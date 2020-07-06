@@ -1,0 +1,210 @@
+{
+    "Privacy Officer/Privacy Compliance Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0008": "Knowledge of applicable business processes and operations of customer organizations."
+        }, {
+            "K0066": "Knowledge of Privacy Impact Assessments."
+        }, {
+            "K0168": "Knowledge of applicable laws, statutes (e.g., in Titles 10,18,32,50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures."
+        }, {
+            "K0612": "Knowledge of what constitutes a 'threat' to a network."
+        }, {
+            "K0613": "Knowledge of who the organization's operational planners are, how and where they can be contacted, and what are their expectations."
+        }, {
+            "K0614": "Knowledge of wireless technologies (e.g., cellular, satellite, GSM) to include the basic structure, architecture, and design of modern wireless communications systems."
+        }, {
+            "K0615": "Knowledge of privacy disclosure statements based on current laws."
+        }],
+        "skills_ids": [{
+            "S0354": "Skill in creating policies that reflect the business's core privacy objectives."
+        }, {
+            "S0355": "Skill in negotiating vendor agreements and evaluating vendor privacy practices."
+        }, {
+            "S0356": "Skill in communicating with all levels of management including Board members (e.g., interpersonal skills, approachability, effective listening skills, appropriate use of style and language for the audience)."
+        }],
+        "abilities_ids": [{
+            "A0024": "Ability to develop clear directions and instructional materials."
+        }, {
+            "A0033": "Ability to develop policy, plans, and strategy in compliance with laws, regulations, policies, and standards in support of organizational cyber activities."
+        }, {
+            "A0034": "Ability to develop, update, and/or maintain standard operating procedures (SOPs)."
+        }, {
+            "A0104": "Ability to select the appropriate implant to achieve operational goals."
+        }, {
+            "A0105": "Ability to tailor technical and planning information to a customer's level of understanding."
+        }, {
+            "A0110": "Ability to monitor advancements in information privacy laws to ensure organizational adaptation and compliance."
+        }, {
+            "A0111": "Ability to work across departments and business units to implement organization's privacy principles and programs, and align privacy objectives with security objectives."
+        }, {
+            "A0112": "Ability to monitor advancements in information privacy technologies to ensure organizational adaptation and compliance."
+        }, {
+            "A0113": "Ability to determine whether a security incident violates a privacy principle or legal standard requiring specific legal action."
+        }, {
+            "A0114": "Ability to develop or procure curriculum that speaks to the topic at the appropriate level for the target."
+        }, {
+            "A0115": "Ability to work across departments and business units to implement organization's privacy principles and programs, and align privacy objectives with security objectives."
+        }, {
+            "A0125": "Ability to author a privacy disclosure statement based on current laws."
+        }],
+        "tasks_ids": [{
+            "T0003": "Advise senior management (e.g., Chief Information Officer [CIO]) on risk levels and security posture."
+        }, {
+            "T0004": "Advise senior management (e.g., CIO) on cost/benefit analysis of information security programs, policies, processes, systems, and elements."
+        }, {
+            "T0029": "Conduct functional and connectivity testing to ensure continuing operability."
+        }, {
+            "T0030": "Conduct interactive training exercises to create an effective learning environment."
+        }, {
+            "T0032": "Conduct Privacy Impact Assessments (PIAs) of the application's security design for the appropriate security controls, which protect the confidentiality and integrity of Personally Identifiable Information (PII)."
+        }, {
+            "T0066": "Develop and maintain strategic plans."
+        }, {
+            "T0098": "Evaluate contracts to ensure compliance with funding, legal, and program requirements."
+        }, {
+            "T0099": "Evaluate cost/benefit, economic, and risk analysis in decision-making process."
+        }, {
+            "T0131": "Interpret and apply laws, regulations, policies, standards, or procedures to specific issues."
+        }, {
+            "T0133": "Interpret patterns of noncompliance to determine their impact on levels of risk and/or overall effectiveness of the enterprise's cybersecurity program."
+        }, {
+            "T0188": "Prepare audit reports that identify technical and procedural findings, and provide recommended remediation strategies/solutions."
+        }, {
+            "T0381": "Present technical information to technical and nontechnical audiences."
+        }, {
+            "T0384": "Promote awareness of cyber policy and strategy as appropriate among management and ensure sound principles are reflected in the organization's mission, vision, and goals."
+        }, {
+            "T0478": "Provide guidance on laws, regulations, policies, standards, or procedures to management, personnel, or clients."
+        }, {
+            "T0861": "Work with the general counsel, external affairs and businesses to ensure both existing and new services comply with privacy and data security obligations."
+        }, {
+            "T0862": "Work with legal counsel and management, key departments and committees to ensure the organization has and maintains appropriate privacy and confidentiality consent, authorization forms and information notices and materials reflecting current organization and legal practices and requirements."
+        }, {
+            "T0863": "Coordinate with the appropriate regulating bodies to ensure that programs, policies and procedures involving civil rights, civil liberties and privacy considerations are addressed in an integrated and comprehensive manner."
+        }, {
+            "T0864": "Liaise with regulatory and accrediting bodies."
+        }, {
+            "T0865": "Work with external affairs to develop relationships with regulators and other government officials responsible for privacy and data security issues."
+        }, {
+            "T0866": "Maintain current knowledge of applicable federal and state privacy laws and accreditation standards, and monitor advancements in information privacy technologies to ensure organizational adaptation and compliance."
+        }, {
+            "T0867": "Ensure all processing and/or databases are registered with the local privacy/data protection authorities where required."
+        }, {
+            "T0868": "Work with business teams and senior management to ensure awareness of 'best practices' on privacy and data security issues."
+        }, {
+            "T0869": "Work with organization senior management to establish an organization-wide Privacy Oversight Committee"
+        }, {
+            "T0870": "Serve in a leadership role for Privacy Oversight Committee activities"
+        }, {
+            "T0871": "Collaborate on cyber privacy and security policies and procedures"
+        }, {
+            "T0872": "Collaborate with cybersecurity personnel on the security risk assessment process to address privacy compliance and risk mitigation"
+        }, {
+            "T0873": "Interface with Senior Management to develop strategic plans for the collection, use and sharing of information in a manner that maximizes its value while complying with applicable privacy regulations"
+        }, {
+            "T0874": "Provide strategic guidance to corporate officers regarding information resources and technology"
+        }, {
+            "T0875": "Assist the Security Officer with the development and implementation of an information infrastructure"
+        }, {
+            "T0876": "Coordinate with the Corporate Compliance Officer re:procedures for documenting and reporting self-disclosures of any evidence of privacy violations."
+        }, {
+            "T0877": "Work cooperatively with applicable organization units in overseeing consumer information access rights"
+        }, {
+            "T0878": "Serve as the information privacy liaison for users of technology systems"
+        }, {
+            "T0879": "Act as a liaison to the information systems department"
+        }, {
+            "T0880": "Develop privacy training materials and other communications to increase employee understanding of company privacy policies, data handling practices and procedures and legal obligations"
+        }, {
+            "T0881": "Oversee, direct, deliver or ensure delivery of initial privacy training and orientation to all employees, volunteers, contractors, alliances, business associates and other appropriate third parties."
+        }, {
+            "T0882": "Conduct on-going privacy training and awareness activities."
+        }, {
+            "T0883": "Work with external affairs to develop relationships with consumer organizations and other NGOs with an interest in privacy and data security issues--and to manage company participation in public events related to privacy and data security."
+        }, {
+            "T0884": "Work with organization administration, legal counsel and other related parties to represent the organization's information privacy interests with external parties, including government bodies, which undertake to adopt or amend privacy legislation, regulation or standard."
+        }, {
+            "T0885": "Report on a periodic basis regarding the status of the privacy program to the Board, CEO or other responsible individual or committee"
+        }, {
+            "T0886": "Work with External Affairs to respond to press and other inquiries regarding concern over consumer and employee data."
+        }, {
+            "T0887": "Provide leadership for the organization's privacy program."
+        }, {
+            "T0888": "Direct and oversee privacy specialists and coordinate privacy and data security programs with senior executives globally to ensure consistency across the organization."
+        }, {
+            "T0889": "Ensure compliance with privacy practices and consistent application of sanctions for failure to comply with privacy policies for all individuals in the organization's workforce, extended workforce and for all business associates in cooperation with Human Resources, the information security officer, administration and legal counsel as applicable."
+        }, {
+            "T0890": "Develop appropriate sanctions for failure to comply with the corporate privacy policies and procedures."
+        }, {
+            "T0891": "Resolve allegations of noncompliance with the corporate privacy policies or notice of information practices."
+        }, {
+            "T0892": "Develop and coordinate a risk management and compliance framework for privacy."
+        }, {
+            "T0893": "Undertake a comprehensive review of the company's data and privacy projects and ensure that they are consistent with corporate privacy and data security goals and policies."
+        }, {
+            "T0894": "Develop and manage enterprise-wide procedures to ensure the development of new products and services is consistent with company privacy policies and legal obligations"
+        }, {
+            "T0895": "Establish a process for receiving, documenting, tracking, investigating and acting on all complaints concerning the organization's privacy policies and procedures"
+        }, {
+            "T0896": "Establish with management and operations a mechanism to track access to protected health information, within the purview of the organization and as required by law and to allow qualified individuals to review or receive a report on such activity"
+        }, {
+            "T0897": "Provide leadership in the planning, design and evaluation of privacy and security related projects"
+        }, {
+            "T0898": "Establish an internal privacy audit program"
+        }, {
+            "T0899": "Periodically revise the privacy program considering changes in laws, regulatory or company policy"
+        }, {
+            "T0900": "Provide development guidance and assist in the identification, implementation and maintenance of organization information privacy policies and procedures in coordination with organization management and administration and legal counsel"
+        }, {
+            "T0901": "Assure that the use of technologies maintains, and does not erode, privacy protections on use, collection and disclosure of personal information"
+        }, {
+            "T0902": "Monitor systems development and operations for security and privacy compliance"
+        }, {
+            "T0903": "Conduct privacy impact assessments of proposed rules on the privacy of personal information, including the type of personal information collected and the number of people affected"
+        }, {
+            "T0904": "Conduct periodic information privacy impact assessments and ongoing compliance monitoring activities in coordination with the organization's other compliance and operational assessment functions"
+        }, {
+            "T0905": "Review all system-related information security plans to ensure alignment between security and privacy practices"
+        }, {
+            "T0906": "Work with all organization personnel involved with any aspect of release of protected information to ensure coordination with the organization's policies, procedures and legal requirements"
+        }, {
+            "T0907": "Account for and administer individual requests for release or disclosure of personal and/or protected information"
+        }, {
+            "T0908": "Develop and manage procedures for vetting and auditing vendors for compliance with the privacy and data security policies and legal requirements"
+        }, {
+            "T0909": "Participate in the implementation and ongoing compliance monitoring of all trading partner and business associate agreements, to ensure all privacy concerns, requirements and responsibilities are addressed"
+        }, {
+            "T0910": "Act as, or work with, counsel relating to business partner contracts"
+        }, {
+            "T0911": "Mitigate effects of a use or disclosure of personal information by employees or business partners"
+        }, {
+            "T0912": "Develop and apply corrective action procedures"
+        }, {
+            "T0913": "Administer action on all complaints concerning the organization's privacy policies and procedures in coordination and collaboration with other similar functions and, when necessary, legal counsel"
+        }, {
+            "T0914": "Support the organization's privacy compliance program, working closely with the Privacy Officer, Chief Information Security Officer, and other business leaders to ensure compliance with federal and state privacy laws and regulations"
+        }, {
+            "T0915": "Identify and correct potential company compliance gaps and/or areas of risk to ensure full compliance with privacy regulations"
+        }, {
+            "T0916": "Manage privacy incidents and breaches in conjunction with the Privacy Officer, Chief Information Security Officer, legal counsel and the business units"
+        }, {
+            "T0917": "Coordinate with the Chief Information Security Officer to ensure alignment between security and privacy practices"
+        }, {
+            "T0918": "Establish, implement and maintains organization-wide policies and procedures to comply with privacy regulations"
+        }, {
+            "T0919": "Ensure that the company maintains appropriate privacy and confidentiality notices, consent and authorization forms, and materials"
+        }]
+    }
+}

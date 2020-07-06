@@ -1,0 +1,386 @@
+{
+    "Security Control Assessor": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0007": "Knowledge of authentication, authorization, and access control methods."
+        }, {
+            "K0008": "Knowledge of applicable business processes and operations of customer organizations."
+        }, {
+            "K0009": "Knowledge of application vulnerabilities."
+        }, {
+            "K0010": "Knowledge of communication methods, principles, and concepts that support the network infrastructure."
+        }, {
+            "K0011": "Knowledge of capabilities and applications of network equipment including routers, switches, bridges, servers, transmission media, and related hardware."
+        }, {
+            "K0013": "Knowledge of cyber defense and vulnerability assessment tools and their capabilities."
+        }, {
+            "K0018": "Knowledge of encryption algorithms"
+        }, {
+            "K0019": "Knowledge of cryptography and cryptographic key management concepts"
+        }, {
+            "K0021": "Knowledge of data backup and recovery."
+        }, {
+            "K0024": "Knowledge of database systems."
+        }, {
+            "K0026": "Knowledge of business continuity and disaster recovery continuity of operations plans."
+        }, {
+            "K0027": "Knowledge of organization's enterprise information security architecture."
+        }, {
+            "K0028": "Knowledge of organization's evaluation and validation requirements."
+        }, {
+            "K0029": "Knowledge of organization's Local and Wide Area Network connections."
+        }, {
+            "K0037": "Knowledge of Security Assessment and Authorization process."
+        }, {
+            "K0038": "Knowledge of cybersecurity and privacy principles used to manage risks related to the use, processing, storage, and transmission of information or data."
+        }, {
+            "K0040": "Knowledge of vulnerability information dissemination sources (e.g., alerts, advisories, errata, and bulletins)."
+        }, {
+            "K0044": "Knowledge of cybersecurity and privacy principles and organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "K0048": "Knowledge of Risk Management Framework (RMF) requirements."
+        }, {
+            "K0049": "Knowledge of information technology (IT) security principles and methods (e.g., firewalls, demilitarized zones, encryption)."
+        }, {
+            "K0054": "Knowledge of current industry methods for evaluating, implementing, and disseminating information technology (IT) security assessment, monitoring, detection, and remediation tools and procedures utilizing standards-based concepts and capabilities."
+        }, {
+            "K0056": "Knowledge of network access, identity, and access management (e.g., public key infrastructure, Oauth, OpenID, SAML, SPML)."
+        }, {
+            "K0059": "Knowledge of new and emerging information technology (IT) and cybersecurity technologies."
+        }, {
+            "K0070": "Knowledge of system and application security threats and vulnerabilities (e.g., buffer overflow, mobile code, cross-site scripting, Procedural Language/Structured Query Language [PL/SQL] and injections, race conditions, covert channel, replay, return-oriented attacks, malicious code)."
+        }, {
+            "K0084": "Knowledge of structured analysis principles and methods."
+        }, {
+            "K0089": "Knowledge of systems diagnostic tools and fault identification techniques."
+        }, {
+            "K0098": "Knowledge of the cyber defense Service Provider reporting structure and processes within one's own organization."
+        }, {
+            "K0100": "Knowledge of the enterprise information technology (IT) architecture."
+        }, {
+            "K0101": "Knowledge of the organization's enterprise information technology (IT) goals and objectives."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0146": "Knowledge of the organization's core business/mission processes."
+        }, {
+            "K0168": "Knowledge of applicable laws, statutes (e.g., in Titles 10,18,32,50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures."
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0170": "Knowledge of critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0199": "Knowledge of security architecture concepts and enterprise architecture reference models (e.g., Zachman, Federal Enterprise Architecture [FEA])."
+        }, {
+            "K0203": "Knowledge of security models (e.g., Bell-LaPadula model, Biba integrity model, Clark-Wilson integrity model)."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0267": "Knowledge of laws, policies, procedures, or governance relevant to cybersecurity for critical infrastructures."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0322": "Knowledge of embedded systems."
+        }, {
+            "K0342": "Knowledge of penetration testing principles, tools, and techniques."
+        }, {
+            "K0622": "Knowledge of controls related to the use, processing, storage, and transmission of data."
+        }, {
+            "K0624": "Knowledge of Application Security Risks (e.g. Open Web Application Security Project Top 10 list)"
+        }],
+        "skills_ids": [{
+            "S0001": "Skill in conducting vulnerability scans and recognizing vulnerabilities in security systems."
+        }, {
+            "S0006": "Skill in applying confidentiality, integrity, and availability principles."
+        }, {
+            "S0027": "Skill in determining how a security system should work (including its resilience and dependability capabilities) and how changes in conditions, operations, or the environment will affect these outcomes."
+        }, {
+            "S0034": "Skill in discerning the protection needs (i.e., security controls) of information systems and networks."
+        }, {
+            "S0038": "Skill in identifying measures or indicators of system performance and the actions needed to improve or correct performance, relative to the goals of the system."
+        }, {
+            "S0073": "Skill in using virtual machines. (e.g., Microsoft Hyper-V, VMWare vSphere, Citrix XenDesktop/Server, Amazon Elastic Compute Cloud, etc.)."
+        }, {
+            "S0078": "Skill in recognizing and categorizing types of vulnerabilities and associated attacks."
+        }, {
+            "S0097": "Skill in applying security controls."
+        }, {
+            "S0100": "Skill in utilizing or developing learning activities (e.g., scenarios, instructional games, interactive exercises)."
+        }, {
+            "S0110": "Skill in identifying Test & Evaluation infrastructure (people, ranges, tools, instrumentation) requirements."
+        }, {
+            "S0111": "Skill in interfacing with customers."
+        }, {
+            "S0112": "Skill in managing test assets, test resources, and test personnel to ensure effective completion of test events."
+        }, {
+            "S0115": "Skill in preparing Test & Evaluation reports."
+        }, {
+            "S0120": "Skill in reviewing logs to identify evidence of past intrusions."
+        }, {
+            "S0124": "Skill in troubleshooting and diagnosing cyber defense infrastructure anomalies and work through resolution."
+        }, {
+            "S0128": "Skill in using manpower and personnel IT systems."
+        }, {
+            "S0134": "Skill in conducting reviews of systems."
+        }, {
+            "S0135": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+        }, {
+            "S0136": "Skill in network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+        }, {
+            "S0137": "Skill in conducting application vulnerability assessments."
+        }, {
+            "S0138": "Skill in using Public-Key Infrastructure (PKI) encryption and digital signature capabilities into applications (e.g., S/MIME email, SSL traffic)."
+        }, {
+            "S0141": "Skill in assessing security systems designs."
+        }, {
+            "S0145": "Skill in integrating and applying policies that meet system security objectives."
+        }, {
+            "S0147": "Skill in assessing security controls based on cybersecurity principles and tenets. (e.g., CIS CSC, NIST SP 800-53, Cybersecurity Framework, etc.)."
+        }, {
+            "S0171": "Skill in performing impact/risk assessments."
+        }, {
+            "S0172": "Skill in applying secure coding techniques."
+        }, {
+            "S0173": "Skill in using security event correlation tools."
+        }, {
+            "S0174": "Skill in using code analysis tools."
+        }, {
+            "S0175": "Skill in performing root cause analysis."
+        }, {
+            "S0176": "Skill in administrative planning activities, to include preparation of functional and specific support plans, preparing and managing correspondence, and staffing procedures."
+        }, {
+            "S0177": "Skill in analyzing a target's communication networks."
+        }, {
+            "S0184": "Skill in analyzing traffic to identify network devices."
+        }, {
+            "S0232": "Skill in identifying intelligence gaps and limitations."
+        }, {
+            "S0233": "Skill in identifying language issues that may have an impact on organization objectives."
+        }, {
+            "S0234": "Skill in identifying leads for target development."
+        }, {
+            "S0235": "Skill in identifying non-target regional languages and dialects"
+        }, {
+            "S0236": "Skill in identifying the devices that work at each level of protocol models."
+        }, {
+            "S0237": "Skill in identifying, locating, and tracking targets via geospatial analysis techniques"
+        }, {
+            "S0238": "Skill in information prioritization as it relates to operations."
+        }, {
+            "S0239": "Skill in interpreting compiled and interpretive programming languages."
+        }, {
+            "S0240": "Skill in interpreting metadata and content as applied by collection systems."
+        }, {
+            "S0241": "Skill in interpreting traceroute results, as they apply to network analysis and reconstruction."
+        }, {
+            "S0242": "Skill in interpreting vulnerability scanner results to identify vulnerabilities."
+        }, {
+            "S0243": "Skill in knowledge management, including technical documentation techniques (e.g., Wiki page)."
+        }, {
+            "S0244": "Skill in managing client relationships, including determining client needs/requirements, managing client expectations, and demonstrating commitment to delivering quality results."
+        }, {
+            "S0248": "Skill in performing target system analysis."
+        }, {
+            "S0249": "Skill in preparing and presenting briefings."
+        }, {
+            "S0250": "Skill in preparing plans and related correspondence."
+        }, {
+            "S0251": "Skill in prioritizing target language material."
+        }, {
+            "S0252": "Skill in processing collected data for follow-on analysis."
+        }, {
+            "S0254": "Skill in providing analysis to aid writing phased after action reports."
+        }, {
+            "S0271": "Skill in reviewing and editing assessment products."
+        }, {
+            "S0273": "Skill in reviewing and editing plans."
+        }, {
+            "S0278": "Skill in tailoring analysis to the necessary levels (e.g., classification and organizational)."
+        }, {
+            "S0279": "Skill in target development in direct support of collection operations."
+        }, {
+            "S0280": "Skill in target network anomaly identification (e.g., intrusions, dataflow or processing, target implementation of new technologies)."
+        }, {
+            "S0281": "Skill in technical writing."
+        }, {
+            "S0296": "Skill in utilizing feedback to improve processes, products, and services."
+        }, {
+            "S0304": "Skill to access information on current assets available, usage."
+        }, {
+            "S0305": "Skill to access the databases where plans/directives/guidance are maintained."
+        }, {
+            "S0306": "Skill to analyze strategic guidance for issues requiring clarification and/or additional guidance."
+        }, {
+            "S0307": "Skill to analyze target or threat sources of strength and morale."
+        }, {
+            "S0325": "Skill to develop a collection plan that clearly shows the discipline that can be used to collect the information needed."
+        }, {
+            "S0329": "Skill to evaluate requests for information to determine if response information exists."
+        }, {
+            "S0332": "Skill to extract information from available tools and applications associated with collection requirements and collection operations management."
+        }, {
+            "S0367": "Skill to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "S0370": "Skill to use cyber defense Service Provider reporting structure and processes within one's own organization."
+        }, {
+            "S0374": "Skill to identify cybersecurity and privacy issues that stem from connections with internal and external customers and partner organizations."
+        }],
+        "abilities_ids": [{
+            "A0001": "Ability to identify systemic security issues based on the analysis of vulnerability and configuration data."
+        }, {
+            "A0011": "Ability to answer questions in a clear and concise manner."
+        }, {
+            "A0012": "Ability to ask clarifying questions."
+        }, {
+            "A0013": "Ability to communicate complex information, concepts, or ideas in a confident and well-organized manner through verbal, written, and/or visual means."
+        }, {
+            "A0014": "Ability to communicate effectively when writing."
+        }, {
+            "A0015": "Ability to conduct vulnerability scans and recognize vulnerabilities in security systems."
+        }, {
+            "A0016": "Ability to facilitate small group discussions."
+        }, {
+            "A0018": "Ability to prepare and present briefings."
+        }, {
+            "A0019": "Ability to produce technical documentation."
+        }, {
+            "A0023": "Ability to design valid and reliable assessments."
+        }, {
+            "A0026": "Ability to analyze test data."
+        }, {
+            "A0030": "Ability to collect, verify, and validate test data."
+        }, {
+            "A0035": "Ability to dissect a problem and examine the interrelationships between data that may appear unrelated."
+        }, {
+            "A0036": "Ability to identify basic common coding flaws at a high level."
+        }, {
+            "A0040": "Ability to translate data and test results into evaluative conclusions."
+        }, {
+            "A0056": "Ability to ensure security practices are followed throughout the acquisition process."
+        }, {
+            "A0069": "Ability to apply collaborative skills and strategies."
+        }, {
+            "A0070": "Ability to apply critical reading/thinking skills."
+        }, {
+            "A0082": "Ability to effectively collaborate via virtual teams."
+        }, {
+            "A0083": "Ability to evaluate information for reliability, validity, and relevance."
+        }, {
+            "A0084": "Ability to evaluate, analyze, and synthesize large quantities of data (which may be fragmented and contradictory) into high quality, fused targeting/intelligence products."
+        }, {
+            "A0085": "Ability to exercise judgment when policies are not well-defined."
+        }, {
+            "A0086": "Ability to expand network access by conducting target analysis and collection to identify targets of interest."
+        }, {
+            "A0087": "Ability to focus research efforts to meet the customer's decision-making needs."
+        }, {
+            "A0088": "Ability to function effectively in a dynamic, fast-paced environment."
+        }, {
+            "A0089": "Ability to function in a collaborative environment, seeking continuous consultation with other analysts and experts--both internal and external to the organization--to leverage analytical and technical expertise."
+        }, {
+            "A0090": "Ability to identify external partners with common cyber operations interests."
+        }, {
+            "A0091": "Ability to identify intelligence gaps."
+        }, {
+            "A0092": "Ability to identify/describe target vulnerability."
+        }, {
+            "A0093": "Ability to identify/describe techniques/methods for conducting technical exploitation of the target."
+        }, {
+            "A0094": "Ability to interpret and apply laws, regulations, policies, and guidance relevant to organization cyber objectives."
+        }, {
+            "A0095": "Ability to interpret and translate customer requirements into operational action."
+        }, {
+            "A0096": "Ability to interpret and understand complex and rapidly evolving concepts."
+        }, {
+            "A0098": "Ability to participate as a member of planning teams, coordination groups, and task forces as necessary."
+        }, {
+            "A0101": "Ability to recognize and mitigate cognitive biases which may affect analysis."
+        }, {
+            "A0106": "Ability to think critically."
+        }, {
+            "A0108": "Ability to understand objectives and effects."
+        }, {
+            "A0109": "Ability to utilize multiple intelligence sources across all intelligence disciplines."
+        }, {
+            "A0111": "Ability to work across departments and business units to implement organization's privacy principles and programs, and align privacy objectives with security objectives."
+        }, {
+            "A0112": "Ability to monitor advancements in information privacy technologies to ensure organizational adaptation and compliance."
+        }, {
+            "A0114": "Ability to develop or procure curriculum that speaks to the topic at the appropriate level for the target."
+        }, {
+            "A0115": "Ability to work across departments and business units to implement organization's privacy principles and programs, and align privacy objectives with security objectives."
+        }, {
+            "A0116": "Ability to prioritize and allocate cybersecurity resources correctly and efficiently."
+        }, {
+            "A0117": "Ability to relate strategy, business, and technology in the context of organizational dynamics."
+        }, {
+            "A0118": "Ability to understand technology, management, and leadership issues related to organization processes and problem solving."
+        }, {
+            "A0119": "Ability to understand the basic concepts and issues related to cyber and its organizational impact."
+        }, {
+            "A0123": "Ability to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "A0170": "Ability to identify critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }],
+        "tasks_ids": [{
+            "T0145": "Manage and approve Accreditation Packages (e.g., ISO/IEC 15026-2)."
+        }, {
+            "T0177": "Perform security reviews, identify gaps in security architecture, and develop a security risk management plan."
+        }, {
+            "T0178": "Perform security reviews and identify security gaps in security architecture resulting in recommendations for inclusion in the risk mitigation strategy."
+        }, {
+            "T0181": "Perform risk analysis (e.g., threat, vulnerability, and probability of occurrence) whenever an application or system undergoes a major change."
+        }, {
+            "T0184": "Plan and conduct security authorization reviews and assurance case development for initial installation of systems and networks."
+        }, {
+            "T0205": "Provide input to the Risk Management Framework process activities and related documentation (e.g., system life-cycle support plans, concept of operations, operational procedures, and maintenance training materials)."
+        }, {
+            "T0221": "Review authorization and assurance documents to confirm that the level of risk is within acceptable limits for each software application, system, and network."
+        }, {
+            "T0243": "Verify and update security documentation reflecting the application/system security design features."
+        }, {
+            "T0244": "Verify that application software/network/system security postures are implemented as stated, document deviations, and recommend required actions to correct those deviations."
+        }, {
+            "T0251": "Develop security compliance processes and/or audits for external services (e.g., cloud service providers, data centers)."
+        }, {
+            "T0255": "Participate in Risk Governance process to provide security risks, mitigations, and input on other technical risk."
+        }, {
+            "T0264": "Ensure that plans of actions and milestones or remediation plans are in place for vulnerabilities identified during risk assessments, audits, inspections, etc."
+        }, {
+            "T0265": "Assure successful implementation and functionality of security requirements and appropriate information technology (IT) policies and procedures that are consistent with the organization's mission and goals."
+        }, {
+            "T0268": "Define and document how the implementation of a new system or new interfaces between systems impacts the security posture of the current environment."
+        }, {
+            "T0272": "Ensure that security design and cybersecurity development activities are properly documented (providing a functional description of security implementation) and updated as necessary."
+        }, {
+            "T0275": "Support necessary compliance activities (e.g., ensure that system security configuration guidelines are followed, compliance monitoring occurs)."
+        }, {
+            "T0277": "Ensure that all acquisitions, procurements, and outsourcing efforts address information security requirements consistent with organization goals."
+        }, {
+            "T0309": "Assess the effectiveness of security controls."
+        }, {
+            "T0344": "Assess all the configuration management (change configuration/release management) processes."
+        }, {
+            "T0371": "Establish acceptable limits for the software application, network, or system."
+        }, {
+            "T0495": "Manage Accreditation Packages (e.g., ISO/IEC 15026-2)."
+        }]
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "Cyber Crime Investigator": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0046": "Knowledge of intrusion detection methodologies and techniques for detecting host and network-based intrusions."
+        }, {
+            "K0070": "Knowledge of system and application security threats and vulnerabilities (e.g., buffer overflow, mobile code, cross-site scripting, Procedural Language/Structured Query Language [PL/SQL] and injections, race conditions, covert channel, replay, return-oriented attacks, malicious code)."
+        }, {
+            "K0107": "Knowledge of Insider Threat investigations, reporting, investigative tools and laws/regulations."
+        }, {
+            "K0110": "Knowledge of adversarial tactics, techniques, and procedures."
+        }, {
+            "K0114": "Knowledge of electronic devices (e.g., computer systems/components, access control devices, digital cameras, digital scanners, electronic organizers, hard drives, memory cards, modems, network components, networked appliances, networked home control devices, printers, removable storage devices, telephones, copiers, facsimile machines, etc.)."
+        }, {
+            "K0118": "Knowledge of processes for seizing and preserving digital evidence."
+        }, {
+            "K0123": "Knowledge of legal governance related to admissibility (e.g. Rules of Evidence)."
+        }, {
+            "K0125": "Knowledge of processes for collecting, packaging, transporting, and storing electronic evidence while maintaining chain of custody."
+        }, {
+            "K0128": "Knowledge of types and collection of persistent data."
+        }, {
+            "K0144": "Knowledge of social dynamics of computer attackers in a global context."
+        }, {
+            "K0155": "Knowledge of electronic evidence law."
+        }, {
+            "K0156": "Knowledge of legal rules of evidence and court procedure."
+        }, {
+            "K0168": "Knowledge of applicable laws, statutes (e.g., in Titles 10,18,32,50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures."
+        }, {
+            "K0209": "Knowledge of covert communication techniques."
+        }, {
+            "K0231": "Knowledge of crisis management protocols, processes, and techniques."
+        }, {
+            "K0244": "Knowledge of physical and physiological behaviors that may indicate suspicious or abnormal activity."
+        }, {
+            "K0251": "Knowledge of the judicial process, including the presentation of facts and evidence."
+        }, {
+            "K0351": "Knowledge of applicable statutes, laws, regulations and policies governing cyber targeting and exploitation."
+        }, {
+            "K0624": "Knowledge of Application Security Risks (e.g. Open Web Application Security Project Top 10 list)"
+        }],
+        "skills_ids": [{
+            "S0047": "Skill in preserving evidence integrity according to standard operating procedures or national standards."
+        }, {
+            "S0068": "Skill in collecting, processing, packaging, transporting, and storing electronic evidence to avoid alteration, loss, physical damage, or destruction of data."
+        }, {
+            "S0072": "Skill in using scientific rules and methods to solve problems."
+        }, {
+            "S0086": "Skill in evaluating the trustworthiness of the supplier and/or product."
+        }],
+        "abilities_ids": [{
+            "A0174": "Ability to Find and navigate the dark web using the TOR network to locate markets and forums."
+        }, {
+            "A0175": "Ability to examine digital media on multiple operating system platforms."
+        }],
+        "tasks_ids": [{
+            "T0031": "Conduct interviews of victims and witnesses and conduct interviews or interrogations of suspects."
+        }, {
+            "T0059": "Develop a plan to investigate alleged crime, violation, or suspicious activity utilizing computers and the Internet."
+        }, {
+            "T0096": "Establish relationships, if applicable, between the incident response team and other groups, both internal (e.g., legal department) and external (e.g., law enforcement agencies, vendors, public relations professionals)."
+        }, {
+            "T0103": "Examine recovered data for information of relevance to the issue at hand."
+        }, {
+            "T0104": "Fuse computer network attack analyses with criminal and counterintelligence investigations and operations."
+        }, {
+            "T0110": "Identify and/or determine whether a security incident is indicative of a violation of law that requires specific legal action."
+        }, {
+            "T0112": "Identify data or intelligence of evidentiary value to support counterintelligence and criminal investigations."
+        }, {
+            "T0113": "Identify digital evidence for examination and analysis in such a way as to avoid unintentional alteration."
+        }, {
+            "T0114": "Identify elements of proof of the crime."
+        }, {
+            "T0120": "Identify, collect, and seize documentary or physical evidence, to include digital media and logs associated with cyber intrusion incidents, investigations, and operations."
+        }, {
+            "T0193": "Process crime scenes."
+        }, {
+            "T0225": "Secure the electronic device or information source."
+        }, {
+            "T0241": "Use specialized equipment and techniques to catalog, document, extract, collect, package, and preserve digital evidence."
+        }, {
+            "T0343": "Analyze the crisis to ensure public, personal, and resource protection."
+        }, {
+            "T0346": "Assess the behavior of the individual victim, witness, or suspect as it relates to the investigation."
+        }, {
+            "T0360": "Determine the extent of threats and recommend courses of action or countermeasures to mitigate risks."
+        }, {
+            "T0386": "Provide criminal investigative support to trial counsel during the judicial process."
+        }, {
+            "T0423": "Analyze computer-generated threats for counter intelligence or criminal activity."
+        }, {
+            "T0430": "Gather and preserve evidence used on the prosecution of computer crimes."
+        }, {
+            "T0433": "Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion or other crimes."
+        }, {
+            "T0453": "Determine and develop leads and identify sources of information to identify and/or prosecute the responsible parties to an intrusion or other crimes."
+        }, {
+            "T0471": "Document original condition of digital and/or associated evidence (e.g., via digital photographs, written reports, hash function checking)."
+        }, {
+            "T0479": "Employ information technology (IT) systems and digital storage media to solve, investigate, and/or prosecute cybercrimes and fraud committed against people and property."
+        }, {
+            "T0523": "Prepare reports to document the investigation following legal standards and requirements."
+        }]
+    }
+}

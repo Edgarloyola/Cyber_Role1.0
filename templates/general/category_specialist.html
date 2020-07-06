@@ -1,0 +1,184 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('general.show_category_specialist') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+        font-size:25px
+    }
+
+    #next{
+        box-shadow: none;
+    }
+
+    #box_K,#box_S,#box_A,#box_T{
+        margin-top: -25px;
+    }
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+
+    #name{
+        margin-left: 20px;
+    }
+
+</style>
+
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+        About Categories and Specialists
+        <span class="subtitle is-3 has-text-centered">
+        <a href="https://www.nist.gov/itl/applied-cybersecurity/nice/nice-cybersecurity-workforce-framework-resource-center/about">
+            + info
+        </a>
+        </span>
+    </h2>
+</div>
+
+
+<div vue="app">
+  <div ref="collapsibles" id="accordion_first">
+    {% for i in categories %}
+        <article class="message">
+          <div class="message-header">
+            <p>
+              <a href="#collapsible-message-accordion-{{loop.index}}" data-action="collapse">
+                <i class="fas fa-plus-circle fa-2x "></i>
+              </a>
+              <span id="name" class="title is-3 has-text-white">{{i.name}}</span>
+            </p>
+          </div>
+          <div
+            id="collapsible-message-accordion-{{loop.index}}"
+            class="message-body is-collapsible"
+            data-parent="accordion_first"
+          >
+            <div class="message-body-content">
+              <h5 class="title is-5">{{i.description}}</h5>
+              
+              <div class="box">
+                <h5 class="title is-5 is-italic"><ins>Specialty Areas</ins></h5>
+                  {% if i.name == 'Analyze' %}
+                    {% for x in i.specialist %}
+                        <li>
+                            <b>{{x.name}}</b>
+                        </li>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                {{x.description}}
+                            </div>
+                        </article>
+                    {% endfor %}
+                  {% elif i.name == 'Collect and Operate' %}
+                    {% for x in i.specialist %}
+                        <li>
+                            <b>{{x.name}}</b>
+                        </li>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                {{x.description}}
+                            </div>
+                        </article>
+                    {% endfor %}
+                  {% elif i.name == 'Investigate' %}
+                    {% for x in i.specialist %}
+                        <li>
+                            <b>{{x.name}}</b>
+                        </li>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                {{x.description}}
+                            </div>
+                        </article>
+                    {% endfor %}
+                  {% elif i.name == 'Operate and Maintain' %}
+                    {% for x in i.specialist %}
+                        <li>
+                            <b>{{x.name}}</b>
+                        </li>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                {{x.description}}
+                            </div>
+                        </article>
+                    {% endfor %}
+                  {% elif i.name == 'Oversee and Govern' %}
+                    {% for x in i.specialist %}
+                        <li>
+                            <b>{{x.name}}</b>
+                        </li>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                {{x.description}}
+                            </div>
+                        </article>
+                    {% endfor %}
+                  {% elif i.name == 'Protect and Defend' %}
+                    {% for x in i.specialist %}
+                        <li>
+                            <b>{{x.name}}</b>
+                        </li>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                {{x.description}}
+                            </div>
+                        </article>
+                    {% endfor %}
+                  {% elif i.name == 'Securely Provision' %}
+                    {% for x in i.specialist %}
+                        <li >
+                            <b>{{x.name}}</b>
+                        </li>
+                        <article class="message is-info">
+                            <div class="message-body">
+                                {{x.description}}
+                            </div>
+                        </article>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+            </div>
+          </div>
+        </article>
+    {% endfor %}
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var vm = new Vue({
+      el: '[vue=app]',
+      data: {
+        welcome: 'bulmaCollapsible - vueJS Integration'
+      },
+      mounted() {
+            const collapsibles = bulmaCollapsible.attach();
+          },
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,160 @@
+{
+    "Cyber Workforce Developer and Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0072": "Knowledge of resource management principles and techniques."
+        }, {
+            "K0101": "Knowledge of the organization's enterprise information technology (IT) goals and objectives."
+        }, {
+            "K0127": "Knowledge of the nature and function of the relevant information structure (e.g., National Information Infrastructure)."
+        }, {
+            "K0146": "Knowledge of the organization's core business/mission processes."
+        }, {
+            "K0147": "Knowledge of emerging security issues, risks, and vulnerabilities."
+        }, {
+            "K0168": "Knowledge of applicable laws, statutes (e.g., in Titles 10,18,32,50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures."
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0204": "Knowledge of learning assessment techniques (rubrics, evaluation plans, tests, quizzes)."
+        }, {
+            "K0215": "Knowledge of organizational training policies."
+        }, {
+            "K0233": "Knowledge of the National Cybersecurity Workforce Framework, work roles, and associated tasks, knowledge, skills, and abilities."
+        }, {
+            "K0234": "Knowledge of full spectrum cyber capabilities (e.g., defense, attack, exploitation)."
+        }, {
+            "K0241": "Knowledge of organizational human resource policies, processes, and procedures."
+        }, {
+            "K0243": "Knowledge of organizational training and education policies, processes, and procedures."
+        }, {
+            "K0309": "Knowledge of emerging technologies that have potential for exploitation."
+        }, {
+            "K0311": "Knowledge of industry indicators useful for identifying technology trends."
+        }, {
+            "K0313": "Knowledge of external organizations and academic institutions with cyber focus (e.g., cyber curriculum/training and Research & Development)."
+        }, {
+            "K0335": "Knowledge of current and emerging cyber technologies."
+        }],
+        "skills_ids": [{
+            "S0108": "Skill in developing workforce and position qualification standards."
+        }, {
+            "S0128": "Skill in using manpower and personnel IT systems."
+        }],
+        "abilities_ids": [{
+            "A0023": "Ability to design valid and reliable assessments."
+        }, {
+            "A0028": "Ability to assess and forecast manpower requirements to meet organizational objectives."
+        }, {
+            "A0033": "Ability to develop policy, plans, and strategy in compliance with laws, regulations, policies, and standards in support of organizational cyber activities."
+        }, {
+            "A0037": "Ability to leverage best practices and lessons learned of external organizations and academic institutions dealing with cyber issues."
+        }, {
+            "A0042": "Ability to develop career path opportunities."
+        }, {
+            "A0053": "Ability to determine the validity of workforce trend data."
+        }],
+        "tasks_ids": [{
+            "T0001": "Acquire and manage the necessary resources, including leadership support, financial resources, and key security personnel, to support information technology (IT) security goals and objectives and reduce overall organizational risk."
+        }, {
+            "T0004": "Advise senior management (e.g., CIO) on cost/benefit analysis of information security programs, policies, processes, systems, and elements."
+        }, {
+            "T0025": "Communicate the value of information technology (IT) security throughout all levels of the organization stakeholders."
+        }, {
+            "T0044": "Collaborate with stakeholders to establish the enterprise continuity of operations program, strategy, and mission assurance."
+        }, {
+            "T0074": "Develop policy, programs, and guidelines for implementation."
+        }, {
+            "T0094": "Establish and maintain communication channels with stakeholders."
+        }, {
+            "T0099": "Evaluate cost/benefit, economic, and risk analysis in decision-making process."
+        }, {
+            "T0116": "Identify organizational policy stakeholders."
+        }, {
+            "T0222": "Review existing and proposed policies with stakeholders."
+        }, {
+            "T0226": "Serve on agency and interagency policy boards."
+        }, {
+            "T0341": "Advocate for adequate funding for cyber training resources, to include both internal and industry-provided courses, instructors, and related materials."
+        }, {
+            "T0352": "Conduct learning needs assessments and identify requirements."
+        }, {
+            "T0355": "Coordinate with internal and external subject matter experts to ensure existing qualification standards reflect organizational functional requirements and meet industry standards."
+        }, {
+            "T0356": "Coordinate with organizational manpower stakeholders to ensure appropriate allocation and distribution of human capital assets."
+        }, {
+            "T0362": "Develop and implement standardized position descriptions based on established cyber work roles."
+        }, {
+            "T0363": "Develop and review recruiting, hiring, and retention procedures in accordance with current HR policies."
+        }, {
+            "T0364": "Develop cyber career field classification structure to include establishing career field entry requirements and other nomenclature such as codes and identifiers."
+        }, {
+            "T0365": "Develop or assist in the development of training policies and protocols for cyber training."
+        }, {
+            "T0368": "Ensure that cyber career fields are managed in accordance with organizational HR policies and directives."
+        }, {
+            "T0369": "Ensure that cyber workforce management policies and processes comply with legal and organizational requirements regarding equal opportunity, diversity, and fair hiring/employment practices."
+        }, {
+            "T0372": "Establish and collect metrics to monitor and validate cyber workforce readiness including analysis of cyber workforce data to assess the status of positions identified, filled, and filled with qualified personnel."
+        }, {
+            "T0373": "Establish and oversee waiver processes for cyber career field entry and training qualification requirements."
+        }, {
+            "T0374": "Establish cyber career paths to allow career progression, deliberate development, and growth within and between cyber career fields."
+        }, {
+            "T0375": "Establish manpower, personnel, and qualification data element standards to support cyber workforce management and reporting requirements."
+        }, {
+            "T0376": "Establish, resource, implement, and assess cyber workforce management programs in accordance with organizational requirements."
+        }, {
+            "T0384": "Promote awareness of cyber policy and strategy as appropriate among management and ensure sound principles are reflected in the organization's mission, vision, and goals."
+        }, {
+            "T0387": "Review and apply cyber career field qualification standards."
+        }, {
+            "T0388": "Review and apply organizational policies related to or influencing the cyber workforce."
+        }, {
+            "T0390": "Review/Assess cyber workforce effectiveness to adjust skill and/or qualification standards."
+        }, {
+            "T0391": "Support integration of qualified cyber workforce personnel into information systems life cycle development processes."
+        }, {
+            "T0408": "Interpret and apply applicable laws, statutes, and regulatory documents and integrate into policy."
+        }, {
+            "T0425": "Analyze organizational cyber policy."
+        }, {
+            "T0429": "Assess policy needs and collaborate with stakeholders to develop policies to govern cyber activities."
+        }, {
+            "T0437": "Correlate training and learning to business or mission requirements."
+        }, {
+            "T0441": "Define and integrate current and future mission environments."
+        }, {
+            "T0445": "Design/integrate a cyber strategy that outlines the vision, mission, and goals that align with the organization's strategic plan."
+        }, {
+            "T0472": "Draft, staff, and publish cyber policy."
+        }, {
+            "T0481": "Identify and address cyber workforce planning and management issues (e.g. recruitment, retention, and training)."
+        }, {
+            "T0505": "Monitor the rigorous application of cyber policies, principles, and practices in the delivery of planning and management services."
+        }, {
+            "T0506": "Seek consensus on proposed policy changes from stakeholders."
+        }, {
+            "T0529": "Provide policy guidance to cyber management, staff, and users."
+        }, {
+            "T0533": "Review, conduct, or participate in audits of cyber programs and projects."
+        }, {
+            "T0536": "Serve as an internal consultant and advisor in own area of expertise (e.g., technical, copyright, print media, electronic media)."
+        }, {
+            "T0537": "Support the CIO in the formulation of cyber-related policies."
+        }, {
+            "T0552": "Review and approve a supply chain security/risk management policy."
+        }]
+    }
+}

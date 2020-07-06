@@ -1,0 +1,272 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('general.show_ksat_user') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+        font-size:25px
+    }
+
+    #create_ksat{
+
+        width: 250px;
+    }
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+</style>
+
+
+<div class="box global">
+    {% if noexist_ksat %}
+        <div class="box">
+            <h2 class="title is-2 has-text-centered">
+                {{ _('My KSAT') }}
+            </h2>
+            <div class="box has-text-centered">
+                <h4 class="title is-4">You don't have any KSATs.</h4>
+                <div class="box columns has-text-centered is-centered">
+                    <a id="create_ksat" href="{{ url_for('general.test_ksat') }}"class="button is-link is-rounded is-medium is-fixed-bottom">
+                    Create ksat
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="box">
+            <h3 class="title is-3 has-text-centered">
+                {{ _('My KSAT') }}
+            </h3>
+            <p class="has-text-centered">
+                <a href="{{url_for('general.show_k')}}"> 
+                    + Show more about the KSAT
+                </a>
+            </p>
+             <p class="has-text-centered has-text-weight-bold">
+                If you want more details click on the column headings, such as Knowledges,Skills, Abilities and Tasks.
+            </p>
+            <p class="has-text-centered">
+                If you want to restart your ksat you can do so by clicking here. 
+            </p>
+            <div class="box buttons is-centered">
+                <a href="{{ url_for('general.test_ksat') }}"class="buttons button is-link is-rounded is-medium is-fixed-bottom">Restart ksat
+                </a>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title has-text-centered">Description ID</p>
+              <button class="delete" aria-label=" close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div id="divKnow">
+                    {% for i in myksats['knowledges_ids'] %}
+                        <b>{{i}}</b> =
+                        {{myksats['knowledges_ids'][i]['description']}}
+                        <br>
+                    {% endfor %}
+                </div>
+                <div id="divSkill">
+                    {% for i in myksats['skills_ids'] %}
+                        <b>{{i}}</b> =
+                        {{myksats['skills_ids'][i]['description']}}
+                        <br>
+                    {% endfor %}
+                </div>
+
+                <div id="divAbilit">
+                    {% for i in myksats['abilities_ids'] %}
+                        <b>{{i}}</b> =
+                        {{myksats['abilities_ids'][i]['description']}}
+                        <br>
+                    {% endfor %}
+                </div>
+
+                <div id="divTask">
+                    {% for i in myksats['tasks_ids'] %}
+                        <b>{{i}}</b> =
+                        {{myksats['tasks_ids'][i]}}
+                        <br>
+                    {% endfor %}
+                </div>
+            </section>
+          </div>
+        </div>
+
+
+        <div class="box">
+            <div class="columns is-centered">
+                <div class="colum">
+                    <table class="table is-bordered is-striped is-narrow is-hoverable ">
+                      <thead>
+                        <tr>
+                          <th class="is-size-5 has-text-centered " style="width: 250px">
+                            <a id="know" onclick= "fun(this.id);" title="Knowledges" class="modal-button" data-target="#modal">
+                                Knowledges
+                            </a>
+                          </th>
+                          <th class="is-size-5 has-text-centered" style="width: 250px">
+                            <a id="skill" onclick= "fun(this.id);" title="Skills" class="modal-button" data-target="#modal">
+                                Skills
+                            </a>
+                          </th>
+                          <th class="is-size-5 has-text-centered" style="width: 250px">
+                            <a id="abily" onclick= "fun(this.id);" title="Abilities" class="modal-button" data-target="#modal">
+                                Abilities
+                            </a>
+                          </th>
+                          <th class="is-size-5 has-text-centered" >
+                             <a id="task" onclick= "fun(this.id);" title="Tasks" class="modal-button" data-target="#modal">
+                                Tasks
+                             </a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style=" padding: 0 0 0 0;border:0px;margin:0px">
+                            <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+                                <thead>
+                                    <tr >
+                                        <th class="is-selected has-background-link">ID-Description</th>
+                                        <th class="is-selected has-background-link">Level</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for i in myksats['knowledges_ids'] %}
+                                    <tr>
+                                        <td>{{i}}</td>
+                                        <td>{{myksats['knowledges_ids'][i]['level']}}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                          </td>
+                          <td style="padding: 0 0 0 0;border:0px;margin:0px">
+                            <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+                                <thead>
+                                    <tr >
+                                        <th class="is-selected has-background-link">ID-Description</th>
+                                        <th class="is-selected has-background-link">Level</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for i in myksats['skills_ids'] %}
+                                        <tr>
+                                            <td>{{i}}</td>
+                                            <td>{{myksats['skills_ids'][i]['level']}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                          </td>
+                          <td style="padding: 0 0 0 0;border:0px;margin:0px">
+                            <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+                                    <thead>
+                                        <tr >
+                                            <th class="is-selected has-background-link">ID-Description</th>
+                                            <th class="is-selected has-background-link">Level</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for i in myksats['abilities_ids'] %}
+                                        <tr>
+                                            <td>{{i}}</td>
+                                            <td>{{myksats['abilities_ids'][i]['level']}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                            </table>
+                          </td>
+                          <td style="padding: 0 0 0 0;border:0px;margin:0px">
+                            <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+                                    <thead>
+                                        <tr >
+                                            <th class="is-selected has-background-link ">ID-Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in myksats['tasks_ids'] %}
+                                            <tr>
+                                                <td>{{i}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+<script type="text/javascript">
+    document.querySelectorAll('.modal-button').forEach(function(el) {
+          el.addEventListener('click', function() {
+            var target = document.querySelector(el.getAttribute('data-target'));
+
+            target.classList.add('is-active');
+
+            target.querySelector('.delete').addEventListener('click',   function() {
+                target.classList.remove('is-active');
+            });
+        });
+    });
+    function fun(clicked_id) {
+            if(clicked_id.localeCompare("know") == 0 ){
+                document.getElementById("divKnow").className="is-active";
+                document.getElementById("divSkill").className="is-hidden";
+                document.getElementById("divAbilit").className="is-hidden";
+                document.getElementById("divTask").className="is-hidden";
+            }
+            if(clicked_id.localeCompare("skill") == 0 ){
+                document.getElementById("divSkill").className="is-active";
+                document.getElementById("divKnow").className="is-hidden";
+                document.getElementById("divAbilit").className="is-hidden";
+                document.getElementById("divTask").className="is-hidden";
+            }
+            if(clicked_id.localeCompare("abily") == 0 ){
+                document.getElementById("divAbilit").className="is-active";
+                document.getElementById("divKnow").className="is-hidden";
+                document.getElementById("divSkill").className="is-hidden";
+                document.getElementById("divTask").className="is-hidden";
+            }
+            if(clicked_id.localeCompare("task") == 0 ){
+                document.getElementById("divTask").className="is-active";
+                document.getElementById("divKnow").className="is-hidden";
+                document.getElementById("divAbilit").className="is-hidden";
+                document.getElementById("divSkill").className="is-hidden";
+            }
+        }
+</script>
+{% endblock %}

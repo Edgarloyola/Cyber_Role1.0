@@ -1,0 +1,120 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+      <li>
+        <a href="{{ url_for('general.show_dash') }}">
+          {{ _('Home') }} 
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('user_ksat.show_user') }}">
+          {{ title }} 
+        </a>
+      </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+      font-size:25px
+    }
+
+    .title{
+      font-size: 14px
+    }
+
+    #eye{
+      padding-left: 10px;
+    }
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+
+    #edit{
+      margin-left: 10px;
+    }
+
+
+</style>
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+       {{ _(title) }}
+    </h2>
+</div>
+<div class="box global">
+    <div class="columns is-centered">
+        <div class="column has-text-centered">
+              <div class="columns is-centered">
+                  <div class="column ">
+                      <div class="box has-text-centered">
+                          {# Username #}
+                          <label class="label">Username</label>
+                          {{ user.username }}
+                          <label class="label">First Name</label>
+                          {% if user.first_name %}
+                            {{ user.first_name}}
+                          {%else%}
+                            None
+                          {%endif%}
+                          <label class="label">Last Name</label>
+                          {% if user.last_name %}
+                            {{ user.last_name}}
+                          {%else%}
+                            None
+                          {%endif%}
+                      </div>
+                  </div>
+                  <div class="column ">
+                      <div class=" box has-text-centered">
+                          {# Email field #}
+                          <label class="label">Email</label>
+                          {{ user.email }}
+                          <label class="label">Role Names</label>
+                          {% for i in user.roles %}
+                            {% if loop.index == user.roles|count %}
+                                {% set str=""%}
+                            {%else%}
+                                {% set str=", "%}
+                            {% endif %}
+                            {{i.name}}{{str}}
+                          {% endfor %}
+                      </div>
+                  </div>
+                  <div class="column ">
+                      <div class="box has-text-centered">
+                          <label class="label">Locale</label>
+                          {{ user.locale }}
+                          <label class="label">Timezone</label>
+                          {{ user.timezone }}
+                          <label class="label">Is enabled</label>
+                          {{user.is_enabled}}
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="box has-text-centered">
+          <label class="label"></label>
+          <a href="{{ url_for('user_ksat.modify_by_user') }}" class="button is-warning is-rounded">
+              <i class="fas fa-edit"></i> <span id="edit"> Modify User</span>
+          </a>
+      </div>
+    </div>
+</div>
+<script type="text/javascript">
+</script>
+{% endblock %}

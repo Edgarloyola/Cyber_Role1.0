@@ -1,0 +1,228 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }} 
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('general.show_k') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+
+        font-size:25px
+
+    }
+
+    #next{
+        box-shadow: none;
+    }
+
+    #box_K,#box_S,#box_A,#box_T{
+        margin-top: -25px;
+    }
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+</style>
+
+<div class="box">
+    <h3 class="title is-3 has-text-centered">
+        {{ _('About KSAT') }}
+    </h3>
+</div>
+
+<div class="box global">
+    <div class="tabs is-boxed">
+        <ul>
+            <li id="seleccionK">
+                <a href="{{ url_for('general.show_k') }}">
+                    <span class="icon is-small">
+                        <i aria-hidden="true" class="fab fa-kickstarter-k">
+                        </i>
+                    </span>
+                    <span>
+                        Knowledges
+                    </span>
+                </a>
+            </li>
+            <li id="seleccionS">
+                <a href="{{ url_for('general.show_s') }}">
+                    <span class="icon is-small">
+                        <i aria-hidden="true" class="fab fa-stripe-s">
+                        </i>
+                    </span>
+                    <span>
+                        Skills
+                    </span>
+                </a>
+            </li>
+            <li id="seleccionA">
+                <a href="{{ url_for('general.show_a') }}">
+                    <span class="icon is-small">
+                        <i aria-hidden="true" class="fab fa-amilia">
+                        </i>
+                    </span>
+                    <span>
+                        Abilities
+                    </span>
+                </a>
+            </li>
+            <li id="seleccionT">
+                <a href="{{ url_for('general.show_t') }}">
+                    <span class="icon is-small">
+                        <i aria-hidden="true" class="fab fa-tumblr">
+                        </i>
+                    </span>
+                    <span>
+                        Tasks
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    {% if verK %}
+    <script type="text/javascript">
+        document.getElementById("seleccionK").className="is-active";
+    </script>
+    <div class="box" id="box_K">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+            <tr>
+                <th class="is-selected has-background-link">ID</th>
+                <th class="is-selected has-background-link">ID_NIST</th>
+                <th class="is-selected has-background-link">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in l_K %}
+                <tr>
+                    <td><b>{{i[0]}}</b></td>
+                    <td><b>{{l_eq[loop.index-1]}}</b></td>
+                    <td>{{i[1]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ macros.render_pagination(lista_K) }}
+    </div>
+    {% endif %}
+
+    {% if verS %}
+    <script type="text/javascript">
+        document.getElementById("seleccionS").className="is-active";
+    </script>
+    <div class="box" id="box_S">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+            <tr>
+                <th class="is-selected has-background-link">ID</th>
+                <th class="is-selected has-background-link">ID_NIST</th>
+                <th class="is-selected has-background-link">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in l_S %}
+                <tr>
+                    <td><b>{{i[0]}}</b></td>
+                    <td><b>{{l_eq[loop.index-1]}}</b></td>
+                    <td>{{i[1]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ macros.render_pagination(lista_S) }}
+    </div>
+    {% endif %}
+
+
+    {% if verA %}
+    <script type="text/javascript">
+        document.getElementById("seleccionA").className="is-active";
+    </script>
+    <div class="box" id="box_A">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+            <tr>
+                <th class="is-selected has-background-link">ID</th>
+                <th class="is-selected has-background-link">ID_NIST</th>
+                <th class="is-selected has-background-link">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in l_A %}
+                <tr>
+                    <td><b>{{i[0]}}</b></td>
+                    <td><b>{{l_eq[loop.index-1]}}</b></td>
+                    <td>{{i[1]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ macros.render_pagination(lista_A) }}
+    </div>
+    {% endif %}
+
+    {% if verT %}
+    <script type="text/javascript">
+        document.getElementById("seleccionT").className="is-active";
+    </script>
+    <div class="box" id="box_T">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+            <tr>
+                <th class="is-selected has-background-link">ID</th>
+                <th class="is-selected has-background-link">ID_NIST</th>
+                <th class="is-selected has-background-link">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in l_T %}
+                <tr>
+                    <td><b>{{i[0]}}</b></td>
+                    <td><b>{{l_eq[loop.index-1]}}</b></td>
+                    <td>{{i[1]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ macros.render_pagination(lista_T) }}
+    </div>
+    {% endif %}
+    <hr class="has-background-grey-light">
+    <div class="box">
+        <h5 class="title is-5 has-text-centered">
+            We recommend reading the Legend so you can tell us what kind of knowledge you have about KSATs.
+            <span class="subtitle is-5 has-text-centered">
+            <a href="https://www.nist.gov/itl/applied-cybersecurity/nice/nice-cybersecurity-workforce-framework-resource-center/about">
+                + info
+            </a>
+            </span>
+        </h5>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+</script>
+{% endblock %}

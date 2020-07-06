@@ -1,0 +1,232 @@
+{
+    "Information Systems Security Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0008": "Knowledge of applicable business processes and operations of customer organizations."
+        }, {
+            "K0018": "Knowledge of encryption algorithms"
+        }, {
+            "K0021": "Knowledge of data backup and recovery."
+        }, {
+            "K0026": "Knowledge of business continuity and disaster recovery continuity of operations plans."
+        }, {
+            "K0033": "Knowledge of host/network access control mechanisms (e.g., access control list, capabilities lists)."
+        }, {
+            "K0038": "Knowledge of cybersecurity and privacy principles used to manage risks related to the use, processing, storage, and transmission of information or data."
+        }, {
+            "K0040": "Knowledge of vulnerability information dissemination sources (e.g., alerts, advisories, errata, and bulletins)."
+        }, {
+            "K0042": "Knowledge of incident response and handling methodologies."
+        }, {
+            "K0043": "Knowledge of industry-standard and organizationally accepted analysis principles and methods."
+        }, {
+            "K0046": "Knowledge of intrusion detection methodologies and techniques for detecting host and network-based intrusions."
+        }, {
+            "K0048": "Knowledge of Risk Management Framework (RMF) requirements."
+        }, {
+            "K0053": "Knowledge of measures or indicators of system performance and availability."
+        }, {
+            "K0054": "Knowledge of current industry methods for evaluating, implementing, and disseminating information technology (IT) security assessment, monitoring, detection, and remediation tools and procedures utilizing standards-based concepts and capabilities."
+        }, {
+            "K0058": "Knowledge of network traffic analysis methods."
+        }, {
+            "K0059": "Knowledge of new and emerging information technology (IT) and cybersecurity technologies."
+        }, {
+            "K0061": "Knowledge of how traffic flows across the network (e.g., Transmission Control Protocol [TCP] and Internet Protocol [IP], Open System Interconnection Model [OSI], Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0070": "Knowledge of system and application security threats and vulnerabilities (e.g., buffer overflow, mobile code, cross-site scripting, Procedural Language/Structured Query Language [PL/SQL] and injections, race conditions, covert channel, replay, return-oriented attacks, malicious code)."
+        }, {
+            "K0072": "Knowledge of resource management principles and techniques."
+        }, {
+            "K0076": "Knowledge of server administration and systems engineering theories, concepts, and methods."
+        }, {
+            "K0077": "Knowledge of server and client operating systems."
+        }, {
+            "K0087": "Knowledge of system software and organizational design standards, policies, and authorized approaches (e.g., International Organization for Standardization [ISO] guidelines) relating to system design."
+        }, {
+            "K0090": "Knowledge of system life cycle management principles, including software security and usability."
+        }, {
+            "K0092": "Knowledge of technology integration processes."
+        }, {
+            "K0101": "Knowledge of the organization's enterprise information technology (IT) goals and objectives."
+        }, {
+            "K0106": "Knowledge of what constitutes a network attack and a network attack's relationship to both threats and vulnerabilities."
+        }, {
+            "K0121": "Knowledge of information security program management and project management principles and techniques."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0149": "Knowledge of organization's risk tolerance and/or risk management approach."
+        }, {
+            "K0150": "Knowledge of enterprise incident response program, roles, and responsibilities."
+        }, {
+            "K0151": "Knowledge of current and emerging threats/threat vectors."
+        }, {
+            "K0163": "Knowledge of critical information technology (IT) procurement requirements."
+        }, {
+            "K0167": "Knowledge of system administration, network, and operating system hardening techniques."
+        }, {
+            "K0168": "Knowledge of applicable laws, statutes (e.g., in Titles ,10,18,32,50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures."
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0170": "Knowledge of critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0180": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+        }, {
+            "K0199": "Knowledge of security architecture concepts and enterprise architecture reference models (e.g., Zachman, Federal Enterprise Architecture [FEA])."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0267": "Knowledge of laws, policies, procedures, or governance relevant to cybersecurity for critical infrastructures."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0332": "Knowledge of network protocols such as TCP/IP, Dynamic Host Configuration, Domain Name System (DNS), and directory services."
+        }, {
+            "K0342": "Knowledge of penetration testing principles, tools, and techniques."
+        }, {
+            "K0622": "Knowledge of controls related to the use, processing, storage, and transmission of data."
+        }, {
+            "K0624": "Knowledge of Application Security Risks (e.g. Open Web Application Security Project Top 10 list)"
+        }],
+        "skills_ids": [{
+            "S0018": "Skill in creating policies that reflect system security objectives."
+        }, {
+            "S0027": "Skill in determining how a security system should work (including its resilience and dependability capabilities) and how changes in conditions, operations, or the environment will affect these outcomes."
+        }, {
+            "S0086": "Skill in evaluating the trustworthiness of the supplier and/or product."
+        }],
+        "abilities_ids": [{
+            "A0128": "Ability to apply techniques for detecting host and network-based intrusions using intrusion detection technologies."
+        }, {
+            "A0161": "Ability to integrate information security requirements into the acquisition process; using applicable baseline security controls as one of the sources for security requirements; ensuring a robust software quality control process; and establishing multiple sources (e.g., delivery routes, for critical system elements)."
+        }, {
+            "A0170": "Ability to identify critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }],
+        "tasks_ids": [{
+            "T0001": "Acquire and manage the necessary resources, including leadership support, financial resources, and key security personnel, to support information technology (IT) security goals and objectives and reduce overall organizational risk."
+        }, {
+            "T0002": "Acquire necessary resources, including financial resources, to conduct an effective enterprise continuity of operations program."
+        }, {
+            "T0003": "Advise senior management (e.g., Chief Information Officer [CIO]) on risk levels and security posture."
+        }, {
+            "T0004": "Advise senior management (e.g., CIO) on cost/benefit analysis of information security programs, policies, processes, systems, and elements."
+        }, {
+            "T0005": "Advise appropriate senior leadership or Authorizing Official of changes affecting the organization's cybersecurity posture."
+        }, {
+            "T0024": "Collect and maintain data needed to meet system cybersecurity reporting."
+        }, {
+            "T0025": "Communicate the value of information technology (IT) security throughout all levels of the organization stakeholders."
+        }, {
+            "T0044": "Collaborate with stakeholders to establish the enterprise continuity of operations program, strategy, and mission assurance."
+        }, {
+            "T0089": "Ensure that security improvement actions are evaluated, validated, and implemented as required."
+        }, {
+            "T0091": "Ensure that cybersecurity inspections, tests, and reviews are coordinated for the network environment."
+        }, {
+            "T0092": "Ensure that cybersecurity requirements are integrated into the continuity planning for that system and/or organization(s)."
+        }, {
+            "T0093": "Ensure that protection and detection capabilities are acquired or developed using the IS security engineering approach and are consistent with organization-level cybersecurity architecture."
+        }, {
+            "T0095": "Establish overall enterprise information security architecture (EISA) with the organization's overall security strategy."
+        }, {
+            "T0097": "Evaluate and approve development efforts to ensure that baseline security safeguards are appropriately installed."
+        }, {
+            "T0099": "Evaluate cost/benefit, economic, and risk analysis in decision-making process."
+        }, {
+            "T0106": "Identify alternative information security strategies to address organizational security objective."
+        }, {
+            "T0115": "Identify information technology (IT) security program implications of new technologies or technology upgrades."
+        }, {
+            "T0130": "Interface with external organizations (e.g., public affairs, law enforcement, Command or Component Inspector General) to ensure appropriate and accurate dissemination of incident and other Computer Network Defense information."
+        }, {
+            "T0132": "Interpret and/or approve security requirements relative to the capabilities of new information technologies."
+        }, {
+            "T0133": "Interpret patterns of noncompliance to determine their impact on levels of risk and/or overall effectiveness of the enterprise's cybersecurity program."
+        }, {
+            "T0134": "Lead and align information technology (IT) security priorities with the security strategy."
+        }, {
+            "T0135": "Lead and oversee information security budget, staffing, and contracting."
+        }, {
+            "T0147": "Manage the monitoring of information security data sources to maintain organizational situational awareness."
+        }, {
+            "T0148": "Manage the publishing of Computer Network Defense guidance (e.g., TCNOs, Concept of Operations, Net Analyst Reports, NTSM, MTOs) for the enterprise constituency."
+        }, {
+            "T0149": "Manage threat or target analysis of cyber defense information and production of threat information within the enterprise."
+        }, {
+            "T0151": "Monitor and evaluate the effectiveness of the enterprise's cybersecurity safeguards to ensure that they provide the intended level of protection."
+        }, {
+            "T0157": "Oversee the information security training and awareness program."
+        }, {
+            "T0158": "Participate in an information security risk assessment during the Security Assessment and Authorization process."
+        }, {
+            "T0159": "Participate in the development or modification of the computer environment cybersecurity program plans and requirements."
+        }, {
+            "T0192": "Prepare, distribute, and maintain plans, instructions, guidance, and standard operating procedures concerning the security of network system(s) operations."
+        }, {
+            "T0199": "Provide enterprise cybersecurity and supply chain risk management guidance for development of the Continuity of Operations Plans."
+        }, {
+            "T0206": "Provide leadership and direction to information technology (IT) personnel by ensuring that cybersecurity awareness, basics, literacy, and training are provided to operations personnel commensurate with their responsibilities."
+        }, {
+            "T0211": "Provide system-related input on cybersecurity requirements to be included in statements of work and other appropriate procurement documents."
+        }, {
+            "T0213": "Provide technical documents, incident reports, findings from computer examinations, summaries, and other situational awareness information to higher headquarters."
+        }, {
+            "T0215": "Recognize a possible security violation and take appropriate action to report the incident, as required."
+        }, {
+            "T0219": "Recommend resource allocations required to securely operate and maintain an organization's cybersecurity requirements."
+        }, {
+            "T0227": "Recommend policy and coordinate review and approval."
+        }, {
+            "T0229": "Supervise or manage protective or corrective measures when a cybersecurity incident or vulnerability is discovered."
+        }, {
+            "T0234": "Track audit findings and recommendations to ensure that appropriate mitigation actions are taken."
+        }, {
+            "T0239": "Use federal and organization-specific published documents to manage operations of their computing environment system(s)."
+        }, {
+            "T0248": "Promote awareness of security issues among management and ensure sound security principles are reflected in the organization's vision and goals."
+        }, {
+            "T0254": "Oversee policy standards and implementation strategies to ensure procedures and guidelines comply with cybersecurity policies."
+        }, {
+            "T0255": "Participate in Risk Governance process to provide security risks, mitigations, and input on other technical risk."
+        }, {
+            "T0256": "Evaluate the effectiveness of procurement function in addressing information security requirements and supply chain risks through procurement activities and recommend improvements."
+        }, {
+            "T0263": "Identify security requirements specific to an information technology (IT) system in all phases of the system life cycle."
+        }, {
+            "T0264": "Ensure that plans of actions and milestones or remediation plans are in place for vulnerabilities identified during risk assessments, audits, inspections, etc."
+        }, {
+            "T0265": "Assure successful implementation and functionality of security requirements and appropriate information technology (IT) policies and procedures that are consistent with the organization's mission and goals."
+        }, {
+            "T0275": "Support necessary compliance activities (e.g., ensure that system security configuration guidelines are followed, compliance monitoring occurs)."
+        }, {
+            "T0276": "Participate in the acquisition process as necessary, following appropriate supply chain risk management practices."
+        }, {
+            "T0277": "Ensure that all acquisitions, procurements, and outsourcing efforts address information security requirements consistent with organization goals."
+        }, {
+            "T0280": "Continuously validate the organization against policies/guidelines/procedures/regulations/laws to ensure compliance."
+        }, {
+            "T0281": "Forecast ongoing service demands and ensure that security assumptions are reviewed as necessary."
+        }, {
+            "T0282": "Define and/or implement policies and procedures to ensure protection of critical infrastructure as appropriate."
+        }]
+    }
+}

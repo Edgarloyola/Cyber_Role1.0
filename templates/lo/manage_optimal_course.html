@@ -1,0 +1,191 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+        <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }} 
+            </a>
+        </li>
+        <li>
+        <a href="{{ url_for('lo.manage_optimal_course') }}">
+                {{ title }} 
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+
+        font-size:25px
+
+    }
+
+    #next{
+        box-shadow: none;
+    }
+
+
+    .box{
+        box-shadow: none;
+    }
+</style>
+
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+        {{ _('Manage Courses') }}
+    </h2>
+</div>
+
+
+<div class="box">
+    <div class="columns is-centered">
+        <div class="column has-text-centered is-5">
+            <div class="control has-icons-left ">
+                 <form class="" method="POST" action="{{ url_for('lo.manage_optimal_course') }}">
+                    {{ search_form.hidden_tag() }}
+                    {{ search_form.q(placeholder="Search by Name...") }}
+                    <span class="icon is-small is-left icon-search">
+                        <i class="search fas fa-2x fa-search"></i>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if courses %}
+    {% if courses.count() == 0 %}
+        <div class="box">
+            <h4 class="title is-4 has-text-centered">
+                {{ _('No Courses found.') }}
+            </h4>
+        </div>
+    {% else %}
+    <div class="box table-container">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+                <tr>
+                    <th class="has-text-centered is-selected has-background-link">ID</th>
+                    <th class="has-text-centered is-selected has-background-link">Name</th>
+                    <th class="has-text-centered is-selected has-background-link">Description</th>
+                    <th class="has-text-centered is-selected has-background-link">Create date</th>
+                    <th class="has-text-centered is-selected has-background-link">Total Time</th>
+                    <th class="has-text-centered is-selected has-background-link">Total Cost</th>
+                    <th class="has-text-centered is-selected has-background-link">Average Reputation</th>
+                    <th class="has-text-centered is-selected has-background-link">fitness_learning_goal</th>
+                    <th class="has-text-centered is-selected has-background-link">fitness_time</th>
+                    <th class="has-text-centered is-selected has-background-link">fitness_cost</th>
+                    <th class="has-text-centered is-selected has-background-link">fitness_reputation</th>
+                    <th class="has-text-centered is-selected has-background-link">fitness_total</th>
+                    <th class="has-text-centered is-selected has-background-link">user_id</th>
+                    <th class="is-selected has-background-link"></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in courses %}
+            <tr>
+                <td><b>{{i.id}}</b></td>
+                <td>{{i.name}}</td>
+                <td>{{i.description}}</td>
+                <td>{{i.create_date}}</td>
+                <td>{{i.total_time}}</td>
+                <td>{{i.total_cost}}</td>
+                <td>{{i.average_reputation}}</td>
+                <td>{{i.fitness_learning_goal}}</td>
+                <td>{{i.fitness_time}}</td>
+                <td>{{i.fitness_cost}}</td>
+                <td>{{i.fitness_reputation}}</td>
+                <td>{{i.fitness_total}}</td>
+                <td>{{i.user_id}}</td>
+                <td class="has-text-centered">
+                    <a href="{{ url_for('lo.manage_optimal_course', delete=True, id=create_hashid(i.id)) }}" class="button is-danger is-rounded">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!-- pagination -->
+         <nav class="pagination" role="navigation" aria-label="pagination" data-target="{{ target }}">
+            <a {% if prev_url %}href="{{ prev_url or '#' }}"{% else %}disabled{% endif %} class="pagination-previous">
+                <span class="icon"><i class="fas fa-chevron-left"></i></span>
+                <span>{{ _('Previous') }}</span>
+            </a>
+            <a {% if next_url %}href="{{ next_url or '#' }}"{% else %}disabled{% endif %} class="pagination-next">
+                <span>{{ _('Next') }}</span>
+                <span class="icon"><i class="fas fa-chevron-right"></i></span>
+            </a>
+        </nav>
+    </div>
+    {% endif %}
+
+{% elif not lista_courses %}
+
+<div class="box">
+    <h4 class="title is-4 has-text-centered">
+        {{ _('There aren\'t Optimal Courses') }}
+    </h4>
+</div>
+
+{% else %}
+<div class="box table-container">
+    <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable ">
+        <thead>
+        <tr >
+            <th class="has-text-centered is-selected has-background-link">ID</th>
+            <th class="has-text-centered is-selected has-background-link">Name</th>
+            <th class="has-text-centered is-selected has-background-link">Description</th>
+            <th class="has-text-centered is-selected has-background-link">Create date</th>
+            <th class="has-text-centered is-selected has-background-link">Total Time</th>
+            <th class="has-text-centered is-selected has-background-link">Total Cost</th>
+            <th class="has-text-centered is-selected has-background-link">Average Reputation</th>
+            <th class="has-text-centered is-selected has-background-link">fitness_learning_goal</th>
+            <th class="has-text-centered is-selected has-background-link">fitness_time</th>
+            <th class="has-text-centered is-selected has-background-link">fitness_cost</th>
+            <th class="has-text-centered is-selected has-background-link">fitness_reputation</th>
+            <th class="has-text-centered is-selected has-background-link">fitness_total</th>
+            <th class="has-text-centered is-selected has-background-link">user_id</th>
+            <th class="has-text-centered is-selected has-background-link has-text-centered" >
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in lista_courses.items %}
+        <tr>
+            <td><b>{{i.id}}</b></td>
+            <td>{{i.name}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.create_date}}</td>
+            <td>{{i.total_time}}</td>
+            <td>{{i.total_cost}}</td>
+            <td>{{i.average_reputation}}</td>
+            <td>{{i.fitness_learning_goal}}</td>
+            <td>{{i.fitness_time}}</td>
+            <td>{{i.fitness_cost}}</td>
+            <td>{{i.fitness_reputation}}</td>
+            <td>{{i.fitness_total}}</td>
+            <td>{{i.user_id}}</td>
+            <td class="has-text-centered"> 
+                <a href="{{ url_for('lo.manage_optimal_course', delete=True, id=create_hashid(i.id)) }}"class="button is-small is-danger is-rounded">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {{ macros.render_pagination(lista_courses) }}
+</div>
+{% endif %}
+<script type="text/javascript">
+</script>
+{% endblock %}

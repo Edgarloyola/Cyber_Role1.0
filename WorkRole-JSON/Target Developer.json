@@ -1,0 +1,294 @@
+{
+    "Target Developer": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0036": "Knowledge of human-computer interaction principles."
+        }, {
+            "K0058": "Knowledge of network traffic analysis methods."
+        }, {
+            "K0108": "Knowledge of concepts, terminology, and operations of a wide range of communications media (computer and telephone networks, satellite, fiber, wireless)."
+        }, {
+            "K0109": "Knowledge of physical computer components and architectures, including the functions of various components and peripherals (e.g., CPUs, Network Interface Cards, data storage)."
+        }, {
+            "K0142": "Knowledge of collection management processes, capabilities, and limitations."
+        }, {
+            "K0177": "Knowledge of cyber attack stages (e.g., reconnaissance, scanning, enumeration, gaining access, escalation of privileges, maintaining access, network exploitation, covering tracks)."
+        }, {
+            "K0349": "Knowledge of website types, administration, functions, and content management system (CMS)."
+        }, {
+            "K0351": "Knowledge of applicable statutes, laws, regulations and policies governing cyber targeting and exploitation."
+        }, {
+            "K0357": "Knowledge of analytical constructs and their use in assessing the operational environment."
+        }, {
+            "K0362": "Knowledge of attack methods and techniques (DDoS, brute force, spoofing, etc.)."
+        }, {
+            "K0379": "Knowledge of client organizations, including information needs, objectives, structure, capabilities, etc."
+        }, {
+            "K0381": "Knowledge of collateral damage and estimating impact(s)."
+        }, {
+            "K0392": "Knowledge of common computer/network infections (virus, Trojan, etc.) and methods of infection (ports, attachments, etc.)."
+        }, {
+            "K0395": "Knowledge of computer networking fundamentals (i.e., basic computer components of a network, types of networks, etc.)."
+        }, {
+            "K0402": "Knowledge of criticality and vulnerability factors (e.g., value, recuperation, cushion, countermeasures) for target selection and applicability to the cyber domain."
+        }, {
+            "K0409": "Knowledge of cyber intelligence/information collection capabilities and repositories."
+        }, {
+            "K0413": "Knowledge of cyber operation objectives, policies, and legalities."
+        }, {
+            "K0417": "Knowledge of data communications terminology (e.g., networking protocols, Ethernet, IP, encryption, optical devices, removable media)."
+        }, {
+            "K0426": "Knowledge of dynamic and deliberate targeting."
+        }, {
+            "K0427": "Knowledge of encryption algorithms and cyber capabilities/tools (e.g., SSL, PGP)."
+        }, {
+            "K0431": "Knowledge of evolving/emerging communications technologies."
+        }, {
+            "K0436": "Knowledge of fundamental cyber operations concepts, terminology/lexicon (i.e., environment preparation, cyber-attack, cyber defense), principles, capabilities, limitations, and effects."
+        }, {
+            "K0437": "Knowledge of general Supervisory control and data acquisition (SCADA) system components."
+        }, {
+            "K0439": "Knowledge of governing authorities for targeting."
+        }, {
+            "K0440": "Knowledge of host-based security products and how those products affect exploitation and reduce vulnerability."
+        }, {
+            "K0444": "Knowledge of how Internet applications work (SMTP email, web-based email, chat clients, VOIP)."
+        }, {
+            "K0445": "Knowledge of how modern digital and telephony networks impact cyber operations."
+        }, {
+            "K0446": "Knowledge of how modern wireless communications systems impact cyber operations."
+        }, {
+            "K0449": "Knowledge of how to extract, analyze, and use metadata."
+        }, {
+            "K0457": "Knowledge of intelligence confidence levels."
+        }, {
+            "K0458": "Knowledge of intelligence disciplines."
+        }, {
+            "K0460": "Knowledge of intelligence preparation of the environment and similar processes."
+        }, {
+            "K0461": "Knowledge of intelligence production processes."
+        }, {
+            "K0464": "Knowledge of intelligence support to planning, execution, and assessment."
+        }, {
+            "K0465": "Knowledge of internal and external partner cyber operations capabilities and tools."
+        }, {
+            "K0466": "Knowledge of internal and external partner intelligence processes and the development of information requirements and essential information."
+        }, {
+            "K0471": "Knowledge of Internet network addressing (IP addresses, classless inter-domain routing, TCP/UDP port numbering)."
+        }, {
+            "K0473": "Knowledge of intrusion sets."
+        }, {
+            "K0478": "Knowledge of legal considerations in targeting."
+        }, {
+            "K0479": "Knowledge of malware analysis and characteristics."
+        }, {
+            "K0497": "Knowledge of operational effectiveness assessment."
+        }, {
+            "K0499": "Knowledge of operations security."
+        }, {
+            "K0507": "Knowledge of organization or partner exploitation of digital networks."
+        }, {
+            "K0516": "Knowledge of physical and logical network devices and infrastructure to include hubs, switches, routers, firewalls, etc."
+        }, {
+            "K0533": "Knowledge of specific target identifiers, and their usage."
+        }, {
+            "K0542": "Knowledge of target development (i.e., concepts, roles, responsibilities, products, etc.)."
+        }, {
+            "K0543": "Knowledge of target estimated repair and recuperation times."
+        }, {
+            "K0546": "Knowledge of target list development (i.e. Restricted, Joint, Candidate, etc.)."
+        }, {
+            "K0547": "Knowledge of target methods and procedures."
+        }, {
+            "K0549": "Knowledge of target vetting and validation procedures."
+        }, {
+            "K0551": "Knowledge of targeting cycles."
+        }, {
+            "K0555": "Knowledge of TCP/IP networking protocols."
+        }, {
+            "K0556": "Knowledge of telecommunications fundamentals."
+        }, {
+            "K0560": "Knowledge of the basic structure, architecture, and design of modern communication networks."
+        }, {
+            "K0561": "Knowledge of the basics of network security (e.g., encryption, firewalls, authentication, honey pots, perimeter protection)."
+        }, {
+            "K0565": "Knowledge of the common networking and routing protocols (e.g. TCP/IP), services (e.g., web, mail, DNS), and how they interact to provide network communications."
+        }, {
+            "K0598": "Knowledge of the structure and intent of organization specific plans, guidance and authorizations."
+        }, {
+            "K0603": "Knowledge of the ways in which targets or threats use the Internet."
+        }, {
+            "K0604": "Knowledge of threat and/or target systems."
+        }, {
+            "K0614": "Knowledge of wireless technologies (e.g., cellular, satellite, GSM) to include the basic structure, architecture, and design of modern wireless communications systems."
+        }],
+        "skills_ids": [{
+            "S0187": "Skill in applying various analytical methods, tools, and techniques (e.g., competing hypotheses; chain of reasoning; scenario methods; denial and deception detection; high impact-low probability; network/association or link analysis; Bayesian, Delphi, and Pattern analyses)."
+        }, {
+            "S0189": "Skill in assessing and/or estimating effects generated during and after cyber operations."
+        }, {
+            "S0194": "Skill in conducting non-attributable research."
+        }, {
+            "S0196": "Skill in conducting research using deep web."
+        }, {
+            "S0203": "Skill in defining and characterizing all pertinent aspects of the operational environment."
+        }, {
+            "S0205": "Skill in determining appropriate targeting options through the evaluation of available capabilities against desired effects."
+        }, {
+            "S0208": "Skill in determining the physical location of network devices."
+        }, {
+            "S0216": "Skill in evaluating available capabilities against desired effects to provide effective courses of action."
+        }, {
+            "S0218": "Skill in evaluating information for reliability, validity, and relevance."
+        }, {
+            "S0222": "Skill in fusion analysis"
+        }, {
+            "S0227": "Skill in identifying alternative analytical interpretations to minimize unanticipated outcomes."
+        }, {
+            "S0228": "Skill in identifying critical target elements, to include critical target elements for the cyber domain."
+        }, {
+            "S0229": "Skill in identifying cyber threats which may jeopardize organization and/or partner interests."
+        }, {
+            "S0248": "Skill in performing target system analysis."
+        }, {
+            "S0249": "Skill in preparing and presenting briefings."
+        }, {
+            "S0256": "Skill in providing understanding of target or threat systems through the identification and link analysis of physical, functional, or behavioral relationships."
+        }, {
+            "S0274": "Skill in reviewing and editing target materials."
+        }, {
+            "S0278": "Skill in tailoring analysis to the necessary levels (e.g., classification and organizational)."
+        }, {
+            "S0285": "Skill in using Boolean operators to construct simple and complex queries."
+        }, {
+            "S0287": "Skill in using geospatial data and applying geospatial resources."
+        }, {
+            "S0288": "Skill in using multiple analytic tools, databases, and techniques (e.g., Analyst's Notebook, A-Space, Anchory, M3, divergent/convergent thinking, link charts, matrices, etc.)."
+        }, {
+            "S0289": "Skill in using multiple search engines (e.g., Google, Yahoo, LexisNexis, DataStar) and tools in conducting open-source searches."
+        }, {
+            "S0292": "Skill in using targeting databases and software packages."
+        }, {
+            "S0296": "Skill in utilizing feedback to improve processes, products, and services."
+        }, {
+            "S0297": "Skill in utilizing virtual collaborative workspaces and/or tools (e.g., IWS, VTCs, chat rooms, SharePoint)."
+        }, {
+            "S0302": "Skill in writing effectiveness reports."
+        }, {
+            "S0360": "Skill to analyze and assess internal and external partner cyber operations capabilities and tools."
+        }, {
+            "S0361": "Skill to analyze and assess internal and external partner intelligence processes and the development of information requirements and essential information."
+        }],
+        "abilities_ids": [{
+            "A0013": "Ability to communicate complex information, concepts, or ideas in a confident and well-organized manner through verbal, written, and/or visual means."
+        }, {
+            "A0066": "Ability to accurately and completely source all data used in intelligence, assessment and/or planning products."
+        }, {
+            "A0073": "Ability to clearly articulate intelligence requirements into well-formulated research questions and requests for information."
+        }, {
+            "A0080": "Ability to develop or recommend analytic approaches or solutions to problems and situations for which information is incomplete or for which no precedent exists."
+        }, {
+            "A0084": "Ability to evaluate, analyze, and synthesize large quantities of data (which may be fragmented and contradictory) into high quality, fused targeting/intelligence products."
+        }, {
+            "A0085": "Ability to exercise judgment when policies are not well-defined."
+        }, {
+            "A0087": "Ability to focus research efforts to meet the customer's decision-making needs."
+        }, {
+            "A0088": "Ability to function effectively in a dynamic, fast-paced environment."
+        }, {
+            "A0089": "Ability to function in a collaborative environment, seeking continuous consultation with other analysts and experts--both internal and external to the organization--to leverage analytical and technical expertise."
+        }, {
+            "A0091": "Ability to identify intelligence gaps."
+        }, {
+            "A0101": "Ability to recognize and mitigate cognitive biases which may affect analysis."
+        }, {
+            "A0102": "Ability to recognize and mitigate deception in reporting and analysis."
+        }, {
+            "A0106": "Ability to think critically."
+        }, {
+            "A0109": "Ability to utilize multiple intelligence sources across all intelligence disciplines."
+        }],
+        "tasks_ids": [{
+            "T0561": "Accurately characterize targets."
+        }, {
+            "T0582": "Provide expertise to course of action development."
+        }, {
+            "T0588": "Provide expertise to the development of measures of effectiveness and measures of performance."
+        }, {
+            "T0594": "Build and maintain electronic target folders."
+        }, {
+            "T0597": "Collaborate with intelligence analysts/targeting organizations involved in related areas."
+        }, {
+            "T0599": "Collaborate with other customer, Intelligence and targeting organizations involved in related cyber areas."
+        }, {
+            "T0617": "Conduct nodal analysis."
+        }, {
+            "T0624": "Conduct target research and analysis."
+        }, {
+            "T0633": "Coordinate target vetting with appropriate partners."
+        }, {
+            "T0642": "Maintain awareness of internal and external cyber organization structures, strengths, and employments of staffing and technology."
+        }, {
+            "T0650": "Determine what technologies are used by a given target."
+        }, {
+            "T0652": "Develop all-source intelligence targeting materials."
+        }, {
+            "T0661": "Develop measures of effectiveness and measures of performance."
+        }, {
+            "T0663": "Develop munitions effectiveness assessment or operational assessment materials."
+        }, {
+            "T0684": "Estimate operational effects generated through cyber activities."
+        }, {
+            "T0688": "Evaluate available capabilities against desired effects to recommend efficient solutions."
+        }, {
+            "T0707": "Generate requests for information."
+        }, {
+            "T0710": "Identify and evaluate threat critical capabilities, requirements, and vulnerabilities."
+        }, {
+            "T0717": "Identify critical target elements."
+        }, {
+            "T0731": "Initiate requests to guide tasking and assist with collection management."
+        }, {
+            "T0744": "Maintain target lists (i.e., RTL, JTL, CTL, etc.)."
+        }, {
+            "T0769": "Perform targeting automation activities."
+        }, {
+            "T0770": "Characterize websites."
+        }, {
+            "T0776": "Produce target system analysis products."
+        }, {
+            "T0781": "Provide aim point and reengagement recommendations."
+        }, {
+            "T0782": "Provide analyses and support for effectiveness assessment."
+        }, {
+            "T0790": "Provide input for targeting effectiveness assessments for leadership acceptance."
+        }, {
+            "T0794": "Provide operations and reengagement recommendations."
+        }, {
+            "T0797": "Provide target recommendations which meet leadership objectives."
+        }, {
+            "T0798": "Provide targeting products and targeting support as designated."
+        }, {
+            "T0799": "Provide time sensitive targeting support."
+        }, {
+            "T0802": "Review appropriate information sources to determine validity and relevance of information gathered."
+        }, {
+            "T0815": "Sanitize and minimize information to protect sources and methods."
+        }, {
+            "T0824": "Support identification and documentation of collateral effects."
+        }, {
+            "T0835": "Work closely with planners, analysts, and collection managers to identify intelligence gaps and ensure intelligence requirements are accurate and up-to-date."
+        }]
+    }
+}

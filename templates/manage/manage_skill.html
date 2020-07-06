@@ -1,0 +1,155 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }} 
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('manage.manage_skill') }}">
+                {{ title }} 
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .box{
+
+        box-shadow: none;
+    }
+
+</style>
+
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+        {{ _('Manage Skills') }}
+    </h2>
+</div>
+
+
+
+<div class="box">
+    <div class="columns is-centered">
+        <div class="column has-text-centered is-5">
+            <div class="control has-icons-left ">
+                 <form class="" method="GET" action="{{ url_for('manage.manage_skill') }}">
+                    {{ search_form.q(placeholder="Search by Description...") }}
+                    <span class="icon is-small is-left icon-search">
+                        <i class="search fas fa-2x fa-search"></i>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if search_skills %}
+    {% if search_skills.count() == 0 %}
+        <div class="box">
+            <h4 class="title is-4 has-text-centered">
+                {{ _('No Skills found.') }}
+            </h4>
+        </div>
+    {% else %}
+    <div class="table-container">
+        <div class="box" id="box_K">
+            <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                    <tr>
+                        <th class="is-selected has-background-link">ID</th>
+                        <th class="is-selected has-background-link">Description</th>
+                        <th class="is-selected has-background-link"></th>
+                        <th class="is-selected has-background-link"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for i in search_skills %}
+                <tr>
+                    <td><b>{{i.id}}</b></td>
+                    <td>{{i.description}}</td>
+                    <td class="has-text-centered">
+                        <a href="{{ url_for('manage.modify_skill', id=create_hashid(i.id)) }}" class="button is-warning is-rounded">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </td>
+                    <td class="has-text-centered">
+                        <a href="{{ url_for('manage.manage_skill', delete=True, id=create_hashid(i.id)) }}" class="button is-danger is-rounded">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <!-- pagination -->
+             <nav class="pagination" role="navigation" aria-label="pagination" data-target="{{ target }}">
+                <a {% if prev_url %}href="{{ prev_url or '#' }}"{% else %}disabled{% endif %} class="pagination-previous">
+                    <span class="icon"><i class="fas fa-chevron-left"></i></span>
+                    <span>{{ _('Previous') }}</span>
+                </a>
+                <a {% if next_url %}href="{{ next_url or '#' }}"{% else %}disabled{% endif %} class="pagination-next">
+                    <span>{{ _('Next') }}</span>
+                    <span class="icon"><i class="fas fa-chevron-right"></i></span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+{% elif not lista_S %}
+<div class="box">
+    <h4 class="title is-4 has-text-centered">
+        {{ _('There aren\'t Skills') }}
+    </h4>
+</div>
+{% else %}
+<div class="table-container">
+    <div class="box" id="box_K">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+            <tr>
+                <th class="is-selected has-background-link">ID</th>
+                <th class="is-selected has-background-link">Description</th>
+                <th class="is-selected has-background-link has-text-centered">
+                    <a href="{{ url_for('manage.add_skill') }}" class="is-success is-rounded">
+                        <i class="fas fa-plus-circle fa-2x"></i>
+                    </a>
+                </th>
+                <th class="is-selected has-background-link"></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in lista_S.items %}
+            <tr>
+                <td><b>{{i.id}}</b></td>
+                <td>{{i.description}}</td>
+                <td class="has-text-centered"> 
+                    <a href="{{ url_for('manage.modify_skill', id=create_hashid(i.id)) }}" class="button is-warning is-rounded">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                </td>
+                <td class="has-text-centered"> 
+                    <a href="{{ url_for('manage.manage_skill', delete=True, id=create_hashid(i.id)) }}"class="button is-danger is-rounded">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ macros.render_pagination(lista_S) }}
+    </div>
+</div>
+{% endif %}
+<script type="text/javascript">
+</script>
+{% endblock %}

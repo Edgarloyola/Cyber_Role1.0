@@ -1,0 +1,85 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('lo.show_evolution') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+        font-size:25px
+    }
+</style>
+
+
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            {{ _(title) }}
+        </h3>
+    </div>
+
+
+    <div class="box has-text-centered">
+        <b>Graphs of percentages of KSAs with their levels and according to their dates, of how a user evolves over time with the training of optimal cyber security courses.</b>
+    </div>
+
+    <div id="chart_div" class="is-center" style="width: 100%; height: 100%;"></div>
+
+
+<script type="text/javascript">
+    //3D PIE CHART
+    google.charts.load("current", {packages: ["corechart"]});
+
+    google.charts.setOnLoadCallback(drawChart);
+
+    var array = {{ data|safe }};
+    var values = Object.values(array);
+    var dates = {{dates|safe}};
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'KSA');
+
+      for (var i = 0; i < dates.length; i++) {
+        data.addColumn('number', dates[i]);
+      }
+
+      //Insertamos los valores de las columnas de level of ksas
+      data.addRows(values[0]);
+
+      var options = {
+        title : 'Level of KSA by Date',
+        seriesType: 'bars',
+        height: 700,
+        vAxis: {title: 'Level',
+              gridlines: {
+          interval: [1],
+        }},
+        hAxis: {title: 'KSA'},
+         /*series: {5: {type: 'line'}}*/
+      };
+
+      var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+
+</script>
+{% endblock %}

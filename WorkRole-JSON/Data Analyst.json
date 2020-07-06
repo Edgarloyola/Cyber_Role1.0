@@ -1,0 +1,180 @@
+{
+    "Data Analyst": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0015": "Knowledge of computer algorithms."
+        }, {
+            "K0016": "Knowledge of computer programming principles"
+        }, {
+            "K0020": "Knowledge of data administration and data standardization policies."
+        }, {
+            "K0022": "Knowledge of data mining and data warehousing principles."
+        }, {
+            "K0023": "Knowledge of database management systems, query languages, table relationships, and views."
+        }, {
+            "K0025": "Knowledge of digital rights management."
+        }, {
+            "K0031": "Knowledge of enterprise messaging systems and associated software."
+        }, {
+            "K0051": "Knowledge of low-level computer languages (e.g., assembly languages)."
+        }, {
+            "K0052": "Knowledge of mathematics (e.g. logarithms, trigonometry, linear algebra, calculus, statistics, and operational analysis)."
+        }, {
+            "K0056": "Knowledge of network access, identity, and access management (e.g., public key infrastructure, Oauth, OpenID, SAML, SPML)."
+        }, {
+            "K0060": "Knowledge of operating systems."
+        }, {
+            "K0065": "Knowledge of policy-based and risk adaptive access controls."
+        }, {
+            "K0068": "Knowledge of programming language structures and logic."
+        }, {
+            "K0069": "Knowledge of query languages such as SQL (structured query language)."
+        }, {
+            "K0083": "Knowledge of sources, characteristics, and uses of the organization's data assets."
+        }, {
+            "K0095": "Knowledge of the capabilities and functionality associated with various technologies for organizing and managing information (e.g., databases, bookmarking engines)."
+        }, {
+            "K0129": "Knowledge of command-line tools (e.g., mkdir, mv, ls, passwd, grep)."
+        }, {
+            "K0139": "Knowledge of interpreted and compiled computer languages."
+        }, {
+            "K0140": "Knowledge of secure coding techniques."
+        }, {
+            "K0193": "Knowledge of advanced data remediation security features in databases."
+        }, {
+            "K0197": "Knowledge of database access application programming interfaces (e.g., Java Database Connectivity [JDBC])."
+        }, {
+            "K0229": "Knowledge of applications that can log errors, exceptions, and application faults and logging."
+        }, {
+            "K0236": "Knowledge of how to utilize Hadoop, Java, Python, SQL, Hive, and PIG to explore data."
+        }, {
+            "K0238": "Knowledge of machine learning theory and principles."
+        }, {
+            "K0325": "Knowledge of Information Theory (e.g., source coding, channel coding, algorithm complexity theory, and data compression)."
+        }, {
+            "K0420": "Knowledge of database theory."
+        }],
+        "skills_ids": [{
+            "S0013": "Skill in conducting queries and developing algorithms to analyze data structures."
+        }, {
+            "S0017": "Skill in creating and utilizing mathematical or statistical models."
+        }, {
+            "S0028": "Skill in developing data dictionaries."
+        }, {
+            "S0029": "Skill in developing data models."
+        }, {
+            "S0037": "Skill in generating queries and reports."
+        }, {
+            "S0060": "Skill in writing code in a currently supported programming language (e.g., Java, C++)."
+        }, {
+            "S0088": "Skill in using binary analysis tools (e.g., Hexedit, command code xxd, hexdump)."
+        }, {
+            "S0089": "Skill in one-way hash functions (e.g., Secure Hash Algorithm [SHA], Message Digest Algorithm [MD5])."
+        }, {
+            "S0094": "Skill in reading Hexadecimal data."
+        }, {
+            "S0095": "Skill in identifying common encoding techniques (e.g., Exclusive Disjunction [XOR], American Standard Code for Information Interchange [ASCII], Unicode, Base64, Uuencode, Uniform Resource Locator [URL] encode)."
+        }, {
+            "S0103": "Skill in assessing the predictive power and subsequent generalizability of a model."
+        }, {
+            "S0106": "Skill in data pre-processing (e.g., imputation, dimensionality reduction, normalization, transformation, extraction, filtering, smoothing)."
+        }, {
+            "S0109": "Skill in identifying hidden patterns or relationships."
+        }, {
+            "S0113": "Skill in performing format conversions to create a standard representation of the data."
+        }, {
+            "S0114": "Skill in performing sensitivity analysis."
+        }, {
+            "S0118": "Skill in developing machine understandable semantic ontologies."
+        }, {
+            "S0119": "Skill in Regression Analysis (e.g., Hierarchical Stepwise, Generalized Linear Model, Ordinary Least Squares, Tree-Based Methods, Logistic)."
+        }, {
+            "S0123": "Skill in transformation analytics (e.g., aggregation, enrichment, processing)."
+        }, {
+            "S0125": "Skill in using basic descriptive statistics and techniques (e.g., normality, model distribution, scatter plots)."
+        }, {
+            "S0126": "Skill in using data analysis tools (e.g., Excel, STATA SAS, SPSS)."
+        }, {
+            "S0127": "Skill in using data mapping tools."
+        }, {
+            "S0129": "Skill in using outlier identification and removal techniques."
+        }, {
+            "S0130": "Skill in writing scripts using R, Python, PIG, HIVE, SQL, etc."
+        }, {
+            "S0160": "Skill in the use of design modeling (e.g., unified modeling language)."
+        }, {
+            "S0202": "Skill in data mining techniques (e.g., searching file systems) and analysis."
+        }, {
+            "S0369": "Skill to identify sources, characteristics, and uses of the organization's data assets."
+        }],
+        "abilities_ids": [{
+            "A0029": "Ability to build complex data structures and high-level programming languages."
+        }, {
+            "A0035": "Ability to dissect a problem and examine the interrelationships between data that may appear unrelated."
+        }, {
+            "A0036": "Ability to identify basic common coding flaws at a high level."
+        }, {
+            "A0041": "Ability to use data visualization tools (e.g., Flare, HighCharts, AmCharts, D3.js, Processing, Google Visualization API, Tableau, Raphael.js)."
+        }, {
+            "A0066": "Ability to accurately and completely source all data used in intelligence, assessment and/or planning products."
+        }],
+        "tasks_ids": [{
+            "T0007": "Analyze and define data requirements and specifications."
+        }, {
+            "T0008": "Analyze and plan for anticipated changes in data capacity requirements."
+        }, {
+            "T0068": "Develop data standards, policies, and procedures."
+        }, {
+            "T0146": "Manage the compilation, cataloging, caching, distribution, and retrieval of data."
+        }, {
+            "T0195": "Provide a managed flow of relevant information (via web-based portals or other means) based on mission requirements."
+        }, {
+            "T0210": "Provide recommendations on new database technologies and architectures."
+        }, {
+            "T0342": "Analyze data sources to provide actionable recommendations."
+        }, {
+            "T0347": "Assess the validity of source data and subsequent findings."
+        }, {
+            "T0349": "Collect metrics and trending data."
+        }, {
+            "T0351": "Conduct hypothesis testing using statistical processes."
+        }, {
+            "T0353": "Confer with systems analysts, engineers, programmers, and others to design application."
+        }, {
+            "T0361": "Develop and facilitate data-gathering methods."
+        }, {
+            "T0366": "Develop strategic insights from large data sets."
+        }, {
+            "T0381": "Present technical information to technical and nontechnical audiences."
+        }, {
+            "T0382": "Present data in creative formats."
+        }, {
+            "T0383": "Program custom algorithms."
+        }, {
+            "T0385": "Provide actionable recommendations to critical stakeholders based on data analysis and findings."
+        }, {
+            "T0392": "Utilize technical documentation or resources to implement a new mathematical, data science, or computer science method."
+        }, {
+            "T0402": "Effectively allocate storage capacity in the design of data management systems."
+        }, {
+            "T0403": "Read, interpret, write, modify, and execute simple scripts (e.g., Perl, VBScript) on Windows and UNIX systems (e.g., those that perform tasks such as: parsing large data files, automating manual tasks, and fetching/processing remote data)."
+        }, {
+            "T0404": "Utilize different programming languages to write code, open files, read files, and write output to different files."
+        }, {
+            "T0405": "Utilize open source language such as R and apply quantitative techniques (e.g., descriptive and inferential statistics, sampling, experimental design, parametric and non-parametric tests of difference, ordinary least squares regression, general line)."
+        }, {
+            "T0460": "Develop and implement data mining and data warehousing programs."
+        }]
+    }
+}

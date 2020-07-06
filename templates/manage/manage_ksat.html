@@ -1,0 +1,167 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }} 
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('manage.manage_ksat') }}">
+                {{ title }} 
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+
+        font-size:25px
+
+    }
+
+    #next{
+        box-shadow: none;
+    }
+
+
+    .box{
+        box-shadow: none;
+    }
+
+
+</style>
+
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+        {{ _('Manage KSATs') }}
+    </h2>
+</div>
+
+
+<div class="box">
+    <div class="columns is-centered">
+        <div class="column has-text-centered is-5">
+            <div class="control has-icons-left ">
+                 <form class="" method="GET" action="{{ url_for('manage.manage_ksat') }}">
+                    {{ search_form.q(placeholder="Search by Name...") }}
+                    <span class="icon is-small is-left icon-search">
+                        <i class="search fas fa-2x fa-search"></i>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% if search_ksats %}
+
+    {% if search_ksats.count() == 0 %}
+        <div class="box">
+            <h4 class="title is-4 has-text-centered">
+                {{ _('No Ksats found.') }}
+            </h4>
+        </div>
+    {% else %}
+    <div class="table-container">
+        <div class="box">
+            <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+                <thead>
+                    <tr>
+                        <th class="is-selected has-background-link">ID</th>
+                        <th class="is-selected has-background-link">Name</th>
+                        <th class="is-selected has-background-link">Date</th>
+                        <th class="is-selected has-background-link">KSAT</th>
+                        <th class="is-selected has-background-link">User_ID</th>
+                        <th class="is-selected has-background-link"></th>
+                        <th class="is-selected has-background-link"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for i in search_ksats %}
+                <tr>
+                    <td><b>{{i.id}}</b></td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.date}}</td>
+                    <td>{{i.ksat_ids}}</td>
+                    <td>{{i.user_id}}</td>
+                    <td class="has-text-centered">
+                        <a href="{{ url_for('manage.manage_ksat', delete=True, id=create_hashid(i.id)) }}" class="button is-danger is-rounded">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <!-- pagination -->
+             <nav class="pagination" role="navigation" aria-label="pagination" data-target="{{ target }}">
+                <a {% if prev_url %}href="{{ prev_url or '#' }}"{% else %}disabled{% endif %} class="pagination-previous">
+                    <span class="icon"><i class="fas fa-chevron-left"></i></span>
+                    <span>{{ _('Previous') }}</span>
+                </a>
+                <a {% if next_url %}href="{{ next_url or '#' }}"{% else %}disabled{% endif %} class="pagination-next">
+                    <span>{{ _('Next') }}</span>
+                    <span class="icon"><i class="fas fa-chevron-right"></i></span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    {% endif %}
+
+{% elif not lista_ksat %}
+
+<div class="box">
+    <h4 class="title is-4 has-text-centered">
+        {{ _('There aren\'t KSATs') }}
+    </h4>
+</div>
+
+{% else %}
+<div class="table-container">
+    <div class="box">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+            <tr>
+                <th class="is-selected has-background-link">ID</th>
+                <th class="is-selected has-background-link">Name</th>
+                <th class="is-selected has-background-link">Date</th>
+                <th class="is-selected has-background-link">KSAT</th>
+                <th class="is-selected has-background-link">User_ID</th>
+                <th class="is-selected has-background-link"></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in lista_ksat.items %}
+            <tr>
+                <td><b>{{i.id}}</b></td>
+                <td>{{i.name}}</td>
+                <td>{{i.date}}</td>
+                <td>{{i.ksat_ids}}</td>
+                <td>{{i.user_id}}</td>
+                <td class="has-text-centered"> 
+                    <a href="{{ url_for('manage.manage_ksat', delete=True, id=create_hashid(i.id)) }}"class="button is-danger is-rounded">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ macros.render_pagination(lista_ksat) }}
+    </div>
+</div>
+{% endif %}
+<script type="text/javascript">
+</script>
+{% endblock %}

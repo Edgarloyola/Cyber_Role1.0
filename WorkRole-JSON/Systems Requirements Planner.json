@@ -1,0 +1,160 @@
+{
+    "Systems Requirements Planner": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0008": "Knowledge of applicable business processes and operations of customer organizations."
+        }, {
+            "K0012": "Knowledge of capabilities and requirements analysis."
+        }, {
+            "K0018": "Knowledge of encryption algorithms"
+        }, {
+            "K0019": "Knowledge of cryptography and cryptographic key management concepts"
+        }, {
+            "K0032": "Knowledge of resiliency and redundancy."
+        }, {
+            "K0035": "Knowledge of installation, integration, and optimization of system components."
+        }, {
+            "K0038": "Knowledge of cybersecurity and privacy principles used to manage risks related to the use, processing, storage, and transmission of information or data."
+        }, {
+            "K0043": "Knowledge of industry-standard and organizationally accepted analysis principles and methods."
+        }, {
+            "K0044": "Knowledge of cybersecurity and privacy principles and organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "K0045": "Knowledge of information security systems engineering principles (NIST SP 800-160)."
+        }, {
+            "K0047": "Knowledge of information technology (IT) architectural concepts and frameworks."
+        }, {
+            "K0055": "Knowledge of microprocessors."
+        }, {
+            "K0056": "Knowledge of network access, identity, and access management (e.g., public key infrastructure, Oauth, OpenID, SAML, SPML)."
+        }, {
+            "K0059": "Knowledge of new and emerging information technology (IT) and cybersecurity technologies."
+        }, {
+            "K0060": "Knowledge of operating systems."
+        }, {
+            "K0061": "Knowledge of how traffic flows across the network (e.g., Transmission Control Protocol [TCP] and Internet Protocol [IP], Open System Interconnection Model [OSI], Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0063": "Knowledge of parallel and distributed computing concepts."
+        }, {
+            "K0066": "Knowledge of Privacy Impact Assessments."
+        }, {
+            "K0067": "Knowledge of process engineering concepts."
+        }, {
+            "K0073": "Knowledge of secure configuration management techniques."
+        }, {
+            "K0074": "Knowledge of key concepts in security management (e.g., Release Management, Patch Management)."
+        }, {
+            "K0086": "Knowledge of system design tools, methods, and techniques, including automated systems analysis and design tools."
+        }, {
+            "K0087": "Knowledge of system software and organizational design standards, policies, and authorized approaches (e.g., International Organization for Standardization [ISO] guidelines) relating to system design."
+        }, {
+            "K0090": "Knowledge of system life cycle management principles, including software security and usability."
+        }, {
+            "K0091": "Knowledge of systems testing and evaluation methods."
+        }, {
+            "K0093": "Knowledge of telecommunications concepts (e.g., Communications channel, Systems Link Budgeting, Spectral efficiency, Multiplexing)."
+        }, {
+            "K0101": "Knowledge of the organization's enterprise information technology (IT) goals and objectives."
+        }, {
+            "K0102": "Knowledge of the systems engineering process."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0163": "Knowledge of critical information technology (IT) procurement requirements."
+        }, {
+            "K0164": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+        }, {
+            "K0168": "Knowledge of applicable laws, statutes (e.g., in Titles 10,18,32,50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures."
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0170": "Knowledge of critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }, {
+            "K0180": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+        }, {
+            "K0200": "Knowledge of service management concepts for networks and related standards (e.g., Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0267": "Knowledge of laws, policies, procedures, or governance relevant to cybersecurity for critical infrastructures."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0325": "Knowledge of Information Theory (e.g., source coding, channel coding, algorithm complexity theory, and data compression)."
+        }, {
+            "K0332": "Knowledge of network protocols such as TCP/IP, Dynamic Host Configuration, Domain Name System (DNS), and directory services."
+        }, {
+            "K0333": "Knowledge of network design processes, to include understanding of security objectives, operational objectives, and trade-offs."
+        }, {
+            "K0622": "Knowledge of controls related to the use, processing, storage, and transmission of data."
+        }],
+        "skills_ids": [{
+            "S0005": "Skill in applying and incorporating information technologies into proposed solutions."
+        }, {
+            "S0006": "Skill in applying confidentiality, integrity, and availability principles."
+        }, {
+            "S0008": "Skill in applying organization-specific systems analysis principles and techniques."
+        }, {
+            "S0010": "Skill in conducting capabilities and requirements analysis."
+        }, {
+            "S0050": "Skill in design modeling and building use cases (e.g., unified modeling language)."
+        }, {
+            "S0134": "Skill in conducting reviews of systems."
+        }, {
+            "S0367": "Skill to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }],
+        "abilities_ids": [{
+            "A0064": "Ability to interpret and translate customer requirements into operational capabilities."
+        }, {
+            "A0123": "Ability to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "A0170": "Ability to identify critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }],
+        "tasks_ids": [{
+            "T0033": "Conduct risk analysis, feasibility study, and/or trade-off analysis to develop, document, and refine functional requirements and specifications."
+        }, {
+            "T0039": "Consult with customers to evaluate functional requirements."
+        }, {
+            "T0045": "Coordinate with systems architects and developers, as needed, to provide oversight in the development of design solutions."
+        }, {
+            "T0052": "Define project scope and objectives based on customer requirements."
+        }, {
+            "T0062": "Develop and document requirements, capabilities, and constraints for design procedures and processes."
+        }, {
+            "T0127": "Integrate and align information security and/or cybersecurity policies to ensure that system analysis meets security requirements."
+        }, {
+            "T0156": "Oversee and make recommendations regarding configuration management."
+        }, {
+            "T0174": "Perform needs analysis to determine opportunities for new and improved business process solutions."
+        }, {
+            "T0191": "Prepare use cases to justify the need for specific information technology (IT) solutions."
+        }, {
+            "T0235": "Translate functional requirements into technical solutions."
+        }, {
+            "T0273": "Develop and document supply chain risks for critical system elements, as appropriate."
+        }, {
+            "T0300": "Develop and document User Experience (UX) requirements including information architecture and user interface requirements."
+        }, {
+            "T0313": "Design and document quality standards."
+        }, {
+            "T0325": "Document a system's purpose and preliminary system security concept of operations."
+        }, {
+            "T0334": "Ensure that all systems components can be integrated and aligned (e.g., procedures, databases, policies, software, and hardware)."
+        }, {
+            "T0454": "Define baseline security requirements in accordance with applicable guidelines."
+        }, {
+            "T0463": "Develop cost estimates for new or modified system(s)."
+        }, {
+            "T0497": "Manage the information technology (IT) planning process to ensure that developed solutions meet customer requirements."
+        }]
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "Communications Security (COMSEC) Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0018": "Knowledge of encryption algorithms"
+        }, {
+            "K0026": "Knowledge of business continuity and disaster recovery continuity of operations plans."
+        }, {
+            "K0038": "Knowledge of cybersecurity and privacy principles used to manage risks related to the use, processing, storage, and transmission of information or data."
+        }, {
+            "K0042": "Knowledge of incident response and handling methodologies."
+        }, {
+            "K0090": "Knowledge of system life cycle management principles, including software security and usability."
+        }, {
+            "K0101": "Knowledge of the organization's enterprise information technology (IT) goals and objectives."
+        }, {
+            "K0121": "Knowledge of information security program management and project management principles and techniques."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0163": "Knowledge of critical information technology (IT) procurement requirements."
+        }, {
+            "K0267": "Knowledge of laws, policies, procedures, or governance relevant to cybersecurity for critical infrastructures."
+        }, {
+            "K0285": "Knowledge of implementing enterprise key escrow systems to support data-at-rest encryption."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0622": "Knowledge of controls related to the use, processing, storage, and transmission of data."
+        }],
+        "skills_ids": [{
+            "S0027": "Skill in determining how a security system should work (including its resilience and dependability capabilities) and how changes in conditions, operations, or the environment will affect these outcomes."
+        }, {
+            "S0059": "Skill in using Virtual Private Network (VPN) devices and encryption."
+        }, {
+            "S0138": "Skill in using Public-Key Infrastructure (PKI) encryption and digital signature capabilities into applications (e.g., S/MIME email, SSL traffic)."
+        }],
+        "abilities_ids": [{
+            "A0162": "Ability to recognize the unique aspects of the Communications Security (COMSEC) environment and hierarchy."
+        }, {
+            "A0163": "Ability to interpret Communications Security (COMSEC) terminology, guidelines and procedures."
+        }, {
+            "A0164": "Ability to identify the roles and responsibilities for appointed Communications Security (COMSEC) personnel."
+        }, {
+            "A0165": "Ability to manage Communications Security (COMSEC) material accounting, control and use procedure."
+        }, {
+            "A0166": "Ability to identify types of Communications Security (COMSEC) Incidents and how they're reported"
+        }, {
+            "A0167": "Ability to recognize the importance of auditing Communications Security (COMSEC) material and accounts."
+        }, {
+            "A0168": "Ability to Identify the requirements of In-Process accounting for Communications Security (COMSEC)"
+        }],
+        "tasks_ids": [{
+            "T0003": "Advise senior management (e.g., Chief Information Officer [CIO]) on risk levels and security posture."
+        }, {
+            "T0004": "Advise senior management (e.g., CIO) on cost/benefit analysis of information security programs, policies, processes, systems, and elements."
+        }, {
+            "T0025": "Communicate the value of information technology (IT) security throughout all levels of the organization stakeholders."
+        }, {
+            "T0044": "Collaborate with stakeholders to establish the enterprise continuity of operations program, strategy, and mission assurance."
+        }, {
+            "T0089": "Ensure that security improvement actions are evaluated, validated, and implemented as required."
+        }, {
+            "T0095": "Establish overall enterprise information security architecture (EISA) with the organization's overall security strategy."
+        }, {
+            "T0099": "Evaluate cost/benefit, economic, and risk analysis in decision-making process."
+        }, {
+            "T0215": "Recognize a possible security violation and take appropriate action to report the incident, as required."
+        }, {
+            "T0229": "Supervise or manage protective or corrective measures when a cybersecurity incident or vulnerability is discovered."
+        }]
+    }
+}

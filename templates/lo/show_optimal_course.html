@@ -1,0 +1,542 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li >
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('lo.show_lo_optimal') }}">
+                {{ _(title) }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+
+{% block content_courses %}
+<style>
+
+    .slider-pagination .slider-page{
+        background: black;
+        margin-bottom: -10px;
+    }
+
+    #next{
+        box-shadow: none;
+    }
+
+    #q{
+        text-indent: 30px;
+        width: 500px;
+        height: 40px;
+    }
+
+    #left-container{
+        overflow: scroll; 
+        width: 100%;
+    }
+
+    #filters{
+        /*padding-left: 50px;*/
+        /*padding-bottom: 0px;*/
+    }
+
+    #title{
+        padding-bottom: 10px;
+    }
+
+    #menu-filter{
+
+        /*padding-top: 100%;
+        padding-bottom: 100%;*/
+        padding: 50px;
+        height: 100%;
+
+    }
+
+    .my-item :hover{
+        background-color:#f2f2f2 !important;
+    }
+
+    input[type=checkbox] {
+      vertical-align: middle;
+      position: relative;
+      bottom: 1px;
+    }
+
+    input[type=number]{
+      width: 30%;
+    }
+
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+
+</style>
+
+
+{% if conectionFailed %}
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">{{ _('Microservice connection failure or Celery conection failure.') }}</h3>
+    </div>
+
+{% elif search %}
+    <h2 id="title" class="title is-2 has-text-centered">
+        {{ _('Optimal CyberWorkRole Courses') }}
+    </h2>
+    <div class="table-container">
+        <section class="section">
+            <div class="container has-text-centered">
+                <!-- Start Carousel -->
+                {% if search.items %}
+                    <div id="carousel-demo" class="carousel">
+                        {% for i in search.items %}
+                            <div class="item-{{i}} my-item">
+                                <!-- Slide Content -->
+                                <div class="box">
+                                    <a href="{{ url_for('lo.do_course',id = create_hashid(i.id)) }}">
+                                        <img src="{{url_for('static', filename='img/cyber1.jpg')}}" align="middle" />
+                                    </a>
+                                    <p><label class="label">Title</label>{{i.name}}</p>
+                                    <p><label class="label">Description</label>
+                                        {{i.description}}
+                                    </p>
+                                    <p><strong>Publication Date:  </strong>
+                                        {{i.create_date.strftime("%d/%m/%Y, %H:%M:%S")}}
+                                    </p>
+                                    <p>
+                                        <strong>Time: </strong>
+                                        {{(i.total_time/60)|round(1, 'floor')}} Horas
+                                    </p>
+                                    <p><strong>Cost: </strong>{{i.total_cost}}€</p>
+                                    <p><strong>Reputation: </strong>{{i.average_reputation}}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div id="carousel-demo" class="carousel">
+                        {% for i in search %}
+                            <div class="item-{{i}} my-item">
+                                <!-- Slide Content -->
+                                <div class="box">
+                                    <a href="{{ url_for('lo.do_course',id = create_hashid(i.id)) }}">
+                                        <img src="{{url_for('static', filename='img/cyber1.jpg')}}" align="middle" />
+                                    </a>
+                                    <p><label class="label">Title</label>{{i.name}}</p>
+                                    <p><label class="label">Description</label>
+                                        {{i.description}}
+                                    </p>
+                                    <p><strong>Publication Date:  </strong>
+                                        {{i.create_date.strftime("%d/%m/%Y, %H:%M:%S")}}
+                                    </p>
+                                    <p>
+                                        <strong>Time: </strong>
+                                        {{(i.total_time/60)|round(1, 'floor')}} Horas
+                                    </p>
+                                    <p><strong>Cost: </strong>{{i.total_cost}}€</p>
+                                    <p><strong>Reputation: </strong>{{i.average_reputation}}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <!-- End Carousel -->
+            </div>
+        </section>
+        <!-- pagination -->
+         <nav class="pagination" role="navigation" aria-label="pagination" data-target="{{ target }}">
+            <a {% if prev_url %}href="{{ prev_url or '#' }}"{% else %}disabled{% endif %} class="pagination-previous">
+                <span class="icon"><i class="fas fa-chevron-left"></i></span>
+                <span>{{ _('Previous') }}</span>
+            </a>
+            <a {% if next_url %}href="{{ next_url or '#' }}"{% else %}disabled{% endif %} class="pagination-next">
+                <span>{{ _('Next') }}</span>
+                <span class="icon"><i class="fas fa-chevron-right"></i></span>
+            </a>
+        </nav>
+    </div>
+
+{% else %}
+
+    {% if notCourses or not_courses_elastic %}
+        <div class="box">
+            <h3 class="title is-3 has-text-centered">{{ _('There aren\'t Optimal Courses.') }}</h3>
+        </div>
+    {% else %}
+<div class="is-wrapped">
+    <div class="columns">
+        <aside id="filters" class="column is-3 aside">
+            <nav id="menu-filter" class=" has-background-grey-lighter menu">
+                <p class="menu-label has-text-weight-bold">Filters</p>
+
+                <ul class="menu-list">
+                    {% if g.filter_form %}
+                    <form id="s_filter" method="GET" action="{{ url_for('lo.search') }}">
+                        <li>
+                            <a><i class="fas fa-euro-sign"></i> Cost
+                                <span >{{g.filter_form.cost}}</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <p>{{ g.filter_form.cost_min.label }}
+                                        <span>
+                                            <input type="number" min='{{g.filter_form.cost_min.data}}' max='{{g.filter_form.cost_max.data}}' id="selected-cost-min" value='{{g.filter_form.cost_min.data}}' oninput="inputUpdate(this,'cost_min')" >
+                                        </span>
+                                    </p>
+                                    {{ g.filter_form.cost_min( oninput="outputUpdate('selected-cost-min',value)") }}
+                                </li>
+                                <li>
+                                    <p>{{ g.filter_form.cost_max.label }}
+                                        <span>
+                                            <input type="number" min='{{g.filter_form.cost_min.data}}' max='{{g.filter_form.cost_max.data}}' id="selected-cost-max" value='{{g.filter_form.cost_max.data}}' oninput="inputUpdate(this,'cost_max')" >
+                                        </span>
+                                    </p>
+                                    {{ g.filter_form.cost_max( oninput="outputUpdate('selected-cost-max',value)") }}
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="far fa-clock"></i> Time
+                                <span >{{g.filter_form.time}}</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <p>{{ g.filter_form.time_min.label }}
+                                        <span>
+                                            <input type="number" min='{{g.filter_form.time_min.data}}' max='{{g.filter_form.time_max.data}}' id="selected-time-min" value='{{g.filter_form.time_min.data}}' oninput="inputUpdate(this,'time_min')" >
+                                        </span>
+                                    </p>
+                                    {{ g.filter_form.time_min( oninput="outputUpdate('selected-time-min',value)") }}
+                                </li>
+                                <li>
+                                    <p>{{ g.filter_form.time_max.label }}
+                                        <span>
+                                            <input type="number" min='{{g.filter_form.time_min.data}}' max='{{g.filter_form.time_max.data}}' id="selected-time-max" value='{{g.filter_form.time_max.data}}' oninput="inputUpdate(this,'time_max')" >
+                                        </span>
+                                    </p>
+                                    {{ g.filter_form.time_max( oninput="outputUpdate('selected-time-max',value)") }}
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="fas fa-star"></i> Reputation
+                                <span >{{g.filter_form.reput}}</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <p>{{ g.filter_form.reput_min.label }}
+                                        <span>
+                                            <input type="number" min='{{g.filter_form.reput_min.data}}' max='{{g.filter_form.reput_max.data}}' id="selected-reput-min" value='{{g.filter_form.reput_min.data}}' oninput="inputUpdate(this,'reput_min')" >
+                                        </span>
+                                    </p>
+                                    {{ g.filter_form.reput_min( oninput="outputUpdate('selected-reput-min',value)") }}
+                                </li>
+                                <li>
+                                    <p>{{ g.filter_form.reput_max.label }}
+                                        <span>
+                                            <input type="number" min='{{g.filter_form.reput_min.data}}' max='{{g.filter_form.reput_max.data}}' id="selected-reput-max" value='{{g.filter_form.reput_max.data}}' oninput="inputUpdate(this,'reput_max')" >
+                                        </span>
+                                    </p>
+                                    {{ g.filter_form.reput_max( oninput="outputUpdate('selected-reput-max',value)") }}
+                                </li>
+                            </ul>
+                        </li>
+                        {# Submit #}
+                        {{ macros.render_submit(g.filter_form.submit, label=_('Search')) }}
+                    </form>
+                    {% endif %}
+                </ul>
+            </nav>
+        </aside>
+
+
+    <main id="left-container" class="column main">
+        <div class="box">
+            <h2 id="title" class="title is-2">
+                {{ _('Optimal CyberWorkRole Courses') }}
+            </h2>
+
+            <div class="columns">
+                <div class="column is-5">
+                    <div class="control has-icons-left ">
+                         <form class="" method="GET" action="{{ url_for('lo.search') }}">
+                            {{ search_form.hidden_tag() }}
+                            {{ search_form.q(placeholder=search_form.q.label.text) }}
+                            <span class="icon is-small is-left icon-search">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+            <section class="section">
+                <div class="container">
+                    <!-- Start Carousel -->
+                    <div id="carousel-demo" class="carousel">
+                        {% for i in range(25) %}
+                            {% if list_courses.items[i] %}
+                            <div class="item-{{i}} my-item">
+                                <!-- Slide Content -->
+                                <div class="box ">
+                                    <a href="{{ url_for('lo.do_course',id = create_hashid(list_courses.items[i].id)) }}">
+                                        <img src="{{url_for('static', filename='img/cyber1.jpg')}}" align="middle" />
+                                    </a>
+                                    <p><label class="label">Title</label>{{list_courses.items[i].name}}</p>
+                                    <p><label class="label">Description</label>
+                                        {{list_courses.items[i].description}}
+                                    </p>
+
+                                    <p><strong>Publication Date:  </strong>{{list_courses.items[i].create_date.strftime("%d/%m/%Y, %H:%M:%S")}}</p>
+                                    <p>
+                                        <strong>Time: </strong>
+                                        {{(list_courses.items[i].total_time/60)|round(1, 'floor')}} Horas
+                                    </p>
+                                    <p><strong>Cost: </strong>{{list_courses.items[i].total_cost}}€</p>
+                                    <p><strong>Reputation: </strong>{{list_courses.items[i].average_reputation}}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- End Carousel -->
+                </div>
+            </section>
+            {% if list_courses.items[25] %}
+            <section class="section">
+                <div class="container">
+                    <!-- Start Carousel -->
+                    <div id="carousel-demo" class="carousel">
+                        {% for i in range(25,50) %}
+                            {% if list_courses.items[i] %}
+                            <div class="item-{{i}} my-item">
+                                <!-- Slide Content -->
+                                <div class="box">
+                                    <a href="{{ url_for('lo.do_course',id = create_hashid(list_courses.items[i].id)) }}">
+                                        <img src="{{url_for('static', filename='img/cyber2.jpeg')}}" align="middle" />
+                                    </a>
+                                    <p><label class="label">Title</label>{{list_courses.items[i].name}}</p>
+                                    <p><label class="label">Description</label>
+                                        {{list_courses.items[i].description}}
+                                    </p>
+                                    <p><strong>Publication Date:  </strong>
+                                        {{list_courses.items[i].create_date.strftime("%d/%m/%Y, %H:%M:%S")}}
+                                    </p>
+
+                                    <p>
+                                        <strong>Time: </strong>
+                                        {{(list_courses.items[i].total_time/60)|round(1, 'floor')}} Horas
+                                    </p>
+                                    <p><strong>Cost: </strong>{{list_courses.items[i].total_cost}}€</p>
+                                    <p><strong>Reputation: </strong>{{list_courses.items[i].average_reputation}}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- End Carousel -->
+                </div>
+            </section>
+            {% endif %}
+            {% if list_courses.items[50] %}
+            <section class="section">
+                <div class="container">
+                    <!-- Start Carousel -->
+                    <div id="carousel-demo" class="carousel">
+                        {% for i in range(50,75) %}
+                            {% if list_courses.items[i] %}
+                            <div class="item-{{i}} my-item">
+                                <!-- Slide Content -->
+                                <div class="box">
+                                    <a href="{{ url_for('lo.do_course',id = create_hashid(list_courses.items[i].id)) }}">
+                                        <img src="{{url_for('static', filename='img/cyber3.jpeg')}}" align="middle" />
+                                    </a>
+                                    <p><label class="label">Title</label>{{list_courses.items[i].name}}</p>
+                                    <p><label class="label">Description</label>
+                                        {{list_courses.items[i].description}}
+                                    </p>
+                                    <p><strong>Publication Date:  </strong>
+                                        {{list_courses.items[i].create_date.strftime("%d/%m/%Y, %H:%M:%S")}}
+                                    </p>
+                                    <p>
+                                        <strong>Time: </strong>
+                                        {{(list_courses.items[i].total_time/60)|round(1, 'floor')}} Horas
+                                    </p>
+                                    <p><strong>Cost: </strong>{{list_courses.items[i].total_cost}}€</p>
+                                    <p><strong>Reputation: </strong>{{list_courses.items[i].average_reputation}}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <!-- End Carousel -->
+                </div>
+            </section>
+            {% endif %}
+            {% if list_courses.items[75] %}
+            <section class="section">
+                <div class="container">
+                    <!-- Start Carousel -->
+                    <div id="carousel-demo" class="carousel">
+                        {% for i in range(75,100) %}
+                            {% if list_courses.items[i] %}
+                            <div class="item-{{i}} my-item">
+                                <!-- Slide Content -->
+                                <div class="box">
+                                    <a href="{{ url_for('lo.do_course',id = create_hashid(list_courses.items[i].id)) }}">
+                                        <img src="{{url_for('static', filename='img/cyber4.jpeg')}}" align="middle" />
+                                    </a>
+                                    <p><label class="label">Title</label>{{list_courses.items[i].name}}</p>
+                                    <p><label class="label">Description</label>
+                                        {{list_courses.items[i].description}}
+                                    </p>
+                                    <p><strong>Publication Date:  </strong>
+                                        {{list_courses.items[i].create_date.strftime("%d/%m/%Y, %H:%M:%S")}}
+                                    </p>
+                                    <p>
+                                        <strong>Time: </strong>
+                                        {{(list_courses.items[i].total_time/60)|round(1, 'floor')}} Horas
+                                    </p>
+                                    <p><strong>Cost: </strong>{{list_courses.items[i].total_cost}}€</p>
+                                    <p><strong>Reputation: </strong>{{list_courses.items[i].average_reputation}}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    <!-- End Carousel -->
+                    </div>
+            </section>
+            {% endif %}
+            {{ macros.render_pagination(list_courses) }}
+        </div>
+    </main>
+    </div>
+</div>
+    {% endif %}
+{% endif %}
+
+<script type="text/javascript">
+    bulmaCarousel.attach('#carousel-demo', {
+        initialSlide:0,
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        loop:false
+    });
+
+
+function outputUpdate(id,value) {
+    document.querySelector('#'+id).value = value;
+}
+
+function inputUpdate(self,id) {
+
+    var slider = document.querySelector('#'+id);
+    var output = document.querySelector('#'+self.id);
+
+    output.addEventListener('input', updateValue);
+
+    function updateValue(e) {
+      $(slider).val(output.value);
+    }
+}
+
+
+
+$(document).ready(function(){
+
+        $('#s_filter input ').on('change', function() {
+
+             time = $('input[id=time]:checked', '#s_filter').val()
+             cost = $('input[id=cost]:checked', '#s_filter').val()
+             reput = $('input[id=reput]:checked', '#s_filter').val()
+
+             sessionStorage.setItem("time",time);
+             sessionStorage.setItem("cost",cost);
+             sessionStorage.setItem("reput",reput);
+
+        });
+
+
+        var time = sessionStorage.getItem("time");
+        var cost = sessionStorage.getItem("cost");
+        var reput = sessionStorage.getItem("reput");
+
+        if(time !==undefined && time.localeCompare('y')==0){
+                var alteredURL = removeParam("cost_min");
+                var alteredURL = removeParam("cost_max");
+                var alteredURL = removeParam("reput_min");
+                var alteredURL = removeParam("reput_max");
+             }
+
+             else if(cost !== undefined && cost.localeCompare('y')==0){
+                var alteredURL = removeParam("time_min");
+                var alteredURL = removeParam("time_max");
+                var alteredURL = removeParam("reput_min");
+                var alteredURL = removeParam("reput_max");
+             }
+
+             else if(reput !== undefined && reput.localeCompare('y')==0){
+                var alteredURL = removeParam("time_min");
+                var alteredURL = removeParam("time_max");
+                var alteredURL = removeParam("cost_min");
+                var alteredURL = removeParam("cost_max");
+             }
+
+             else if(time!== undefined && cost!==undefined && time.localeCompare('y')==0 &&
+              cost.localeCompare('y')==0 ){
+                var alteredURL = removeParam("reput_min");
+                var alteredURL = removeParam("reput_max");
+             }
+
+             else if(time!==undefined&& reput!==undefined&&time.localeCompare('y')==0 &&
+              reput.localeCompare('y')==0){
+                var alteredURL = removeParam("cost_min");
+                var alteredURL = removeParam("cost_max");
+             }
+
+             else if(cost!==undefined&&reput!==undefined&&cost.localeCompare('y')==0 &&
+              reput.localeCompare('y')==0){
+                var alteredURL = removeParam("time_min");
+                var alteredURL = removeParam("time_max");
+             }
+
+});
+
+
+function removeParam(parameter){
+      var url=document.location.href;
+      var urlparts= url.split('?');
+
+     if (urlparts.length>=2)
+     {
+      var urlBase=urlparts.shift(); 
+      var queryString=urlparts.join("?"); 
+
+      var prefix = encodeURIComponent(parameter)+'=';
+      var pars = queryString.split(/[&;]/g);
+      for (var i= pars.length; i-->0;)
+          if (pars[i].lastIndexOf(prefix, 0)!==-1)
+              pars.splice(i, 1);
+      url = urlBase+'?'+pars.join('&');
+      window.history.pushState('',document.title,url); // added this line to push the new url directly to url bar .
+    }
+    return url;
+}
+
+</script>
+{% endblock %}

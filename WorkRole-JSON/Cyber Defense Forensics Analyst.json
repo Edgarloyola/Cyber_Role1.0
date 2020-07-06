@@ -1,0 +1,226 @@
+{
+    "Cyber Defense Forensics Analyst": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0018": "Knowledge of encryption algorithms"
+        }, {
+            "K0021": "Knowledge of data backup and recovery."
+        }, {
+            "K0042": "Knowledge of incident response and handling methodologies."
+        }, {
+            "K0060": "Knowledge of operating systems."
+        }, {
+            "K0070": "Knowledge of system and application security threats and vulnerabilities (e.g., buffer overflow, mobile code, cross-site scripting, Procedural Language/Structured Query Language [PL/SQL] and injections, race conditions, covert channel, replay, return-oriented attacks, malicious code)."
+        }, {
+            "K0077": "Knowledge of server and client operating systems."
+        }, {
+            "K0078": "Knowledge of server diagnostic tools and fault identification techniques."
+        }, {
+            "K0109": "Knowledge of physical computer components and architectures, including the functions of various components and peripherals (e.g., CPUs, Network Interface Cards, data storage)."
+        }, {
+            "K0117": "Knowledge of file system implementations (e.g., New Technology File System [NTFS], File Allocation Table [FAT], File Extension [EXT])."
+        }, {
+            "K0118": "Knowledge of processes for seizing and preserving digital evidence."
+        }, {
+            "K0119": "Knowledge of hacking methodologies."
+        }, {
+            "K0122": "Knowledge of investigative implications of hardware, Operating Systems, and network technologies."
+        }, {
+            "K0123": "Knowledge of legal governance related to admissibility (e.g. Rules of Evidence)."
+        }, {
+            "K0125": "Knowledge of processes for collecting, packaging, transporting, and storing electronic evidence while maintaining chain of custody."
+        }, {
+            "K0128": "Knowledge of types and collection of persistent data."
+        }, {
+            "K0131": "Knowledge of web mail collection, searching/analyzing techniques, tools, and cookies."
+        }, {
+            "K0132": "Knowledge of which system files (e.g., log files, registry files, configuration files) contain relevant information and where to find those system files."
+        }, {
+            "K0133": "Knowledge of types of digital forensics data and how to recognize them."
+        }, {
+            "K0134": "Knowledge of deployable forensics."
+        }, {
+            "K0145": "Knowledge of security event correlation tools."
+        }, {
+            "K0155": "Knowledge of electronic evidence law."
+        }, {
+            "K0156": "Knowledge of legal rules of evidence and court procedure."
+        }, {
+            "K0167": "Knowledge of system administration, network, and operating system hardening techniques."
+        }, {
+            "K0168": "Knowledge of applicable laws, statutes (e.g., in Titles 10, 18,32,50 in U.S. Code), Presidential Directives, executive branch guidelines, and/or administrative/criminal legal guidelines and procedures."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0182": "Knowledge of data carving tools and techniques (e.g., Foremost)."
+        }, {
+            "K0183": "Knowledge of reverse engineering concepts."
+        }, {
+            "K0184": "Knowledge of anti-forensics tactics, techniques, and procedures."
+        }, {
+            "K0185": "Knowledge of forensics lab design configuration and support applications (e.g., VMWare, Wireshark)."
+        }, {
+            "K0186": "Knowledge of debugging procedures and tools."
+        }, {
+            "K0187": "Knowledge of file type abuse by adversaries for anomalous behavior."
+        }, {
+            "K0188": "Knowledge of malware analysis tools (e.g., Oily Debug, Ida Pro)."
+        }, {
+            "K0189": "Knowledge of malware with virtual machine detection (e.g. virtual aware malware, debugger aware malware, and unpacked malware that looks for VM-related strings in your computer's display device)."
+        }, {
+            "K0224": "Knowledge of system administration concepts for operating systems such as but not limited to Unix/Linux, IOS, Android, and Windows operating systems."
+        }, {
+            "K0254": "Knowledge of binary analysis."
+        }, {
+            "K0255": "Knowledge of network architecture concepts including topology, protocols, and components."
+        }, {
+            "K0301": "Knowledge of packet-level analysis using appropriate tools (e.g., Wireshark, tcpdump)."
+        }, {
+            "K0304": "Knowledge of concepts and practices of processing digital forensic data."
+        }, {
+            "K0347": "Knowledge and understanding of operational design."
+        }, {
+            "K0624": "Knowledge of Application Security Risks (e.g. Open Web Application Security Project Top 10 list)"
+        }],
+        "skills_ids": [{
+            "S0032": "Skill in developing, testing, and implementing network infrastructure contingency and recovery plans."
+        }, {
+            "S0047": "Skill in preserving evidence integrity according to standard operating procedures or national standards."
+        }, {
+            "S0062": "Skill in analyzing memory dumps to extract information."
+        }, {
+            "S0065": "Skill in identifying and extracting data of forensic interest in diverse media (i.e., media forensics)."
+        }, {
+            "S0067": "Skill in identifying, modifying, and manipulating applicable system components within Windows, Unix, or Linux (e.g., passwords, user accounts, files)."
+        }, {
+            "S0068": "Skill in collecting, processing, packaging, transporting, and storing electronic evidence to avoid alteration, loss, physical damage, or destruction of data."
+        }, {
+            "S0069": "Skill in setting up a forensic workstation."
+        }, {
+            "S0071": "Skill in using forensic tool suites (e.g., EnCase, Sleuthkit, FTK)."
+        }, {
+            "S0073": "Skill in using virtual machines. (e.g., Microsoft Hyper-V, VMWare vSphere, Citrix XenDesktop/Server, Amazon Elastic Compute Cloud, etc.)."
+        }, {
+            "S0074": "Skill in physically disassembling PCs."
+        }, {
+            "S0075": "Skill in conducting forensic analyses in multiple operating system environments (e.g., mobile device systems)."
+        }, {
+            "S0087": "Skill in deep analysis of captured malicious code (e.g., malware forensics)."
+        }, {
+            "S0088": "Skill in using binary analysis tools (e.g., Hexedit, command code xxd, hexdump)."
+        }, {
+            "S0089": "Skill in one-way hash functions (e.g., Secure Hash Algorithm [SHA], Message Digest Algorithm [MD5])."
+        }, {
+            "S0090": "Skill in analyzing anomalous code as malicious or benign."
+        }, {
+            "S0091": "Skill in analyzing volatile data."
+        }, {
+            "S0092": "Skill in identifying obfuscation techniques."
+        }, {
+            "S0093": "Skill in interpreting results of debugger to ascertain tactics, techniques, and procedures."
+        }, {
+            "S0131": "Skill in analyzing malware."
+        }, {
+            "S0132": "Skill in conducting bit-level analysis."
+        }, {
+            "S0133": "Skill in processing digital evidence, to include protecting and making legally sound copies of evidence."
+        }, {
+            "S0156": "Skill in performing packet-level analysis."
+        }],
+        "abilities_ids": [{
+            "A0005": "Ability to decrypt digital data collections."
+        }, {
+            "A0043": "Ability to conduct forensic analyses in and for both Windows and Unix/Linux environments."
+        }],
+        "tasks_ids": [{
+            "T0027": "Conduct analysis of log files, evidence, and other information to determine best methods for identifying the perpetrator(s) of a network intrusion."
+        }, {
+            "T0036": "Confirm what is known about an intrusion and discover new information, if possible, after identifying intrusion via dynamic analysis."
+        }, {
+            "T0048": "Create a forensically sound duplicate of the evidence (i.e., forensic image) that ensures the original evidence is not unintentionally modified, to use for data recovery and analysis processes. This includes, but is not limited to, hard drives, floppy diskettes, CDs, PDAs, mobile phones, GPS, and all tape formats."
+        }, {
+            "T0049": "Decrypt seized data using technical means."
+        }, {
+            "T0075": "Provide technical summary of findings in accordance with established reporting procedures."
+        }, {
+            "T0087": "Ensure that chain of custody is followed for all digital media acquired in accordance with the Federal Rules of Evidence."
+        }, {
+            "T0103": "Examine recovered data for information of relevance to the issue at hand."
+        }, {
+            "T0113": "Identify digital evidence for examination and analysis in such a way as to avoid unintentional alteration."
+        }, {
+            "T0165": "Perform dynamic analysis to boot an image of a drive (without necessarily having the original drive) to see the intrusion as the user may have seen it, in a native environment."
+        }, {
+            "T0167": "Perform file signature analysis."
+        }, {
+            "T0168": "Perform hash comparison against established database."
+        }, {
+            "T0172": "Perform real-time forensic analysis (e.g., using Helix in conjunction with LiveView)."
+        }, {
+            "T0173": "Perform timeline analysis."
+        }, {
+            "T0175": "Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs)."
+        }, {
+            "T0179": "Perform static media analysis."
+        }, {
+            "T0182": "Perform tier 1, 2, and 3 malware analysis."
+        }, {
+            "T0190": "Prepare digital media for imaging by ensuring data integrity (e.g., write blockers in accordance with standard operating procedures)."
+        }, {
+            "T0212": "Provide technical assistance on digital evidence matters to appropriate personnel."
+        }, {
+            "T0216": "Recognize and accurately report forensic artifacts indicative of a particular operating system."
+        }, {
+            "T0238": "Extract data using data carving techniques (e.g., Forensic Tool Kit [FTK], Foremost)."
+        }, {
+            "T0240": "Capture and analyze network traffic associated with malicious activities using network monitoring tools."
+        }, {
+            "T0241": "Use specialized equipment and techniques to catalog, document, extract, collect, package, and preserve digital evidence."
+        }, {
+            "T0253": "Conduct cursory binary analysis."
+        }, {
+            "T0279": "Serve as technical expert and liaison to law enforcement personnel and explain incident details as required."
+        }, {
+            "T0285": "Perform virus scanning on digital media."
+        }, {
+            "T0286": "Perform file system forensic analysis."
+        }, {
+            "T0287": "Perform static analysis to mount an image of a drive (without necessarily having the original drive)."
+        }, {
+            "T0288": "Perform static malware analysis."
+        }, {
+            "T0289": "Utilize deployable forensics toolkit to support operations as necessary."
+        }, {
+            "T0312": "Coordinate with intelligence analysts to correlate threat assessment data."
+        }, {
+            "T0396": "Process image with appropriate tools depending on analyst's goals."
+        }, {
+            "T0397": "Perform Windows registry analysis."
+        }, {
+            "T0398": "Perform file and registry monitoring on the running system after identifying intrusion via dynamic analysis."
+        }, {
+            "T0399": "Enter media information into tracking database (e.g., Product Tracker Tool) for digital media that has been acquired."
+        }, {
+            "T0400": "Correlate incident data and perform cyber defense reporting."
+        }, {
+            "T0401": "Maintain deployable cyber defense toolkit (e.g., specialized cyber defense software/hardware) to support Incident Response Team mission."
+        }, {
+            "T0432": "Collect and analyze intrusion artifacts (e.g., source code, malware, and system configuration) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise."
+        }, {
+            "T0532": "Review forensic images and other data sources (e.g., volatile data) for recovery of potentially relevant information."
+        }, {
+            "T0546": "Write and publish cyber defense recommendations, reports, and white papers on incident findings to appropriate constituencies."
+        }]
+    }
+}

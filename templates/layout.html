@@ -1,0 +1,175 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE HTML>
+<html>
+{% block html_head %}
+<head>
+    {# Favicon #}
+
+    <title>{% block title %}{% endblock %} | Cyber Role</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/css/bulma-collapsible.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/vanillaSelectBox.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vanillaSelectBox.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nanobar/0.4.2/nanobar.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-collapsible@1.0.3/dist/js/bulma-collapsible.min.js"></script>
+
+
+    {# Meta tags #}
+    <meta charset="utf-8"/>
+    <meta name="distribution" content="global"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta property="og:title" content="{{ self.title() }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ request.url }}"/>
+    <meta property="og:site_name" content="{{ config['SITENAME'] }}"/>
+
+    {# CSRF token. Set flag in templates when needed #}
+    {% if _include_csrf %}
+        <meta name="csrf-token" content="{{ csrf_token() }}"/>
+    {% endif %}
+
+    {# Additional tags #}
+    {% block head_extend %}{% endblock %}
+</head>
+{% endblock %}
+
+{% block html_body %}
+
+<style>
+    #demotext {
+    color: #202c2d;
+    background: #FFFFFF;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+    color: #202c2d;
+    background: #FFFFFF;
+    padding-right: 20px;
+    }
+
+    .logo{
+        padding-top: 14px;
+    }
+
+
+    .search {
+      vertical-align: middle;
+      position: relative;
+      bottom: -5px;
+      padding: 3px;
+      margin-left: 10px;
+    }
+
+    #q{
+        text-indent: 40px;
+        width: 100%;
+        height:50px;
+        font-size:25px;
+    }
+
+
+html{ height:100%; }
+body{ min-height:100%; padding:0; margin:10; position:relative; }
+
+body::after{ content:''; display:block; height:100px; }
+
+footer{ 
+  position:absolute; 
+  bottom:0; 
+  width:100%; 
+  height:100px; 
+  padding: 40px;
+}
+
+
+</style>
+
+<body>
+    {# Top navbar #}
+    <nav class="navbar has-background-grey-lighter has-shadow">
+        <div class="container">
+            <div class="navbar-brand">
+                {% if current_user.has_roles('Admin') %}
+                   <div id=demotext class="subtitle is-3 has-text-centered has-background-grey-lighter"> ADMIN </div>
+                {% endif %}
+                <a href="{{ url_for('general.show_dash') }}">
+                    <span class="icon is-large logo">
+                        <i aria-hidden="true" class=" fas fa-3x fa-user-shield"></i>
+                    </span>
+                    <span>
+                        {{ config['SITENAME'] }}
+                    </span>
+                </a>
+                <a id="sidebar-toggle" role="button" class="navbar-burger" data-target="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+
+            {% if current_user.is_authenticated %}
+                <div id="nav-menu" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item is-tab">
+                            <span class="icon"><i class="fas fa-user"></i></span>
+                            <span>{{ current_user.username }}</span>
+                        </a>
+                        {% if current_user.has_roles('Admin')  and change_admin %}
+                            <a href="{{ url_for('general.show_dash') }}" class="navbar-item is-tab">
+                                <span class="icon"><i class="fas fa-exchange-alt"></i></span>
+                                <span>{{ _('Admin Mode') }}</span>
+                            </a>
+                        {% elif current_user.has_roles('Admin') %}
+                            <a href="{{ url_for('general.show_dash',change_user = True) }}" class="navbar-item is-tab">
+                                <span class="icon"><i class="fas fa-exchange-alt"></i></span>
+                                <span>{{ _('User Mode') }}</span>
+                            </a>
+                        {% endif %}
+                        <a href="{{ url_for('user.logout') }}" class="navbar-item is-tab">
+                            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span>{{ _('Logout') }}</span>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </nav>
+
+    {# Breadcrumbs #}
+    {% block breadcrumbs %}{% endblock %}
+
+    {# Main content #}
+
+    {% if list_courses or search or conectionFailed or notCourses or not_courses_elastic %}
+        {% block content_courses %}{% endblock %}
+    {% else %}
+        <section class="container">
+        {% block content %}{% endblock %}
+        </section>
+    {% endif %}
+    
+
+    {# Show flash messages #}
+    {{ macros.render_flash_messages() }}
+</body>
+{% endblock %}
+
+{% block html_footer %}
+
+
+<footer class="is-vertical has-background-grey-lighter">
+  <div class="content has-text-centered">
+      <strong>Cyber Role</strong> by <a href="https://jgthms.com">Edgar Augusto Loyola Torres</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+  </div>
+</footer>
+{% endblock %}
+</html>

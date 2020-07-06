@@ -1,0 +1,262 @@
+{
+    "Mission Assessment Specialist": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0036": "Knowledge of human-computer interaction principles."
+        }, {
+            "K0058": "Knowledge of network traffic analysis methods."
+        }, {
+            "K0108": "Knowledge of concepts, terminology, and operations of a wide range of communications media (computer and telephone networks, satellite, fiber, wireless)."
+        }, {
+            "K0109": "Knowledge of physical computer components and architectures, including the functions of various components and peripherals (e.g., CPUs, Network Interface Cards, data storage)."
+        }, {
+            "K0177": "Knowledge of cyber attack stages (e.g., reconnaissance, scanning, enumeration, gaining access, escalation of privileges, maintaining access, network exploitation, covering tracks)."
+        }, {
+            "K0349": "Knowledge of website types, administration, functions, and content management system (CMS)."
+        }, {
+            "K0362": "Knowledge of attack methods and techniques (DDoS, brute force, spoofing, etc.)."
+        }, {
+            "K0377": "Knowledge of classification and control markings standards, policies and procedures."
+        }, {
+            "K0392": "Knowledge of common computer/network infections (virus, Trojan, etc.) and methods of infection (ports, attachments, etc.)."
+        }, {
+            "K0395": "Knowledge of computer networking fundamentals (i.e., basic computer components of a network, types of networks, etc.)."
+        }, {
+            "K0405": "Knowledge of current computer-based intrusion sets."
+        }, {
+            "K0409": "Knowledge of cyber intelligence/information collection capabilities and repositories."
+        }, {
+            "K0410": "Knowledge of cyber laws and their effect on Cyber planning."
+        }, {
+            "K0414": "Knowledge of cyber operations support or enabling processes."
+        }, {
+            "K0417": "Knowledge of data communications terminology (e.g., networking protocols, Ethernet, IP, encryption, optical devices, removable media)."
+        }, {
+            "K0427": "Knowledge of encryption algorithms and cyber capabilities/tools (e.g., SSL, PGP)."
+        }, {
+            "K0431": "Knowledge of evolving/emerging communications technologies."
+        }, {
+            "K0436": "Knowledge of fundamental cyber operations concepts, terminology/lexicon (i.e., environment preparation, cyber-attack, cyber defense), principles, capabilities, limitations, and effects."
+        }, {
+            "K0437": "Knowledge of general Supervisory control and data acquisition (SCADA) system components."
+        }, {
+            "K0440": "Knowledge of host-based security products and how those products affect exploitation and reduce vulnerability."
+        }, {
+            "K0444": "Knowledge of how Internet applications work (SMTP email, web-based email, chat clients, VOIP)."
+        }, {
+            "K0445": "Knowledge of how modern digital and telephony networks impact cyber operations."
+        }, {
+            "K0446": "Knowledge of how modern wireless communications systems impact cyber operations."
+        }, {
+            "K0449": "Knowledge of how to extract, analyze, and use metadata."
+        }, {
+            "K0457": "Knowledge of intelligence confidence levels."
+        }, {
+            "K0460": "Knowledge of intelligence preparation of the environment and similar processes."
+        }, {
+            "K0464": "Knowledge of intelligence support to planning, execution, and assessment."
+        }, {
+            "K0465": "Knowledge of internal and external partner cyber operations capabilities and tools."
+        }, {
+            "K0469": "Knowledge of internal tactics to anticipate and/or emulate threat capabilities and actions."
+        }, {
+            "K0471": "Knowledge of Internet network addressing (IP addresses, classless inter-domain routing, TCP/UDP port numbering)."
+        }, {
+            "K0480": "Knowledge of malware."
+        }, {
+            "K0507": "Knowledge of organization or partner exploitation of digital networks."
+        }, {
+            "K0511": "Knowledge of organizational hierarchy and cyber decision-making processes."
+        }, {
+            "K0516": "Knowledge of physical and logical network devices and infrastructure to include hubs, switches, routers, firewalls, etc."
+        }, {
+            "K0549": "Knowledge of target vetting and validation procedures."
+        }, {
+            "K0551": "Knowledge of targeting cycles."
+        }, {
+            "K0556": "Knowledge of telecommunications fundamentals."
+        }, {
+            "K0560": "Knowledge of the basic structure, architecture, and design of modern communication networks."
+        }, {
+            "K0561": "Knowledge of the basics of network security (e.g., encryption, firewalls, authentication, honey pots, perimeter protection)."
+        }, {
+            "K0565": "Knowledge of the common networking and routing protocols (e.g. TCP/IP), services (e.g., web, mail, DNS), and how they interact to provide network communications."
+        }, {
+            "K0598": "Knowledge of the structure and intent of organization specific plans, guidance and authorizations."
+        }, {
+            "K0603": "Knowledge of the ways in which targets or threats use the Internet."
+        }, {
+            "K0604": "Knowledge of threat and/or target systems."
+        }, {
+            "K0610": "Knowledge of virtualization products (VMware, Virtual PC)."
+        }, {
+            "K0612": "Knowledge of what constitutes a 'threat' to a network."
+        }, {
+            "K0614": "Knowledge of wireless technologies (e.g., cellular, satellite, GSM) to include the basic structure, architecture, and design of modern wireless communications systems."
+        }],
+        "skills_ids": [{
+            "S0189": "Skill in assessing and/or estimating effects generated during and after cyber operations."
+        }, {
+            "S0194": "Skill in conducting non-attributable research."
+        }, {
+            "S0203": "Skill in defining and characterizing all pertinent aspects of the operational environment."
+        }, {
+            "S0211": "Skill in developing or recommending analytic approaches or solutions to problems and situations for which information is incomplete or for which no precedent exists."
+        }, {
+            "S0216": "Skill in evaluating available capabilities against desired effects to provide effective courses of action."
+        }, {
+            "S0218": "Skill in evaluating information for reliability, validity, and relevance."
+        }, {
+            "S0227": "Skill in identifying alternative analytical interpretations to minimize unanticipated outcomes."
+        }, {
+            "S0228": "Skill in identifying critical target elements, to include critical target elements for the cyber domain."
+        }, {
+            "S0229": "Skill in identifying cyber threats which may jeopardize organization and/or partner interests."
+        }, {
+            "S0249": "Skill in preparing and presenting briefings."
+        }, {
+            "S0254": "Skill in providing analysis to aid writing phased after action reports."
+        }, {
+            "S0256": "Skill in providing understanding of target or threat systems through the identification and link analysis of physical, functional, or behavioral relationships."
+        }, {
+            "S0271": "Skill in reviewing and editing assessment products."
+        }, {
+            "S0278": "Skill in tailoring analysis to the necessary levels (e.g., classification and organizational)."
+        }, {
+            "S0285": "Skill in using Boolean operators to construct simple and complex queries."
+        }, {
+            "S0288": "Skill in using multiple analytic tools, databases, and techniques (e.g., Analyst's Notebook, A-Space, Anchory, M3, divergent/convergent thinking, link charts, matrices, etc.)."
+        }, {
+            "S0289": "Skill in using multiple search engines (e.g., Google, Yahoo, LexisNexis, DataStar) and tools in conducting open-source searches."
+        }, {
+            "S0292": "Skill in using targeting databases and software packages."
+        }, {
+            "S0296": "Skill in utilizing feedback to improve processes, products, and services."
+        }, {
+            "S0297": "Skill in utilizing virtual collaborative workspaces and/or tools (e.g., IWS, VTCs, chat rooms, SharePoint)."
+        }, {
+            "S0303": "Skill in writing, reviewing and editing cyber-related Intelligence/assessment products from multiple sources."
+        }, {
+            "S0360": "Skill to analyze and assess internal and external partner cyber operations capabilities and tools."
+        }],
+        "abilities_ids": [{
+            "A0013": "Ability to communicate complex information, concepts, or ideas in a confident and well-organized manner through verbal, written, and/or visual means."
+        }, {
+            "A0066": "Ability to accurately and completely source all data used in intelligence, assessment and/or planning products."
+        }, {
+            "A0072": "Ability to clearly articulate intelligence requirements into well-formulated research questions and data tracking variables for inquiry tracking purposes."
+        }, {
+            "A0080": "Ability to develop or recommend analytic approaches or solutions to problems and situations for which information is incomplete or for which no precedent exists."
+        }, {
+            "A0082": "Ability to effectively collaborate via virtual teams."
+        }, {
+            "A0083": "Ability to evaluate information for reliability, validity, and relevance."
+        }, {
+            "A0084": "Ability to evaluate, analyze, and synthesize large quantities of data (which may be fragmented and contradictory) into high quality, fused targeting/intelligence products."
+        }, {
+            "A0085": "Ability to exercise judgment when policies are not well-defined."
+        }, {
+            "A0087": "Ability to focus research efforts to meet the customer's decision-making needs."
+        }, {
+            "A0088": "Ability to function effectively in a dynamic, fast-paced environment."
+        }, {
+            "A0089": "Ability to function in a collaborative environment, seeking continuous consultation with other analysts and experts--both internal and external to the organization--to leverage analytical and technical expertise."
+        }, {
+            "A0091": "Ability to identify intelligence gaps."
+        }, {
+            "A0101": "Ability to recognize and mitigate cognitive biases which may affect analysis."
+        }, {
+            "A0102": "Ability to recognize and mitigate deception in reporting and analysis."
+        }, {
+            "A0106": "Ability to think critically."
+        }, {
+            "A0107": "Ability to think like threat actors."
+        }, {
+            "A0108": "Ability to understand objectives and effects."
+        }, {
+            "A0109": "Ability to utilize multiple intelligence sources across all intelligence disciplines."
+        }],
+        "tasks_ids": [{
+            "T0582": "Provide expertise to course of action development."
+        }, {
+            "T0583": "Provide subject matter expertise to the development of a common operational picture."
+        }, {
+            "T0585": "Provide subject matter expertise to the development of cyber operations specific indicators."
+        }, {
+            "T0586": "Assist in the coordination, validation, and management of all-source collection requirements, plans, and/or activities."
+        }, {
+            "T0588": "Provide expertise to the development of measures of effectiveness and measures of performance."
+        }, {
+            "T0589": "Assist in the identification of intelligence collection shortfalls."
+        }, {
+            "T0593": "Brief threat and/or target current situations."
+        }, {
+            "T0597": "Collaborate with intelligence analysts/targeting organizations involved in related areas."
+        }, {
+            "T0611": "Conduct end-of-operations assessments."
+        }, {
+            "T0615": "Conduct in-depth research and analysis."
+        }, {
+            "T0617": "Conduct nodal analysis."
+        }, {
+            "T0624": "Conduct target research and analysis."
+        }, {
+            "T0660": "Develop information requirements necessary for answering priority information requests."
+        }, {
+            "T0661": "Develop measures of effectiveness and measures of performance."
+        }, {
+            "T0663": "Develop munitions effectiveness assessment or operational assessment materials."
+        }, {
+            "T0678": "Engage customers to understand customers' intelligence needs and wants."
+        }, {
+            "T0684": "Estimate operational effects generated through cyber activities."
+        }, {
+            "T0685": "Evaluate threat decision-making processes."
+        }, {
+            "T0686": "Identify threat vulnerabilities."
+        }, {
+            "T0707": "Generate requests for information."
+        }, {
+            "T0718": "Identify intelligence gaps and shortfalls."
+        }, {
+            "T0748": "Monitor and report changes in threat dispositions, activities, tactics, capabilities, objectives, etc. as related to designated cyber operations warning problem sets."
+        }, {
+            "T0749": "Monitor and report on validated threat activities."
+        }, {
+            "T0752": "Monitor operational environment and report on adversarial activities which fulfill leadership's priority information requirements."
+        }, {
+            "T0758": "Produce timely, fused, all-source cyber operations intelligence and/or indications and warnings intelligence products (e.g., threat assessments, briefings, intelligence studies, country studies)."
+        }, {
+            "T0761": "Provide subject-matter expertise and support to planning/developmental forums and working groups as appropriate."
+        }, {
+            "T0782": "Provide analyses and support for effectiveness assessment."
+        }, {
+            "T0783": "Provide current intelligence support to critical internal/external stakeholders as appropriate."
+        }, {
+            "T0785": "Provide evaluation and feedback necessary for improving intelligence production, intelligence reporting, collection requirements, and operations."
+        }, {
+            "T0786": "Provide information and assessments for the purposes of informing leadership and customers; developing and refining objectives; supporting operation planning and execution; and assessing the effects of operations."
+        }, {
+            "T0788": "Provide input and assist in post-action effectiveness assessments."
+        }, {
+            "T0789": "Provide input and assist in the development of plans and guidance."
+        }, {
+            "T0793": "Provide effectiveness support to designated exercises, and/or time sensitive operations."
+        }, {
+            "T0797": "Provide target recommendations which meet leadership objectives."
+        }, {
+            "T0834": "Work closely with planners, intelligence analysts, and collection managers to ensure intelligence requirements and collection plans are accurate and up-to-date."
+        }]
+    }
+}

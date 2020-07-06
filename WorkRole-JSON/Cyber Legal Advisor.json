@@ -1,0 +1,72 @@
+{
+    "Cyber Legal Advisor": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0017": "Knowledge of concepts and practices of processing digital forensic data."
+        }, {
+            "K0059": "Knowledge of new and emerging information technology (IT) and cybersecurity technologies."
+        }, {
+            "K0107": "Knowledge of Insider Threat investigations, reporting, investigative tools and laws/regulations."
+        }, {
+            "K0157": "Knowledge of cyber defense and information security policies, procedures, and regulations."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0267": "Knowledge of laws, policies, procedures, or governance relevant to cybersecurity for critical infrastructures."
+        }, {
+            "K0312": "Knowledge of intelligence gathering principles, policies, and procedures including legal authorities and restrictions."
+        }, {
+            "K0316": "Knowledge of business or military operation plans, concept operation plans, orders, policies, and standing rules of engagement."
+        }, {
+            "K0341": "Knowledge of foreign disclosure policies and import/export control regulations as related to cybersecurity."
+        }, {
+            "K0615": "Knowledge of privacy disclosure statements based on current laws."
+        }],
+        "skills_ids": [{
+            "S0356": "Skill in communicating with all levels of management including Board members (e.g., interpersonal skills, approachability, effective listening skills, appropriate use of style and language for the audience)."
+        }],
+        "abilities_ids": [{
+            "A0046": "Ability to monitor and assess the potential impact of emerging technologies on laws, regulations, and/or policies."
+        }],
+        "tasks_ids": [{
+            "T0006": "Advocate organization's official position in legal and legislative proceedings."
+        }, {
+            "T0098": "Evaluate contracts to ensure compliance with funding, legal, and program requirements."
+        }, {
+            "T0102": "Evaluate the effectiveness of laws, regulations, policies, standards, or procedures."
+        }, {
+            "T0131": "Interpret and apply laws, regulations, policies, standards, or procedures to specific issues."
+        }, {
+            "T0220": "Resolve conflicts in laws, regulations, policies, standards, or procedures."
+        }, {
+            "T0419": "Acquire and maintain a working knowledge of constitutional issues which arise in relevant laws, regulations, policies, agreements, standards, procedures, or other issuances."
+        }, {
+            "T0434": "Conduct framing of pleadings to properly identify alleged violations of law, regulations, or policy/guidance."
+        }, {
+            "T0465": "Develop guidelines for implementation."
+        }, {
+            "T0474": "Provide legal analysis and decisions to inspectors general, privacy officers, oversight and compliance personnel regarding compliance with cybersecurity policies and relevant legal and regulatory requirements."
+        }, {
+            "T0476": "Evaluate the impact of changes to laws, regulations, policies, standards, or procedures."
+        }, {
+            "T0478": "Provide guidance on laws, regulations, policies, standards, or procedures to management, personnel, or clients."
+        }, {
+            "T0487": "Facilitate implementation of new or revised laws, regulations, executive orders, policies, standards, or procedures."
+        }, {
+            "T0522": "Prepare legal and other relevant documents (e.g., depositions, briefs, affidavits, declarations, appeals, pleadings, discovery)."
+        }]
+    }
+}

@@ -1,0 +1,134 @@
+{
+    "System Administrator": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0049": "Knowledge of information technology (IT) security principles and methods (e.g., firewalls, demilitarized zones, encryption)."
+        }, {
+            "K0050": "Knowledge of local area and wide area networking principles and concepts including bandwidth management."
+        }, {
+            "K0053": "Knowledge of measures or indicators of system performance and availability."
+        }, {
+            "K0064": "Knowledge of performance tuning tools and techniques."
+        }, {
+            "K0077": "Knowledge of server and client operating systems."
+        }, {
+            "K0088": "Knowledge of systems administration concepts."
+        }, {
+            "K0100": "Knowledge of the enterprise information technology (IT) architecture."
+        }, {
+            "K0103": "Knowledge of the type and frequency of routine hardware maintenance."
+        }, {
+            "K0104": "Knowledge of Virtual Private Network (VPN) security."
+        }, {
+            "K0117": "Knowledge of file system implementations (e.g., New Technology File System [NTFS], File Allocation Table [FAT], File Extension [EXT])."
+        }, {
+            "K0130": "Knowledge of virtualization technologies and virtual machine development and maintenance."
+        }, {
+            "K0158": "Knowledge of organizational information technology (IT) user security policies (e.g., account creation, password rules, access control)."
+        }, {
+            "K0167": "Knowledge of system administration, network, and operating system hardening techniques."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0274": "Knowledge of transmission records (e.g., Bluetooth, Radio Frequency Identification (RFID), Infrared Networking (IR), Wireless Fidelity (Wi-Fi). paging, cellular, satellite dishes, Voice over Internet Protocol (VoIP)), and jamming techniques that enable transmission of undesirable information, or prevent installed systems from operating correctly."
+        }, {
+            "K0280": "Knowledge of systems engineering theories, concepts, and methods."
+        }, {
+            "K0289": "Knowledge of system/server diagnostic tools and fault identification techniques."
+        }, {
+            "K0318": "Knowledge of operating system command-line tools."
+        }, {
+            "K0332": "Knowledge of network protocols such as TCP/IP, Dynamic Host Configuration, Domain Name System (DNS), and directory services."
+        }, {
+            "K0346": "Knowledge of principles and methods for integrating system components."
+        }],
+        "skills_ids": [{
+            "S0016": "Skill in configuring and optimizing software."
+        }, {
+            "S0033": "Skill in diagnosing connectivity problems."
+        }, {
+            "S0043": "Skill in maintaining directory services. (e.g., Microsoft Active Directory, LDAP, etc.)."
+        }, {
+            "S0073": "Skill in using virtual machines. (e.g., Microsoft Hyper-V, VMWare vSphere, Citrix XenDesktop/Server, Amazon Elastic Compute Cloud, etc.)."
+        }, {
+            "S0076": "Skill in configuring and utilizing software-based computer protection tools (e.g., software firewalls, antivirus software, anti-spyware)."
+        }, {
+            "S0111": "Skill in interfacing with customers."
+        }, {
+            "S0143": "Skill in conducting system/server planning, management, and maintenance."
+        }, {
+            "S0144": "Skill in correcting physical and technical problems that impact system/server performance."
+        }, {
+            "S0151": "Skill in troubleshooting failed system components (i.e., servers)"
+        }, {
+            "S0153": "Skill in identifying and anticipating system/server performance, availability, capacity, or configuration problems."
+        }, {
+            "S0154": "Skill in installing system and component upgrades. (i.e., servers, appliances, network devices)."
+        }, {
+            "S0155": "Skill in monitoring and optimizing system/server performance."
+        }, {
+            "S0157": "Skill in recovering failed systems/servers. (e.g., recovery software, failover clusters, replication, etc.)."
+        }, {
+            "S0158": "Skill in operating system administration. (e.g., account maintenance, data backups, maintain system performance, install and configure new hardware/software)."
+        }],
+        "abilities_ids": [{
+            "A0154": "Ability to conduct a comprehensive assessment of the management, operational, and technical security controls and control enhancements employed within or inherited by a system to determine the effectiveness of the controls (i.e., the extent to which the security controls are implemented correctly, operating as intended, and producing the desired outcome with respect to meeting the security requirements for the system)."
+        }, {
+            "A0158": "Ability to ensure that functional and security requirements are appropriately addressed in a contract and that the contractor meets the functional and security requirements as stated in the contract."
+        }],
+        "tasks_ids": [{
+            "T0029": "Conduct functional and connectivity testing to ensure continuing operability."
+        }, {
+            "T0054": "Design group policies and access control lists to ensure compatibility with organizational standards, business rules, and needs."
+        }, {
+            "T0063": "Develop and document systems administration standard operating procedures."
+        }, {
+            "T0136": "Maintain baseline system security according to organizational policies."
+        }, {
+            "T0144": "Manage accounts, network rights, and access to systems and equipment."
+        }, {
+            "T0186": "Plan, execute, and verify data redundancy and system recovery procedures."
+        }, {
+            "T0207": "Provide ongoing optimization and problem-solving support."
+        }, {
+            "T0418": "Install, update, and troubleshoot systems/servers."
+        }, {
+            "T0431": "Check system hardware availability, functionality, integrity, and efficiency."
+        }, {
+            "T0435": "Conduct periodic system maintenance including cleaning (both physically and electronically), disk checks, routine reboots, data dumps, and testing."
+        }, {
+            "T0458": "Comply with organization systems administration standard operating procedures."
+        }, {
+            "T0461": "Implement and enforce local network usage policies and procedures."
+        }, {
+            "T0498": "Manage system/server resources including performance, capacity, availability, serviceability, and recoverability."
+        }, {
+            "T0501": "Monitor and maintain system/server configuration."
+        }, {
+            "T0507": "Oversee installation, implementation, configuration, and support of system components."
+        }, {
+            "T0514": "Diagnose faulty system/server hardware."
+        }, {
+            "T0515": "Perform repairs on faulty system/server hardware."
+        }, {
+            "T0531": "Troubleshoot hardware/software interface and interoperability problems."
+        }]
+    }
+}

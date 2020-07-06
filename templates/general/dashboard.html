@@ -1,0 +1,133 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .title{
+
+        font-size: 14px
+    }
+    .box{
+
+        box-shadow: none;
+    }
+    .global{
+
+        box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+</style>
+
+<h3 class="title is-1 has-text-centered">
+    {{ _('Welcome to Cyber Role') }}
+</h3>
+
+<div class="box global">
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            User Manager
+        </h3>
+    </div>
+    <div class="box">
+        <div class="columns is-centered">
+            <div class="column is-4">
+                <a href="{{ url_for('user_ksat.show_user') }}" class="box button is-large is-success">
+                    View Profile
+                </a>
+                <a href="{{ url_for('user_ksat.change_password_user') }}" class="box button is-large is-success">
+                    Change Password
+                </a>
+            </div>
+            <div class="column is-4">
+                <a href="{{ url_for('user_ksat.drop_out_user') }}"class=" box button is-large is-success">
+                    Drop out
+                </a>
+                <a href="{{ url_for('user_ksat.ksa_comparison_friend') }}" class=" box button is-large is-success">
+                    KSA Comparison
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="has-background-grey-light">
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            Learning Object Manager
+        </h3>
+    </div>
+    <div class="box">
+        <div class="columns is-centered">
+            <div class="column is-4">
+                    <!-- Cada vez que pulsemos a los cursos optimos haremos un chequeo si un usuario ya hizo el primer test
+                        para evaluar sus conocimientos en KSAT, en caso de que tenga datos procederemos a mostrarle los cursos optimos para
+                        este usuario, en caso contrario de que no haya hecho el primer de test de conceptos de KSAT, tendra que hacerlo-->
+                {% if exist_KSAT %}
+                    <a href="{{ url_for('general.test_target_ksat') }}" class="box button is-large is-link">
+                        Obtain Optimal Courses
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('general.test_ksat') }}" class="box button is-large is-link">
+                        Obtain Optimal Courses
+                    </a>
+                {% endif %}
+
+                {% if not courses %}
+                    <a href="{{ url_for('lo.show_progress_optimal') }}" class="box button is-large is-link">
+                        Progress Optimal Courses
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="columns is-centered">
+            <div class="column">
+                <a href="{{ url_for('lo.show_lo_optimal') }}" class="box button is-large is-link">
+                    My Optimal Courses
+                </a>
+                <a href="{{ url_for('lo.show_lo_general') }}" class="box button is-large is-link">
+                    Show LO's 
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('lo.show_evolution') }}" class="box button is-large is-link">
+                    Evolution KSA
+                </a>
+                <a href="{{ url_for('general.show_top10_wk_role') }}" class="box button is-large is-link">
+                    Top 10 Work Roles
+                </a>
+            </div>
+            
+            <div class="column">
+                <a href="{{ url_for('general.show_ksat_user') }}" class="box button is-large is-link">
+                    My KSATs
+                </a>
+                <a href="{{ url_for('general.show_k') }}" class="box button is-large is-link">
+                    About KSAT
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('general.show_category_specialist') }}" class="box button is-large is-link">
+                    About Category/Specialist
+                </a>
+                <a href="{{ url_for('general.show_work_role') }}" class="box button is-large is-link">
+                    About Work Roles
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+</script>
+{% endblock %}

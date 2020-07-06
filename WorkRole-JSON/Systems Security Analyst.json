@@ -1,0 +1,184 @@
+{
+    "Systems Security Analyst": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0015": "Knowledge of computer algorithms."
+        }, {
+            "K0018": "Knowledge of encryption algorithms"
+        }, {
+            "K0019": "Knowledge of cryptography and cryptographic key management concepts"
+        }, {
+            "K0024": "Knowledge of database systems."
+        }, {
+            "K0035": "Knowledge of installation, integration, and optimization of system components."
+        }, {
+            "K0036": "Knowledge of human-computer interaction principles."
+        }, {
+            "K0040": "Knowledge of vulnerability information dissemination sources (e.g., alerts, advisories, errata, and bulletins)."
+        }, {
+            "K0044": "Knowledge of cybersecurity and privacy principles and organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "K0049": "Knowledge of information technology (IT) security principles and methods (e.g., firewalls, demilitarized zones, encryption)."
+        }, {
+            "K0052": "Knowledge of mathematics (e.g. logarithms, trigonometry, linear algebra, calculus, statistics, and operational analysis)."
+        }, {
+            "K0056": "Knowledge of network access, identity, and access management (e.g., public key infrastructure, Oauth, OpenID, SAML, SPML)."
+        }, {
+            "K0060": "Knowledge of operating systems."
+        }, {
+            "K0061": "Knowledge of how traffic flows across the network (e.g., Transmission Control Protocol [TCP] and Internet Protocol [IP], Open System Interconnection Model [OSI], Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0063": "Knowledge of parallel and distributed computing concepts."
+        }, {
+            "K0075": "Knowledge of security system design tools, methods, and techniques."
+        }, {
+            "K0082": "Knowledge of software engineering."
+        }, {
+            "K0093": "Knowledge of telecommunications concepts (e.g., Communications channel, Systems Link Budgeting, Spectral efficiency, Multiplexing)."
+        }, {
+            "K0102": "Knowledge of the systems engineering process."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0180": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+        }, {
+            "K0200": "Knowledge of service management concepts for networks and related standards (e.g., Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0203": "Knowledge of security models (e.g., Bell-LaPadula model, Biba integrity model, Clark-Wilson integrity model)."
+        }, {
+            "K0227": "Knowledge of various types of computer architectures."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0263": "Knowledge of information technology (IT) risk management policies, requirements, and procedures."
+        }, {
+            "K0266": "Knowledge of how to evaluate the trustworthiness of the supplier and/or product."
+        }, {
+            "K0267": "Knowledge of laws, policies, procedures, or governance relevant to cybersecurity for critical infrastructures."
+        }, {
+            "K0275": "Knowledge of configuration management techniques."
+        }, {
+            "K0276": "Knowledge of security management."
+        }, {
+            "K0281": "Knowledge of information technology (IT) service catalogues."
+        }, {
+            "K0284": "Knowledge of developing and applying user credential management system."
+        }, {
+            "K0285": "Knowledge of implementing enterprise key escrow systems to support data-at-rest encryption."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0290": "Knowledge of systems security testing and evaluation methods."
+        }, {
+            "K0297": "Knowledge of countermeasure design for identified security risks."
+        }, {
+            "K0322": "Knowledge of embedded systems."
+        }, {
+            "K0333": "Knowledge of network design processes, to include understanding of security objectives, operational objectives, and trade-offs."
+        }, {
+            "K0339": "Knowledge of how to use network analysis tools to identify vulnerabilities."
+        }],
+        "skills_ids": [{
+            "S0024": "Skill in designing the integration of hardware and software solutions."
+        }, {
+            "S0027": "Skill in determining how a security system should work (including its resilience and dependability capabilities) and how changes in conditions, operations, or the environment will affect these outcomes."
+        }, {
+            "S0031": "Skill in developing and applying security system access controls."
+        }, {
+            "S0036": "Skill in evaluating the adequacy of security designs."
+        }, {
+            "S0060": "Skill in writing code in a currently supported programming language (e.g., Java, C++)."
+        }, {
+            "S0141": "Skill in assessing security systems designs."
+        }, {
+            "S0147": "Skill in assessing security controls based on cybersecurity principles and tenets. (e.g., CIS CSC, NIST SP 800-53, Cybersecurity Framework, etc.)."
+        }, {
+            "S0167": "Skill in recognizing vulnerabilities in security systems. (e.g., vulnerability and compliance scanning)."
+        }, {
+            "S0367": "Skill to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }],
+        "abilities_ids": [{
+            "A0015": "Ability to conduct vulnerability scans and recognize vulnerabilities in security systems."
+        }, {
+            "A0123": "Ability to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }],
+        "tasks_ids": [{
+            "T0015": "Apply security policies to applications that interface with one another, such as Business-to-Business (B2B) applications."
+        }, {
+            "T0016": "Apply security policies to meet security objectives of the system."
+        }, {
+            "T0017": "Apply service-oriented security architecture principles to meet organization's confidentiality, integrity, and availability requirements."
+        }, {
+            "T0085": "Ensure all systems security operations and maintenance activities are properly documented and updated as necessary."
+        }, {
+            "T0086": "Ensure that the application of security patches for commercial products integrated into system design meet the timelines dictated by the management authority for the intended operational environment."
+        }, {
+            "T0088": "Ensure that cybersecurity-enabled products or other compensating security control technologies reduce identified risk to an acceptable level."
+        }, {
+            "T0123": "Implement specific cybersecurity countermeasures for systems and/or applications."
+        }, {
+            "T0128": "Integrate automated capabilities for updating or patching system software where practical and develop processes and procedures for manual updating and patching of system software based on current and projected patch timeline requirements for the operational environment of the system."
+        }, {
+            "T0169": "Perform cybersecurity testing of developed applications and/or systems."
+        }, {
+            "T0177": "Perform security reviews, identify gaps in security architecture, and develop a security risk management plan."
+        }, {
+            "T0187": "Plan and recommend modifications or adjustments based on exercise results or system environment."
+        }, {
+            "T0194": "Properly document all systems security implementation, operations, and maintenance activities and update as necessary."
+        }, {
+            "T0202": "Provide cybersecurity guidance to leadership."
+        }, {
+            "T0205": "Provide input to the Risk Management Framework process activities and related documentation (e.g., system life-cycle support plans, concept of operations, operational procedures, and maintenance training materials)."
+        }, {
+            "T0243": "Verify and update security documentation reflecting the application/system security design features."
+        }, {
+            "T0309": "Assess the effectiveness of security controls."
+        }, {
+            "T0344": "Assess all the configuration management (change configuration/release management) processes."
+        }, {
+            "T0462": "Develop procedures and test fail-over for system operations transfer to an alternate site based on system availability requirements."
+        }, {
+            "T0469": "Analyze and report organizational security posture trends."
+        }, {
+            "T0470": "Analyze and report system security posture trends."
+        }, {
+            "T0475": "Assess adequate access controls based on principles of least privilege and need-to-know."
+        }, {
+            "T0477": "Ensure the execution of disaster recovery and continuity of operations."
+        }, {
+            "T0485": "Implement security measures to resolve vulnerabilities, mitigate risks, and recommend security changes to system or system components as needed."
+        }, {
+            "T0489": "Implement system security measures in accordance with established procedures to ensure confidentiality, integrity, availability, authentication, and non-repudiation."
+        }, {
+            "T0492": "Ensure the integration and implementation of Cross-Domain Solutions (CDS) in a secure environment."
+        }, {
+            "T0499": "Mitigate/correct security deficiencies identified during security/certification testing and/or recommend risk acceptance for the appropriate senior leader or authorized representative."
+        }, {
+            "T0504": "Assess and monitor cybersecurity related to system implementation and testing practices."
+        }, {
+            "T0508": "Verify minimum security requirements are in place for all applications."
+        }, {
+            "T0526": "Provides cybersecurity recommendations to leadership based on significant threats and vulnerabilities."
+        }, {
+            "T0545": "Work with stakeholders to resolve computer security incidents and vulnerability compliance."
+        }, {
+            "T0548": "Provide advice and input for Disaster Recovery, Contingency, and Continuity of Operations Plans."
+        }]
+    }
+}

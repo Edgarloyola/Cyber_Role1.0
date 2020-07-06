@@ -1,0 +1,126 @@
+{
+    "Executive Cyber Leadership": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0009": "Knowledge of application vulnerabilities."
+        }, {
+            "K0070": "Knowledge of system and application security threats and vulnerabilities (e.g., buffer overflow, mobile code, cross-site scripting, Procedural Language/Structured Query Language [PL/SQL] and injections, race conditions, covert channel, replay, return-oriented attacks, malicious code)."
+        }, {
+            "K0106": "Knowledge of what constitutes a network attack and a network attack's relationship to both threats and vulnerabilities."
+        }, {
+            "K0147": "Knowledge of emerging security issues, risks, and vulnerabilities."
+        }, {
+            "K0296": "Knowledge of capabilities, applications, and potential vulnerabilities of network equipment including hubs, routers, switches, bridges, servers, transmission media, and related hardware."
+        }, {
+            "K0314": "Knowledge of industry technologie's potential cybersecurity vulnerabilities."
+        }, {
+            "K0624": "Knowledge of Application Security Risks (e.g. Open Web Application Security Project Top 10 list)"
+        }, {
+            "K0628": "Knowledge of cyber competitions as a way of developing skills by providing hands-on experience in simulated, real-world situations."
+        }],
+        "skills_ids": [{
+            "S0018": "Skill in creating policies that reflect system security objectives."
+        }, {
+            "S0356": "Skill in communicating with all levels of management including Board members (e.g., interpersonal skills, approachability, effective listening skills, appropriate use of style and language for the audience)."
+        }, {
+            "S0357": "Skill to anticipate new security threats."
+        }, {
+            "S0358": "Skill to remain aware of evolving technical infrastructures."
+        }, {
+            "S0359": "Skill to use critical thinking to analyze organizational patterns and relationships."
+        }],
+        "abilities_ids": [{
+            "A0033": "Ability to develop policy, plans, and strategy in compliance with laws, regulations, policies, and standards in support of organizational cyber activities."
+        }, {
+            "A0070": "Ability to apply critical reading/thinking skills."
+        }, {
+            "A0085": "Ability to exercise judgment when policies are not well-defined."
+        }, {
+            "A0094": "Ability to interpret and apply laws, regulations, policies, and guidance relevant to organization cyber objectives."
+        }, {
+            "A0105": "Ability to tailor technical and planning information to a customer's level of understanding."
+        }, {
+            "A0106": "Ability to think critically."
+        }, {
+            "A0116": "Ability to prioritize and allocate cybersecurity resources correctly and efficiently."
+        }, {
+            "A0117": "Ability to relate strategy, business, and technology in the context of organizational dynamics."
+        }, {
+            "A0118": "Ability to understand technology, management, and leadership issues related to organization processes and problem solving."
+        }, {
+            "A0119": "Ability to understand the basic concepts and issues related to cyber and its organizational impact."
+        }, {
+            "A0129": "Ability to ensure information security management processes are integrated with strategic and operational planning processes."
+        }, {
+            "A0130": "Ability to ensure that senior officials within the organization provide information security for the information and systems that support the operations and assets under their control."
+        }],
+        "tasks_ids": [{
+            "T0001": "Acquire and manage the necessary resources, including leadership support, financial resources, and key security personnel, to support information technology (IT) security goals and objectives and reduce overall organizational risk."
+        }, {
+            "T0002": "Acquire necessary resources, including financial resources, to conduct an effective enterprise continuity of operations program."
+        }, {
+            "T0004": "Advise senior management (e.g., CIO) on cost/benefit analysis of information security programs, policies, processes, systems, and elements."
+        }, {
+            "T0006": "Advocate organization's official position in legal and legislative proceedings."
+        }, {
+            "T0025": "Communicate the value of information technology (IT) security throughout all levels of the organization stakeholders."
+        }, {
+            "T0066": "Develop and maintain strategic plans."
+        }, {
+            "T0130": "Interface with external organizations (e.g., public affairs, law enforcement, Command or Component Inspector General) to ensure appropriate and accurate dissemination of incident and other Computer Network Defense information."
+        }, {
+            "T0134": "Lead and align information technology (IT) security priorities with the security strategy."
+        }, {
+            "T0135": "Lead and oversee information security budget, staffing, and contracting."
+        }, {
+            "T0148": "Manage the publishing of Computer Network Defense guidance (e.g., TCNOs, Concept of Operations, Net Analyst Reports, NTSM, MTOs) for the enterprise constituency."
+        }, {
+            "T0151": "Monitor and evaluate the effectiveness of the enterprise's cybersecurity safeguards to ensure that they provide the intended level of protection."
+        }, {
+            "T0227": "Recommend policy and coordinate review and approval."
+        }, {
+            "T0229": "Supervise or manage protective or corrective measures when a cybersecurity incident or vulnerability is discovered."
+        }, {
+            "T0248": "Promote awareness of security issues among management and ensure sound security principles are reflected in the organization's vision and goals."
+        }, {
+            "T0254": "Oversee policy standards and implementation strategies to ensure procedures and guidelines comply with cybersecurity policies."
+        }, {
+            "T0263": "Identify security requirements specific to an information technology (IT) system in all phases of the system life cycle."
+        }, {
+            "T0264": "Ensure that plans of actions and milestones or remediation plans are in place for vulnerabilities identified during risk assessments, audits, inspections, etc."
+        }, {
+            "T0282": "Define and/or implement policies and procedures to ensure protection of critical infrastructure as appropriate."
+        }, {
+            "T0337": "Supervise and assign work to programmers, designers, technologists and technicians, and other engineering and scientific personnel."
+        }, {
+            "T0356": "Coordinate with organizational manpower stakeholders to ensure appropriate allocation and distribution of human capital assets."
+        }, {
+            "T0429": "Assess policy needs and collaborate with stakeholders to develop policies to govern cyber activities."
+        }, {
+            "T0445": "Design/integrate a cyber strategy that outlines the vision, mission, and goals that align with the organization's strategic plan."
+        }, {
+            "T0509": "Perform an information security risk assessment."
+        }, {
+            "T0763": "Conduct long-range, strategic planning efforts with internal and external partners in cyber activities."
+        }, {
+            "T0871": "Collaborate on cyber privacy and security policies and procedures"
+        }, {
+            "T0872": "Collaborate with cybersecurity personnel on the security risk assessment process to address privacy compliance and risk mitigation"
+        }, {
+            "T0927": "Appoint and guide a team of IT security experts"
+        }, {
+            "T0928": "Collaborate with key stakeholders to establish a cybersecurity risk management program"
+        }]
+    }
+}

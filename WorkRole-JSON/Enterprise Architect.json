@@ -1,0 +1,182 @@
+{
+    "Enterprise Architect": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0024": "Knowledge of database systems."
+        }, {
+            "K0027": "Knowledge of organization's enterprise information security architecture."
+        }, {
+            "K0028": "Knowledge of organization's evaluation and validation requirements."
+        }, {
+            "K0030": "Knowledge of electrical engineering as applied to computer architecture (e.g., circuit boards, processors, chips, and computer hardware)."
+        }, {
+            "K0035": "Knowledge of installation, integration, and optimization of system components."
+        }, {
+            "K0037": "Knowledge of Security Assessment and Authorization process."
+        }, {
+            "K0043": "Knowledge of industry-standard and organizationally accepted analysis principles and methods."
+        }, {
+            "K0044": "Knowledge of cybersecurity and privacy principles and organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "K0052": "Knowledge of mathematics (e.g. logarithms, trigonometry, linear algebra, calculus, statistics, and operational analysis)."
+        }, {
+            "K0056": "Knowledge of network access, identity, and access management (e.g., public key infrastructure, Oauth, OpenID, SAML, SPML)."
+        }, {
+            "K0060": "Knowledge of operating systems."
+        }, {
+            "K0061": "Knowledge of how traffic flows across the network (e.g., Transmission Control Protocol [TCP] and Internet Protocol [IP], Open System Interconnection Model [OSI], Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0063": "Knowledge of parallel and distributed computing concepts."
+        }, {
+            "K0074": "Knowledge of key concepts in security management (e.g., Release Management, Patch Management)."
+        }, {
+            "K0075": "Knowledge of security system design tools, methods, and techniques."
+        }, {
+            "K0082": "Knowledge of software engineering."
+        }, {
+            "K0091": "Knowledge of systems testing and evaluation methods."
+        }, {
+            "K0093": "Knowledge of telecommunications concepts (e.g., Communications channel, Systems Link Budgeting, Spectral efficiency, Multiplexing)."
+        }, {
+            "K0102": "Knowledge of the systems engineering process."
+        }, {
+            "K0170": "Knowledge of critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0180": "Knowledge of network systems management principles, models, methods (e.g., end-to-end systems performance monitoring), and tools."
+        }, {
+            "K0198": "Knowledge of organizational process improvement concepts and process maturity models (e.g., Capability Maturity Model Integration (CMMI) for Development, CMMI for Services, and CMMI for Acquisitions)."
+        }, {
+            "K0200": "Knowledge of service management concepts for networks and related standards (e.g., Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0203": "Knowledge of security models (e.g., Bell-LaPadula model, Biba integrity model, Clark-Wilson integrity model)."
+        }, {
+            "K0207": "Knowledge of circuit analysis."
+        }, {
+            "K0211": "Knowledge of confidentiality, integrity, and availability requirements."
+        }, {
+            "K0212": "Knowledge of cybersecurity-enabled software products."
+        }, {
+            "K0214": "Knowledge of the Risk Management Framework Assessment Methodology."
+        }, {
+            "K0227": "Knowledge of various types of computer architectures."
+        }, {
+            "K0240": "Knowledge of multi-level security systems and cross domain solutions."
+        }, {
+            "K0264": "Knowledge of program protection planning (e.g. information technology (IT) supply chain security/risk management policies, anti-tampering techniques, and requirements)."
+        }, {
+            "K0275": "Knowledge of configuration management techniques."
+        }, {
+            "K0286": "Knowledge of N-tiered typologies (e.g. including server and client operating systems)."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0291": "Knowledge of the enterprise information technology (IT) architectural concepts and patterns (e.g., baseline, validated design, and target architectures.)"
+        }, {
+            "K0293": "Knowledge of integrating the organization's goals and objectives into the architecture."
+        }, {
+            "K0299": "Knowledge in determining how a security system should work (including its resilience and dependability capabilities) and how changes in conditions, operations, or the environment will affect these outcomes."
+        }, {
+            "K0322": "Knowledge of embedded systems."
+        }, {
+            "K0323": "Knowledge of system fault tolerance methodologies."
+        }, {
+            "K0325": "Knowledge of Information Theory (e.g., source coding, channel coding, algorithm complexity theory, and data compression)."
+        }, {
+            "K0326": "Knowledge of demilitarized zones."
+        }, {
+            "K0332": "Knowledge of network protocols such as TCP/IP, Dynamic Host Configuration, Domain Name System (DNS), and directory services."
+        }, {
+            "K0333": "Knowledge of network design processes, to include understanding of security objectives, operational objectives, and trade-offs."
+        }, {
+            "K0487": "Knowledge of network security (e.g., encryption, firewalls, authentication, honey pots, perimeter protection)."
+        }, {
+            "K0516": "Knowledge of physical and logical network devices and infrastructure to include hubs, switches, routers, firewalls, etc."
+        }],
+        "skills_ids": [{
+            "S0005": "Skill in applying and incorporating information technologies into proposed solutions."
+        }, {
+            "S0024": "Skill in designing the integration of hardware and software solutions."
+        }, {
+            "S0027": "Skill in determining how a security system should work (including its resilience and dependability capabilities) and how changes in conditions, operations, or the environment will affect these outcomes."
+        }, {
+            "S0050": "Skill in design modeling and building use cases (e.g., unified modeling language)."
+        }, {
+            "S0060": "Skill in writing code in a currently supported programming language (e.g., Java, C++)."
+        }, {
+            "S0122": "Skill in the use of design methods."
+        }, {
+            "S0367": "Skill to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "S0374": "Skill to identify cybersecurity and privacy issues that stem from connections with internal and external customers and partner organizations."
+        }],
+        "abilities_ids": [{
+            "A0008": "Ability to apply the methods, standards, and approaches for describing, analyzing, and documenting an organization's enterprise information technology (IT) architecture (e.g., Open Group Architecture Framework [TOGAF], Department of Defense Architecture Framework [DoDAF], Federal Enterprise Architecture Framework [FEAF])."
+        }, {
+            "A0015": "Ability to conduct vulnerability scans and recognize vulnerabilities in security systems."
+        }, {
+            "A0027": "Ability to apply an organization's goals and objectives to develop and maintain architecture."
+        }, {
+            "A0038": "Ability to optimize systems to meet enterprise performance requirements."
+        }, {
+            "A0051": "Ability to execute technology integration processes."
+        }, {
+            "A0060": "Ability to build architectures and frameworks."
+        }, {
+            "A0123": "Ability to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "A0170": "Ability to identify critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }],
+        "tasks_ids": [{
+            "T0051": "Define appropriate levels of system availability based on critical system functions and ensure that system requirements identify appropriate disaster recovery and continuity of operations requirements to include any appropriate fail-over/alternate site requirements, backup requirements, and material supportability requirements for system recover/restoration."
+        }, {
+            "T0084": "Employ secure configuration management processes."
+        }, {
+            "T0090": "Ensure that acquired or developed system(s) and architecture(s) are consistent with organization's cybersecurity architecture guidelines."
+        }, {
+            "T0108": "Identify and prioritize critical business functions in collaboration with organizational stakeholders."
+        }, {
+            "T0196": "Provide advice on project costs, design concepts, or design changes."
+        }, {
+            "T0205": "Provide input to the Risk Management Framework process activities and related documentation (e.g., system life-cycle support plans, concept of operations, operational procedures, and maintenance training materials)."
+        }, {
+            "T0307": "Analyze candidate architectures, allocate security services, and select security mechanisms."
+        }, {
+            "T0314": "Develop a system security context, a preliminary system security Concept of Operations (CONOPS), and define baseline system security requirements in accordance with applicable cybersecurity requirements."
+        }, {
+            "T0328": "Evaluate security architectures and designs to determine the adequacy of security design and architecture proposed or provided in response to requirements contained in acquisition documents."
+        }, {
+            "T0338": "Write detailed functional specifications that document the architecture development process."
+        }, {
+            "T0427": "Analyze user needs and requirements to plan architecture."
+        }, {
+            "T0440": "Capture and integrate essential system capabilities or business functions required for partial or full system restoration after a catastrophic failure event."
+        }, {
+            "T0448": "Develop enterprise architecture or system components required to meet user needs."
+        }, {
+            "T0473": "Document and update as necessary all definition and architecture activities."
+        }, {
+            "T0517": "Integrate results regarding the identification of gaps in security architecture."
+        }, {
+            "T0521": "Plan implementation strategy to ensure that enterprise components can be integrated and aligned."
+        }, {
+            "T0542": "Translate proposed capabilities into technical requirements."
+        }, {
+            "T0555": "Document how the implementation of a new system or new interface between systems impacts the current and target environment including but not limited to security posture."
+        }, {
+            "T0557": "Integrate key management functions as related to cyberspace."
+        }]
+    }
+}

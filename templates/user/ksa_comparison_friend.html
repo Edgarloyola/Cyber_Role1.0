@@ -1,0 +1,107 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('user_ksat.ksa_comparison_friend') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+        font-size:25px
+    }
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+</style>
+  
+  <div class="box">
+    <h3 class="title is-3 has-text-centered">
+        {{ _(title) }}
+    </h3>
+  </div>
+  <div class="box global">
+    <div class="box has-text-centered">
+        <b>Find a friend by their username and compare your KSA levels.</b>
+    </div>
+    <div class="columns is-centered">
+        <div class="column has-text-centered is-4">
+            <div class="control has-icons-left has-text-centered ">
+                 <form method="POST" action="">
+                    {{ search_friend.hidden_tag() }}
+                    {{ macros.render_input(search_friend.friend_user,label=" ", icon="user") }}
+                    {{ macros.render_submit(search_friend.submit)}}
+                </form>
+            </div>
+        </div>
+    </div>
+    {% if data %}
+    <div id="chart_div" class="is-center" style="width: 100%; height: 100%;"></div>
+    {% endif%}
+  </div>
+
+
+
+<script type="text/javascript">
+    //3D PIE CHART
+    google.charts.load("current", {packages: ["corechart"]});
+
+    google.charts.setOnLoadCallback(drawChart);
+
+    var array = {{ data|safe }};
+    var values = Object.values(array);
+    var dates = {{dates|safe}};
+    var names = {{names|safe}};
+
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'KSA');
+
+      for (var i = 0; i < dates.length; i++) {
+        data.addColumn('number', names[i]+' -- '+dates[i]);
+      }
+
+      //Insertamos los valores de las columnas de level of ksas
+      data.addRows(values[0]);
+
+      var options = {
+        title : 'Level of KSA by Date',
+        seriesType: 'bars',
+        height: 700,
+        vAxis: {title: 'Level',
+              gridlines: {
+          interval: [1],
+        }},
+        hAxis: {title: 'KSA'},
+         /*series: {5: {type: 'line'}}*/
+      };
+
+      var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+
+    }
+
+</script>
+{% endblock %}

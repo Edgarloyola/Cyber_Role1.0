@@ -1,0 +1,646 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+{% block title %}{{ _(title) }}{% endblock %}
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('general.test_target_ksat') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .title{
+        font-size: 18px
+    }
+
+    .vsb-menu li{
+
+        padding-top: 0.7em
+    }
+</style>
+<h2 class="title is-2 has-text-centered">
+    {{ _(title) }}
+</h2>
+
+{% set lo_prerequisites="Your current KSA profile"%}
+{% set lo_outcomes="Achieving KSA goals"%}
+    <div class="box">
+        <div class="content">
+            <p>
+                <h4 class="subtitle is-4 has-text-centered">
+                    Before you begin, whith Optimal courses
+                </h4>
+            </p>
+            <div class="box">
+                <form action="" method="POST" role="form">
+                        {{ form.hidden_tag() }}
+                    <div class="box">
+                        <div class="columns is-centered has-text-centered">
+                            <div class="column is-centered">
+                                <h4 class="subtitle is-4 has-text-centered"> Target setup</h4>
+                                <div class="columns is-centered">
+                                    <div class="column is-4">
+                                        <label class="has-text-weight-bold">{{form.time_min.label}}</label>
+                                        <div class="field">
+                                            {{form.time_min}}
+                                        </div> 
+                                        <label class="has-text-weight-bold">{{form.cost_min.label}}</label>
+                                        <div class="field">
+                                            {{form.cost_min}}
+                                        </div> 
+                                        <label class="has-text-weight-bold">{{form.reput_min.label}}</label>
+                                        <div class="field">
+                                            {{form.reput_min}}
+                                        </div> 
+                                     </div>
+                                     <div class="column is-4">
+                                        <label class="has-text-weight-bold">{{form.time_max.label}}</label>
+                                        <div class="field">
+                                            {{form.time_max}}
+                                        </div> 
+
+                                        {% if form.time_max.errors[1] %}
+                                        {% set mesage= form.time_max.errors[1] %}
+                                        <article class="message is-warning">
+                                            <div class="message-body">
+                                                <li>{{mesage}}</li>
+                                            </div>
+                                        </article>
+                                        {% endif %}
+
+                                        <label class="has-text-weight-bold">{{form.cost_max.label}}</label>
+                                        <div class="field">
+                                             {{form.cost_max}}
+                                        </div> 
+
+                                        {% if form.cost_max.errors[1] %}
+                                        {% set mesage= form.cost_max.errors[1] %}
+                                        <article class="message is-warning">
+                                            <div class="message-body">
+                                                <li>{{mesage}}</li>
+                                            </div>
+                                        </article>
+                                        {% endif %}
+                                        
+                                        <label class="has-text-weight-bold">{{form.reput_average.label}}</label>
+                                        <div class="field">
+                                              {{form.reput_average}}
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <h4 class="subtitle is-4 has-text-centered"> Range of LO modules</h4>
+                                <div class="columns">
+                                    <div class="column has-text-centered">
+                                        <label class="has-text-weight-bold has-text-centered">{{form.nk_min.label}}</label>
+                                        <div class="field">
+                                              {{form.nk_min}}
+                                        </div> 
+                                        <label class="has-text-weight-bold has-text-centered">{{form.nk_max.label}}</label>
+                                        <div class="field">
+                                             {{form.nk_max}}
+                                        </div> 
+
+                                        {% if form.nk_max.errors[1] %}
+                                        {% set mesage= form.nk_max.errors[1] %}
+                                        <article class="message is-warning">
+                                            <div class="message-body">
+                                                <li>{{mesage}}</li>
+                                            </div>
+                                        </article>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="box">
+                            <h4 class="subtitle is-4 has-text-centered"> Select an objective option from a WorkRole</h4>
+                             <div class="box">
+                                <div class="field has-text-centered">
+                                {{form.selectWroles}}
+                                </div>
+                            </div>
+                    </div>
+                    <div class="columns is-centered">
+                        <div class="column is-4">
+                            <div class="box ">
+                                <label class="label title is-4 has-text-centered">
+                                    <a href="{{ url_for('general.show_k') }}">Knowledges</a>
+                                </label>
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="box has-text-centered">
+                                            <b>{{lo_prerequisites}}</b>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="box has-text-centered">
+                                            <b>{{lo_outcomes}}</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {% set sizK = 0 %}
+                                {% if sizeK %}
+                                    {% set sizK = sizeK %}
+                                {% else %}
+                                    {% set sizK = listK|count %}
+                                {% endif %}
+                                <div class="columns">
+                                    <div class="column is-half">
+                                        <div class="columns is-centered">
+                                            <div class="box" id="Knows_req" style="width:170px; height:400px; overflow: auto;">
+                                                {% for fo in range(sizK) %}
+                                                    <label id="label_K_req" class="has-text-weight-bold">
+                                                        {{ form.ksas[fo]['levelK_req'].label }}
+                                                    </label>
+                                                    <span class="level-left" style="margin-bottom: 10px">
+                                                        {{ form.ksas[fo]['levelK_req'] }}
+                                                    </span>
+                                                    {% if form.ksas[fo]['levelK_req'].errors[1] %}
+                                                        {% set mesage= form.ksas[fo]['levelK_req'].errors[1] %}
+                                                        <article class="message is-warning">
+                                                            <div class="message-body">
+                                                                <li>{{mesage}}</li>
+                                                            </div>
+                                                        </article>
+                                                  {% endif %}
+                                                {% endfor%}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-half">
+                                        <div class="columns is-centered">
+                                            <div class="box" id="Knows_out" style="width:170px; height:400px; overflow: auto;">
+                                                {% for fo in range(sizK) %}
+                                                    <label id="label_K_goal" class="has-text-weight-bold">
+                                                        {{ form.ksas[fo]['levelK_goal'].label }}
+                                                    </label>
+                                                    <span class="level-left" style="margin-bottom: 10px">
+                                                        {{ form.ksas[fo]['levelK_goal'] }}
+                                                    </span>
+                                                    {% if form.ksas[fo]['levelK_goal'].errors[1] %}
+                                                    {% set mesage= form.ksas[fo]['levelK_goal'].errors[1] %}
+                                                    <article class="message is-warning">
+                                                        <div class="message-body">
+                                                            <li>{{mesage}}</li>
+                                                        </div>
+                                                    </article>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="box">
+                                <label class="label title is-4 has-text-centered">
+                                    <a href="{{ url_for('general.show_s') }}">Skills</a>
+                                </label>
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="box has-text-centered">
+                                            <b>{{lo_prerequisites}}</b>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="box has-text-centered">
+                                            <b>{{lo_outcomes}}</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% set sizS = 0 %}
+                                {% if sizeS %}
+                                    {% set sizS = sizeS %}
+                                {% else %}
+                                    {% set sizS = listS|count %}
+                                {% endif %}
+                                <div class="columns">
+                                    <div class="column is-half">
+                                        <div class="columns is-centered">
+                                            <div class="box" id="Skills_req" style="width:170px; height:400px; overflow: auto;">
+                                                {% for fo in range(sizS) %}
+                                                    <label id="label_S_req" class="has-text-weight-bold">
+                                                        {{ form.ksas[fo]['levelS_req'].label }}
+                                                    </label>
+                                                    <span class="level-left" style="margin-bottom: 10px">
+                                                        {{ form.ksas[fo]['levelS_req'] }}
+                                                    </span>
+                                                    {% if form.ksas[fo]['levelS_req'].errors[1] %}
+                                                    {% set mesage= form.ksas[fo]['levelS_req'].errors[1] %}
+                                                        <article class="message is-warning">
+                                                            <div class="message-body">
+                                                                <li>{{mesage}}</li>
+                                                            </div>
+                                                        </article>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column is-half">
+                                        <div class="columns is-centered">
+                                            <div class="box" id="Skills_out" style="width:170px; height:400px; overflow: auto;">
+                                                {% for fo in range(sizS) %}
+                                                    <label id="label_S_goal" class="has-text-weight-bold">
+                                                        {{ form.ksas[fo]['levelS_goal'].label }}
+                                                    </label>
+                                                    <span class="level-left" style="margin-bottom: 10px">
+                                                        {{ form.ksas[fo]['levelS_goal'] }}
+                                                    </span>
+                                                {% if form.ksas[fo]['levelS_goal'].errors[1] %}
+                                                {% set mesage= form.ksas[fo]['levelS_goal'].errors[1] %}
+                                                    <article class="message is-warning">
+                                                        <div class="message-body">
+                                                            <li>{{mesage}}</li>
+                                                        </div>
+                                                    </article>
+                                                {% endif %}
+                                                {% endfor%}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-4">
+                            <div class="box">
+                                <label class="label title is-4 has-text-centered">
+                                    <a href="{{ url_for('general.show_a') }}">Abilities</a>
+                                </label>
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="box has-text-centered">
+                                            <b>{{lo_prerequisites}}</b>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="box has-text-centered">
+                                            <b>{{lo_outcomes}}</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% set sizA = 0 %}
+                                {% if sizeA %}
+                                    {% set sizA = sizeA %}
+                                {% else %}
+                                    {% set sizA = listA|count %}
+                                {% endif %}
+                                <div class="columns">
+                                    <div class="column is-half">
+                                        <div class="columns is-centered">
+                                            <div class="box" id="Abilis_req" style="width:170px; height:400px; overflow: auto;">
+                                                {% for fo in range(sizA) %}
+                                                    <label id="label_A_req" class="has-text-weight-bold">
+                                                        {{ form.ksas[fo]['levelA_req'].label }}
+                                                    </label>
+                                                    <span class="level-left" style="margin-bottom: 10px">
+                                                        {{ form.ksas[fo]['levelA_req'] }}
+                                                    </span>
+                                                {% if form.ksas[fo]['levelA_req'].errors[1] %}
+                                                {% set mesage= form.ksas[fo]['levelA_req'].errors[1] %}
+                                                    <article class="message is-warning">
+                                                        <div class="message-body">
+                                                            <li>{{mesage}}</li>
+                                                        </div>
+                                                    </article>
+                                                {% endif %}
+                                                {% endfor%}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column is-half">
+                                        <div class="columns is-centered">
+                                            <div class="box" id="Abilis_out" style="width:170px; height:400px; overflow: auto;">
+                                                {% for fo in range(sizA) %}
+                                                    <label id="label_A_goal" class="has-text-weight-bold">
+                                                        {{ form.ksas[fo]['levelA_goal'].label }}
+                                                    </label>
+                                                    <span class="level-left" style="margin-bottom: 10px">
+                                                        {{ form.ksas[fo]['levelA_goal'] }}
+                                                    </span>
+                                                    {% if form.ksas[fo]['levelA_goal'].errors %}
+                                                    {% set mesage= form.ksas[fo]['levelA_goal'].errors[1] %}
+                                                    <article class="message is-warning">
+                                                        <div class="message-body">
+                                                            <li>{{mesage}}</li>
+                                                        </div>
+                                                    </article>
+                                                    {% endif %}
+                                                {% endfor%}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if notKSA %}
+                    <div class="box">
+                        <article class="message is-warning has-text-centered">
+                            <div class="message-body">
+                                <li>Elige al menos una tripleta KSA doble (Prerequisites and Outcomes).
+                                </li>
+                            </div>
+                        </article>
+                    </div>
+                {% endif %}
+            </div>
+                <div class="columns is-centered">
+                    <div class="field">
+                         {# Submit #}
+                         <!-- Podemos cambiar el estilo del boton submit en macros.html -->
+                        {{ macros.render_submit(form.submit, label=_('Next')) }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    let selectWKroles = document.getElementById('selectWroles');
+
+    selectWKroles.onchange = function(){
+
+        name = selectWKroles.value;
+
+        //Agregamos el valor por default en general.py y aqui creamos
+
+        let miK_r = document.getElementById("Knows_req");
+        let miK_o = document.getElementById("Knows_out");
+
+        let miS_r = document.getElementById("Skills_req");
+        let miS_o = document.getElementById("Skills_out");
+
+        let miA_r = document.getElementById("Abilis_req");
+        let miA_o = document.getElementById("Abilis_out");
+
+        let kr_select_optionHTML='';
+        let ko_select_optionHTML='';
+        let sr_select_optionHTML='';
+        let so_select_optionHTML='';
+        let ar_select_optionHTML='';
+        let ao_select_optionHTML='';
+        //inicializamos a cero
+        miK_r.innerHTML='';
+        miK_o.innerHTML='';
+        miS_r.innerHTML='';
+        miS_o.innerHTML='';
+        miA_r.innerHTML='';
+        miA_o.innerHTML='';
+
+        choose_default = '<option selected value=-1>-1</option><option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option></select></span>';
+
+        //UNA OPCION MAS PODRIA SER ENVIAR LOS VALORES QUE NECESITAMOS POR EL GENERAL.PY Y AQUI LO CAPTURAMOS
+        // YA QUE EL FORM ES UNA ESPCECIE DE VARIABLE QUE SE TRANSFORMA EN HTML CON JINJA2
+
+        if (name.localeCompare("Default")==0){
+
+            {% set max_lenListKSa = (listK|length,listS|length,listA|length)|max %}
+
+            var equal_label=false;
+
+            //la culpa es este i, supera los valores de los arrays internos de los json, sintaxis compilada rara
+            let knows;
+            let skills;
+            let abilis;
+
+            {% for i in range(max_lenListKSa) %}
+                {% if loop.index <= listK|count %}
+                    var label = '{{ listK[i] }}';
+                    knowledges= {{ksa_user['knowledges_ids']|tojson}};
+
+                    equal_label=false;
+
+                    //Comprobamos que label sea igual al label del KNOWLEDGES del user
+                    if (Object.keys(knowledges).includes(label)){
+
+                        var valueK = knowledges[label]['level'];
+                        kr_select_optionHTML+='<label id=label_K_req class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelK_req name=levelK_req required><option value='+valueK+'>'+valueK+'</option></select></span>';
+                        equal_label=true;
+                    }
+
+                    if(!equal_label){
+                        kr_select_optionHTML+='<label id=label_K_req class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelK_req name=levelK_req required>'+choose_default;
+                    }
+
+                    ko_select_optionHTML+='<label id=label_K_goal class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelK_goal name=levelK_goal required>'+choose_default;
+                {%endif%}
+                {% if loop.index <= listS|count %}
+                    var label = '{{ listS[i] }}';
+                    skills = {{ksa_user['skills_ids']|tojson}};
+
+                    equal_label=false;
+
+                    //Comprobamos que label sea igual al label del KNOWLEDGES del user
+                    if (Object.keys(skills).includes(label)){
+                        var valueS = skills[label]['level'];
+                        sr_select_optionHTML+='<label id=label_S_req class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px"><select id=levelS_req name=levelS_req required><option value='+valueS+'>'+valueS+'</option></select></span>';
+                        equal_label=true;
+                    }
+
+                    if(!equal_label){
+                        sr_select_optionHTML+='<label id=label_S_req class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelS_req name=levelS_req required>'+choose_default;
+                    }
+
+                    so_select_optionHTML+='<label id=label_S_goal class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px"><select id=levelS_goal name=levelS_goal required>'+choose_default;
+
+                {%endif%}
+                {% if loop.index <= listA|count %}
+                    var label = '{{listA[i]}}';
+                    abilis = {{ksa_user['abilities_ids']|tojson}};
+
+                    equal_label=false;
+
+                    //Comprobamos que label sea igual al label del KNOWLEDGES del user
+                    if (Object.keys(abilis).includes(label)){
+                        var valueA = abilis[label]['level'];
+                        ar_select_optionHTML+='<label id=label_A_req class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelA_req name=levelA_req required><option value='+valueA+'>'+valueA+'</option></select></span>';
+                        equal_label=true;
+                    }
+
+                    if(!equal_label){
+                         ar_select_optionHTML+='<label id=label_A_req class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px"><select id=levelA_req name=levelA_req required>'+choose_default;
+                    }
+
+                    ao_select_optionHTML+='<label id=label_A_goal class=has-text-weight-bold>'+label+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelA_goal name=levelA_goal required>'+choose_default;
+                {%endif%}
+                //Hacemos esto para que se muestren antes (para mayor eficiencia en el html)
+                {% if loop.index == listS|count+1 %}
+                    miS_r.innerHTML=sr_select_optionHTML;
+                    miS_o.innerHTML=so_select_optionHTML;
+                {%endif%}
+                {% if loop.index == listA|count+1 %}
+                    miA_r.innerHTML=ar_select_optionHTML;
+                    miA_o.innerHTML=ao_select_optionHTML;
+                {%endif%}
+            {% endfor %}
+            miK_r.innerHTML=kr_select_optionHTML;
+            miK_o.innerHTML=ko_select_optionHTML;
+        }
+        else{
+
+            fetch('/select_wk_role/'+ name ).then(function(response){
+
+                response.json().then(function(data){
+
+                    let miK_r = document.getElementById("Knows_req");
+                    let miK_o = document.getElementById("Knows_out");
+
+                    let miS_r = document.getElementById("Skills_req");
+                    let miS_o = document.getElementById("Skills_out");
+
+                    let miA_r = document.getElementById("Abilis_req");
+                    let miA_o = document.getElementById("Abilis_out");
+
+                    let select_optionHTML='';
+                    //inicializamos a cero
+                    miK_r.innerHTML='';
+                    miK_o.innerHTML='';
+                    miS_r.innerHTML='';
+                    miS_o.innerHTML='';
+                    miA_r.innerHTML='';
+                    miA_o.innerHTML='';
+
+
+                    //buscamos los labels que tiene un usuario KSA y remplazamos por su values originales
+                    let k_level_upperZero=false;
+                    //PREREQUISITOS KNOWLEDGES
+                    //recorremos el tamaño de los que se han sustituido los labels
+                    for (let k_wkroles of Object.keys(data[0][name].knowledges_ids)){
+                        k_level_upperZero=false;
+                        //tamanno de los kSA del user
+                        for(let k_user of Object.keys(data[1].knowledges_ids)){
+                            if(k_wkroles.localeCompare(k_user) == 0 && data[1].knowledges_ids[k_user].level > 0){
+
+                                select_optionHTML+='<label id=label_K_req class=has-text-weight-bold>'+k_user+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelK_req name=levelK_req required><option value='+data[1].knowledges_ids[k_user].level+'>'+data[1].knowledges_ids[k_user].level+'</option></select></span>';
+                                k_level_upperZero=true;
+                            }
+                        }
+                        if(!k_level_upperZero){
+                            select_optionHTML+='<label id=label_K_req class=has-text-weight-bold>'+k_wkroles+'</label><span class=level-left style="margin-bottom:10px"><select id=levelK_req name=levelK_req required>'+choose_default;
+                        }
+
+                    }
+
+                    miK_r.innerHTML=select_optionHTML;
+                    select_optionHTML='';
+                    //OUTCOMES KNOWLEDGES
+                    //recorremos el tamaño de los que se han sustituido los labels
+                    for (let k_wkroles of Object.keys(data[0][name].knowledges_ids)){
+                        select_optionHTML+='<label id=label_K_goal class=has-text-weight-bold>'+k_wkroles+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelK_goal name=levelK_goal required>'+choose_default;
+                    }
+
+                    miK_o.innerHTML=select_optionHTML;
+
+                    select_optionHTML='';
+
+                    //buscamos los labels que tiene un usuario KSA y remplazamos por su values originales
+                    let s_level_upperZero=false;
+                    //PREREQUISITOS KNOWLEDGES
+                    //recorremos el tamaño de los que se han sustituido los labels
+                    for (let s_wkroles of Object.keys(data[0][name].skills_ids)){
+                        s_level_upperZero=false;
+                        //tamanno de los kSA del user
+                        for(let s_user of Object.keys(data[1].skills_ids)){
+                            if(s_wkroles.localeCompare(s_user) == 0 && data[1].skills_ids[s_user].level > 0){
+                                select_optionHTML+='<label id=label_S_req class=has-text-weight-bold>'+s_user+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelS_req name=levelS_req required><option value='+data[1].skills_ids[s_user].level+'>'+data[1].skills_ids[s_user].level+'</option></select></span>';
+                                s_level_upperZero=true;
+                            }
+                        }
+                        if(!s_level_upperZero){
+                            select_optionHTML+='<label id=label_S_req class=has-text-weight-bold>'+s_wkroles+'</label><span class=level-left style="margin-bottom:10px"><select id=levelS_req name=levelS_req required>'+choose_default;
+                        }
+
+                    }
+
+                    miS_r.innerHTML=select_optionHTML;
+                    select_optionHTML='';
+                    //OUTCOMES KNOWLEDGES
+                    //recorremos el tamaño de los que se han sustituido los labels
+                    for (let s_wkroles of Object.keys(data[0][name].skills_ids)){
+                        select_optionHTML+='<label id=label_S_goal class=has-text-weight-bold>'+s_wkroles+'</label><span class=level-left style="margin-bottom:10px"><select id=levelS_goal name=levelS_goal required>'+choose_default;
+                    }
+
+                    miS_o.innerHTML=select_optionHTML;
+
+                    select_optionHTML='';
+
+                    //buscamos los labels que tiene un usuario KSA y remplazamos por su values originales
+                    let a_level_upperZero=false;
+                    //PREREQUISITOS KNOWLEDGES
+                    //recorremos el tamaño de los que se han sustituido los labels
+                    for (let a_wkroles of Object.keys(data[0][name].abilities_ids)){
+                        a_level_upperZero=false;
+                        //tamanno de los kSA del user
+                        for(let a_user of Object.keys(data[1].abilities_ids)){
+                            if(a_wkroles.localeCompare(a_user) == 0 && data[1].abilities_ids[a_user].level > 0){
+                                select_optionHTML+='<label id=label_A_req class=has-text-weight-bold>'+a_user+'</label><span class=level-left style="margin-bottom: 10px" ><select id=levelA_req name=levelA_req required><option value='+data[1].abilities_ids[a_user].level+'>'+data[1].abilities_ids[a_user].level+'</option></select></span>';
+                                a_level_upperZero=true;
+                            }
+                        }
+                        if(!a_level_upperZero){
+                            select_optionHTML+='<label id=label_A_req class=has-text-weight-bold>'+a_wkroles+'</label><span class=level-left style="margin-bottom:10px"><select id=levelA_req name=levelA_req required>'+choose_default;
+                        }
+
+                    }
+
+                    miA_r.innerHTML=select_optionHTML;
+                    select_optionHTML='';
+                    //OUTCOMES KNOWLEDGES
+                    //recorremos el tamaño de los que se han sustituido los labels
+                    for (let a_wkroles of Object.keys(data[0][name].abilities_ids)){
+                        select_optionHTML+='<label id=label_A_goal class=has-text-weight-bold>'+a_wkroles+'</label><span class=level-left style="margin-bottom:10px"><select id=levelA_goal name=levelA_goal required>'+choose_default;
+                    }
+
+                    miA_o.innerHTML=select_optionHTML;
+
+
+                });
+            });
+
+        }//else
+        
+    }
+
+    let mySelectT = new vanillaSelectBox("#selectWroles",{
+        search:true,
+        placeHolder:"Select your WorkRole",
+        stayOpen:false
+    });
+
+    document.querySelectorAll('.modal-button').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var target = document.querySelector(el.getAttribute('data-target'));
+        
+        target.classList.add('is-active');
+        
+        target.querySelector('.modal-close').addEventListener('click',   function() {
+            target.classList.remove('is-active');
+        });
+    });
+  });
+
+
+
+    /*$.notify("home");*/
+</script>
+{% endblock %}

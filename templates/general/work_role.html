@@ -1,0 +1,94 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('general.show_work_role') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+        font-size:25px
+    }
+
+    #next{
+        box-shadow: none;
+    }
+
+    #box_K,#box_S,#box_A,#box_T{
+        margin-top: -25px;
+    }
+
+    .my-card{
+        height: 100%;
+    }
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+</style>
+
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+        About Work Roles
+        <span class="subtitle is-3 has-text-centered">
+        <a href="https://www.nist.gov/itl/applied-cybersecurity/nice/nice-cybersecurity-workforce-framework-resource-center/about">
+            + info
+        </a>
+        </span>
+    </h2>
+</div>
+
+<div class="box global has-background-grey-lighter">
+    <div class="columns is-multiline is-centered">
+        {% for i in work_roles %}
+        <div class="column is-5">
+        <div class="card my-card">
+          <div class="card-content ">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">{{i.name}}</p>
+                <p class=""><b>Specialty Area:</b>  {{ i.specialist.name }}</p>
+                <p class=""><b>Category:</b> {{ i.specialist.category.name }} </p>
+              </div>
+            </div>
+
+            <div class="content">
+                {{i.description}}
+            </div>
+          </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<script type="text/javascript">
+</script>
+{% endblock %}

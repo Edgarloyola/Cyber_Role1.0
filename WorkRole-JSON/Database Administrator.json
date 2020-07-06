@@ -1,0 +1,100 @@
+{
+    "Database Administrator": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0020": "Knowledge of data administration and data standardization policies."
+        }, {
+            "K0021": "Knowledge of data backup and recovery."
+        }, {
+            "K0022": "Knowledge of data mining and data warehousing principles."
+        }, {
+            "K0023": "Knowledge of database management systems, query languages, table relationships, and views."
+        }, {
+            "K0025": "Knowledge of digital rights management."
+        }, {
+            "K0031": "Knowledge of enterprise messaging systems and associated software."
+        }, {
+            "K0056": "Knowledge of network access, identity, and access management (e.g., public key infrastructure, Oauth, OpenID, SAML, SPML)."
+        }, {
+            "K0060": "Knowledge of operating systems."
+        }, {
+            "K0065": "Knowledge of policy-based and risk adaptive access controls."
+        }, {
+            "K0069": "Knowledge of query languages such as SQL (structured query language)."
+        }, {
+            "K0083": "Knowledge of sources, characteristics, and uses of the organization's data assets."
+        }, {
+            "K0097": "Knowledge of the characteristics of physical and virtual data storage media."
+        }, {
+            "K0197": "Knowledge of database access application programming interfaces (e.g., Java Database Connectivity [JDBC])."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0277": "Knowledge of current and emerging data encryption (e.g., Column and Tablespace Encryption, file and disk encryption) security features in databases (e.g. built-in cryptographic key management features)."
+        }, {
+            "K0278": "Knowledge of current and emerging data remediation security features in databases."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0420": "Knowledge of database theory."
+        }],
+        "skills_ids": [{
+            "S0002": "Skill in allocating storage capacity in the design of data management systems."
+        }, {
+            "S0013": "Skill in conducting queries and developing algorithms to analyze data structures."
+        }, {
+            "S0037": "Skill in generating queries and reports."
+        }, {
+            "S0042": "Skill in maintaining databases. (i.e., backup, restore, delete data, transaction log files, etc.)."
+        }, {
+            "S0045": "Skill in optimizing database performance."
+        }],
+        "abilities_ids": [{
+            "A0176": "Ability to maintain databases. (i.e., backup, restore, delete data, transaction log files, etc.)."
+        }],
+        "tasks_ids": [{
+            "T0008": "Analyze and plan for anticipated changes in data capacity requirements."
+        }, {
+            "T0137": "Maintain database management systems software."
+        }, {
+            "T0139": "Maintain directory replication services that enable information to replicate automatically from rear servers to forward units via optimized routing."
+        }, {
+            "T0140": "Maintain information exchanges through publish, subscribe, and alert functions that enable users to send and receive critical information as required."
+        }, {
+            "T0146": "Manage the compilation, cataloging, caching, distribution, and retrieval of data."
+        }, {
+            "T0152": "Monitor and maintain databases to ensure optimal performance."
+        }, {
+            "T0162": "Perform backup and recovery of databases to ensure data integrity."
+        }, {
+            "T0210": "Provide recommendations on new database technologies and architectures."
+        }, {
+            "T0305": "Performs configuration management, problem management, capacity management, and financial management for databases and data management systems."
+        }, {
+            "T0306": "Supports incident management, service-level management, change management, release management, continuity management, and availability management for databases and data management systems."
+        }, {
+            "T0330": "Maintain assured message delivery systems."
+        }, {
+            "T0422": "Implement data management standards, requirements, and specifications."
+        }, {
+            "T0459": "Implement data mining and data warehousing applications."
+        }, {
+            "T0490": "Install and configure database management systems and software."
+        }]
+    }
+}

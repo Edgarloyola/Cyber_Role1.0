@@ -1,0 +1,104 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .progress {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+
+    .container_r {
+        width:100%;
+        height:50vh;
+        display:flex;
+        flex:1;
+    }
+    .content_r {
+        width: 100%;
+        margin: auto;
+    }
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+
+
+
+
+</style>
+
+<div class="box">
+    <h1 class="title is-1 has-text-centered"> {{title}}</h1>
+</div>
+
+<div class="box global">
+    <div class="columns is-centered">
+        <div class="column has-text-centered">
+              <div class="columns is-centered">
+                  <div class="column ">
+                      <div class="control has-text-centered">
+                          <label class="label">Name</label>
+                          {{ course.name }}
+                        <label class="label">Description</label>
+                            {{ course.description}}
+                        <label class="label">Date</label>
+                            {{ course.create_date.strftime("%d/%m/%Y, %H:%M:%S")}}
+                      </div>
+                  </div>
+                  <div class="column ">
+                      <div class="control has-text-centered">
+                          <label class="label">Duration Course</label>
+                          {{ course.total_time }} minutes
+                          <label class="label">Cost Course</label>
+                          {{ course.total_cost }}€
+                          <label class="label">Average Reputation</label>
+                          {{ course.average_reputation }}/50
+                      </div>
+                  </div>
+                  <div class="column ">
+                      <div class="control has-text-centered ">
+                          <label class="label">Fitness Time</label>
+                            {{course.fitness_time}}
+                          <label class="label">Fitness Cost</label>
+                          {{ course.fitness_cost }}
+                          <label class="label">Fitness Reputation</label>
+                          {{ course.fitness_reputation }}
+                      </div>
+                  </div>
+              </div>
+              <hr>
+              <div class="columns is-centered">
+                  <div class="column ">
+                      <div class="control has-text-centered ">
+                        <label class="label">Fitness Learning Goal</label>
+                          {{ course.fitness_learning_goal }}
+                        <label class="label">Fitness Total</label>
+                          {{ course.fitness_total }}
+                      </div>
+                  </div>
+              </div>
+        </div>
+<script type="text/javascript">
+</script>
+{% endblock %}

@@ -1,0 +1,135 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .progress {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+
+    .container_r {
+        width:100%;
+        height:50vh;
+        display:flex;
+        flex:1;
+    }
+    .content_r {
+        width: 100%;
+        margin: auto;
+    }
+
+
+
+
+</style>
+
+{% if task_id %}
+    <h2 class="title is-2 has-text-centered">
+        {{ _('Optimal CyberWorkRole Courses') }}
+    </h2>
+    <h4 class="subtitle is-4 has-text-centered">
+        {{ _('You can do other tasks while we load your optimal courses...') }}
+    </h4>
+    <h4 class="title is-4 has-text-centered">
+        {{_('Remember in the main dashboard of the web-app a button(Progress Optimal Courses) will be activated to see the loading progress.')}}
+    </h4>
+
+    <div class="container_r">
+        <div class="content_r has-text-centered">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+{% else %}
+    <h2 class="title is-2 has-text-centered">
+    {{ _('Optimal CyberWorkRole Courses') }}
+    </h2>
+    <h2 class="subtitle is-2 has-text-centered">
+        {{ _('Not tasks of creation of optimal courses.') }}
+    </h2>
+{% endif %}
+
+
+
+
+<script type="text/javascript">
+
+
+    function start_long_task() {
+        // add task status elements 
+        div = $('<div class="progress box"><div></div><div>0%</div><div>...</div><div>&nbsp;</div></div>');
+        $('#progress').append(div);
+
+        // create a progress bar
+        var nanobar = new Nanobar({
+            bg: '#44f',
+            target: div[0].childNodes[0]
+        });
+
+
+        // send ajax GET request to start background job
+        $.ajax({
+            type: 'GET',
+            url: '/status/'+'{{task_id}}',
+
+            success: function(data, status, xhr) {
+                status_url = xhr.getResponseHeader('Location');     
+                update_progress('/status/'+'{{task_id}}', nanobar, div[0]);
+            },
+            error: function() {
+                alert('Unexpected error');
+            }
+        });
+    }
+
+
+     function update_progress(status_url, nanobar, status_div) {
+            // send GET request to status URL
+            $.getJSON(status_url, function(data) {
+                // update UI
+                percent = parseInt(data['current'] * 100 / data['total']);
+                nanobar.go(percent);
+                $(status_div.childNodes[1]).text(percent + '%');
+                $(status_div.childNodes[2]).text(data['status']);
+                if (data['state'] != 'PENDING' && data['state'] != 'PROGRESS') {
+                    if ('result' in data) {
+                        // show result
+                        $(status_div.childNodes[3]).text('Result: ' + data['result']);
+                        //Hacemos un redirect a la pagina cuando ya obtenemos todos los cursos
+                        window.location.replace('/show_lo_optimal');
+                    }
+                    else {
+                        // something unexpected happened
+                        $(status_div.childNodes[3]).text('Result: ' + data['state']);
+                    }
+                }
+                else {
+                    // rerun in 2 seconds
+                    setTimeout(function() {
+                        update_progress(status_url, nanobar, status_div);
+                    }, 2000);
+                }
+            });
+        }
+        $(document).ready(function(){
+            start_long_task();
+        });
+</script>
+{% endblock %}

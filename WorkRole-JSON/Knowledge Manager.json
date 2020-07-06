@@ -1,0 +1,80 @@
+{
+    "Knowledge Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0013": "Knowledge of cyber defense and vulnerability assessment tools and their capabilities."
+        }, {
+            "K0094": "Knowledge of the capabilities and functionality associated with content creation technologies (e.g., wikis, social networking, content management systems, blogs)."
+        }, {
+            "K0095": "Knowledge of the capabilities and functionality associated with various technologies for organizing and managing information (e.g., databases, bookmarking engines)."
+        }, {
+            "K0096": "Knowledge of the capabilities and functionality of various collaborative technologies (e.g., groupware, SharePoint)."
+        }, {
+            "K0146": "Knowledge of the organization's core business/mission processes."
+        }, {
+            "K0194": "Knowledge of Cloud-based knowledge management technologies and concepts related to security, governance, procurement, and administration."
+        }, {
+            "K0195": "Knowledge of data classification standards and methodologies based on sensitivity and other risk factors."
+        }, {
+            "K0228": "Knowledge of taxonomy and semantic ontology theory."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0283": "Knowledge of use cases related to collaboration and content synchronization across platforms (e.g., Mobile, PC, Cloud)."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0315": "Knowledge of the principal methods, procedures, and techniques of gathering information and producing, reporting, and sharing information."
+        }, {
+            "K0338": "Knowledge of data mining techniques."
+        }, {
+            "K0420": "Knowledge of database theory."
+        }],
+        "skills_ids": [{
+            "S0011": "Skill in conducting information searches."
+        }, {
+            "S0012": "Skill in conducting knowledge mapping (e.g., map of knowledge repositories)."
+        }, {
+            "S0049": "Skill in the measuring and reporting of intellectual capital."
+        }, {
+            "S0055": "Skill in using knowledge management technologies."
+        }],
+        "abilities_ids": [{
+            "A0002": "Ability to match the appropriate knowledge repository technology for a given application or environment."
+        }],
+        "tasks_ids": [{
+            "T0037": "Construct access paths to suites of information (e.g., link pages) to facilitate access by end-users."
+        }, {
+            "T0060": "Develop an understanding of the needs and requirements of information end-users."
+        }, {
+            "T0154": "Monitor and report the usage of knowledge management assets and resources."
+        }, {
+            "T0185": "Plan and manage the delivery of knowledge management projects."
+        }, {
+            "T0209": "Provide recommendations on data structures and databases that ensure correct and quality production of reports/management information."
+        }, {
+            "T0339": "Lead efforts to promote the organization's use of knowledge management and information sharing."
+        }, {
+            "T0421": "Manage the indexing/cataloguing, storage, and access of explicit organizational knowledge (e.g., hard copy documents, digital files)."
+        }, {
+            "T0452": "Design, build, implement, and maintain a knowledge management framework that provides end-users access to the organization's intellectual capital."
+        }, {
+            "T0524": "Promote knowledge sharing between information owners/users through an organization's operational processes and systems."
+        }]
+    }
+}

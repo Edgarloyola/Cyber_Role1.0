@@ -1,0 +1,224 @@
+{
+    "Multi-Disciplined Language Analyst": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0108": "Knowledge of concepts, terminology, and operations of a wide range of communications media (computer and telephone networks, satellite, fiber, wireless)."
+        }, {
+            "K0143": "Knowledge of front-end collection systems, including traffic collection, filtering, and selection."
+        }, {
+            "K0177": "Knowledge of cyber attack stages (e.g., reconnaissance, scanning, enumeration, gaining access, escalation of privileges, maintaining access, network exploitation, covering tracks)."
+        }, {
+            "K0356": "Knowledge of analytic tools and techniques."
+        }, {
+            "K0359": "Knowledge of approved intelligence dissemination processes."
+        }, {
+            "K0377": "Knowledge of classification and control markings standards, policies and procedures."
+        }, {
+            "K0391": "Knowledge of collection systems, capabilities, and processes."
+        }, {
+            "K0396": "Knowledge of computer programming concepts, including computer languages, programming, testing, debugging, and file types."
+        }, {
+            "K0398": "Knowledge of concepts related to websites (e.g., web servers/pages, hosting, DNS, registration, web languages such as HTML)."
+        }, {
+            "K0407": "Knowledge of customer information needs."
+        }, {
+            "K0413": "Knowledge of cyber operation objectives, policies, and legalities."
+        }, {
+            "K0416": "Knowledge of cyber operations."
+        }, {
+            "K0417": "Knowledge of data communications terminology (e.g., networking protocols, Ethernet, IP, encryption, optical devices, removable media)."
+        }, {
+            "K0431": "Knowledge of evolving/emerging communications technologies."
+        }, {
+            "K0449": "Knowledge of how to extract, analyze, and use metadata."
+        }, {
+            "K0462": "Knowledge of intelligence reporting principles, policies, procedures, and vehicles, including report formats, reportability criteria (requirements and priorities), dissemination practices, and legal authorities and restrictions."
+        }, {
+            "K0476": "Knowledge of language processing tools and techniques."
+        }, {
+            "K0487": "Knowledge of network security (e.g., encryption, firewalls, authentication, honey pots, perimeter protection)."
+        }, {
+            "K0488": "Knowledge of network security implementations (e.g., host-based IDS, IPS, access control lists), including their function and placement in a network."
+        }, {
+            "K0491": "Knowledge of networking and Internet communications fundamentals (i.e. devices, device configuration, hardware, software, applications, ports/protocols, addressing, network architecture and infrastructure, routing, operating systems, etc.)."
+        }, {
+            "K0493": "Knowledge of obfuscation techniques (e.g., TOR/Onion/anonymizers, VPN/VPS, encryption)."
+        }, {
+            "K0499": "Knowledge of operations security."
+        }, {
+            "K0520": "Knowledge of principles and practices related to target development such as target knowledge, associations, communication systems, and infrastructure."
+        }, {
+            "K0524": "Knowledge of relevant laws, regulations, and policies."
+        }, {
+            "K0532": "Knowledge of specialized target language (e.g., acronyms, jargon, technical terminology, code words)."
+        }, {
+            "K0539": "Knowledge of target communication profiles and their key elements (e.g., target associations, activities, communication infrastructure)."
+        }, {
+            "K0540": "Knowledge of target communication tools and techniques."
+        }, {
+            "K0541": "Knowledge of target cultural references, dialects, expressions, idioms, and abbreviations."
+        }, {
+            "K0545": "Knowledge of target language(s)."
+        }, {
+            "K0548": "Knowledge of target or threat cyber actors and procedures."
+        }, {
+            "K0550": "Knowledge of target, including related current events, communication profile, actors, and history (language, culture) and/or frame of reference."
+        }, {
+            "K0564": "Knowledge of the characteristics of targeted communication networks (e.g., capacity, functionality, paths, critical nodes)."
+        }, {
+            "K0567": "Knowledge of the data flow from collection origin to repositories and tools."
+        }, {
+            "K0571": "Knowledge of the feedback cycle in collection processes."
+        }, {
+            "K0574": "Knowledge of the impact of language analysis on on-net operator functions."
+        }, {
+            "K0579": "Knowledge of the organization, roles and responsibilities of higher, lower and adjacent sub-elements."
+        }, {
+            "K0596": "Knowledge of the request for information process."
+        }, {
+            "K0599": "Knowledge of the structure, architecture, and design of modern digital and telephony networks."
+        }, {
+            "K0600": "Knowledge of the structure, architecture, and design of modern wireless communications systems."
+        }, {
+            "K0606": "Knowledge of transcript development processes and techniques (e.g., verbatim, gist, summaries)."
+        }, {
+            "K0607": "Knowledge of translation processes and techniques."
+        }],
+        "skills_ids": [{
+            "S0179": "Skill in analyzing language processing tools to provide feedback to enhance tool development."
+        }, {
+            "S0184": "Skill in analyzing traffic to identify network devices."
+        }, {
+            "S0187": "Skill in applying various analytical methods, tools, and techniques (e.g., competing hypotheses; chain of reasoning; scenario methods; denial and deception detection; high impact-low probability; network/association or link analysis; Bayesian, Delphi, and Pattern analyses)."
+        }, {
+            "S0188": "Skill in assessing a target's frame of reference (e.g., motivation, technical capability, organizational structure, sensitivities)."
+        }, {
+            "S0193": "Skill in complying with the legal restrictions for targeted information."
+        }, {
+            "S0195": "Skill in conducting research using all available sources."
+        }, {
+            "S0198": "Skill in conducting social network analysis."
+        }, {
+            "S0210": "Skill in developing intelligence reports."
+        }, {
+            "S0212": "Skill in disseminating items of highest intelligence value in a timely manner."
+        }, {
+            "S0215": "Skill in evaluating and interpreting metadata."
+        }, {
+            "S0217": "Skill in evaluating data sources for relevance, reliability, and objectivity."
+        }, {
+            "S0218": "Skill in evaluating information for reliability, validity, and relevance."
+        }, {
+            "S0224": "Skill in gisting target communications."
+        }, {
+            "S0226": "Skill in identifying a target's network characteristics."
+        }, {
+            "S0232": "Skill in identifying intelligence gaps and limitations."
+        }, {
+            "S0233": "Skill in identifying language issues that may have an impact on organization objectives."
+        }, {
+            "S0235": "Skill in identifying non-target regional languages and dialects"
+        }, {
+            "S0241": "Skill in interpreting traceroute results, as they apply to network analysis and reconstruction."
+        }, {
+            "S0244": "Skill in managing client relationships, including determining client needs/requirements, managing client expectations, and demonstrating commitment to delivering quality results."
+        }, {
+            "S0251": "Skill in prioritizing target language material."
+        }, {
+            "S0253": "Skill in providing analysis on target-related matters (e.g., language, cultural, communications)."
+        }, {
+            "S0259": "Skill in recognizing denial and deception techniques of the target."
+        }, {
+            "S0262": "Skill in recognizing significant changes in a target's communication patterns."
+        }, {
+            "S0265": "Skill in recognizing technical information that may be used for target development including intelligence development."
+        }, {
+            "S0277": "Skill in synthesizing, analyzing, and prioritizing meaning across data sets."
+        }, {
+            "S0283": "Skill in transcribing target language communications."
+        }, {
+            "S0284": "Skill in translating target graphic and/or voice language materials."
+        }, {
+            "S0290": "Skill in using non-attributable networks."
+        }],
+        "abilities_ids": [{
+            "A0013": "Ability to communicate complex information, concepts, or ideas in a confident and well-organized manner through verbal, written, and/or visual means."
+        }, {
+            "A0071": "Ability to apply language and cultural expertise to analysis."
+        }, {
+            "A0089": "Ability to function in a collaborative environment, seeking continuous consultation with other analysts and experts--both internal and external to the organization--to leverage analytical and technical expertise."
+        }, {
+            "A0103": "Ability to review processed target language materials for accuracy and completeness."
+        }],
+        "tasks_ids": [{
+            "T0606": "Compile, integrate, and/or interpret all-source data for intelligence or vulnerability value with respect to specific targets."
+        }, {
+            "T0650": "Determine what technologies are used by a given target."
+        }, {
+            "T0715": "Identify collection gaps and potential collection strategies against targets."
+        }, {
+            "T0745": "Make recommendations to guide collection in support of customer requirements."
+        }, {
+            "T0761": "Provide subject-matter expertise and support to planning/developmental forums and working groups as appropriate."
+        }, {
+            "T0837": "Advise managers and operators on language and cultural issues that impact organization objectives."
+        }, {
+            "T0838": "Analyze and process information using language and/or cultural expertise."
+        }, {
+            "T0839": "Assess, document, and apply a target's motivation and/or frame of reference to facilitate analysis, targeting and collection opportunities."
+        }, {
+            "T0840": "Collaborate across internal and/or external organizational lines to enhance collection, analysis and dissemination."
+        }, {
+            "T0841": "Conduct all-source target research to include the use of open source materials in the target language."
+        }, {
+            "T0842": "Conduct analysis of target communications to identify essential information in support of organization objectives."
+        }, {
+            "T0843": "Perform quality review and provide feedback on transcribed or translated materials."
+        }, {
+            "T0844": "Evaluate and interpret metadata to look for patterns, anomalies, or events, thereby optimizing targeting, analysis and processing."
+        }, {
+            "T0845": "Identify cyber threat tactics and methodologies."
+        }, {
+            "T0846": "Identify target communications within the global network."
+        }, {
+            "T0847": "Maintain awareness of target communication tools, techniques, and the characteristics of target communication networks (e.g., capacity, functionality, paths, critical nodes) and their potential implications for targeting, collection, and analysis."
+        }, {
+            "T0848": "Provide feedback to collection managers to enhance future collection and analysis."
+        }, {
+            "T0849": "Perform foreign language and dialect identification in initial source data."
+        }, {
+            "T0850": "Perform or support technical network analysis and mapping."
+        }, {
+            "T0851": "Provide requirements and feedback to optimize the development of language processing tools."
+        }, {
+            "T0852": "Perform social network analysis and document as appropriate."
+        }, {
+            "T0853": "Scan, identify and prioritize target graphic (including machine-to-machine communications) and/or voice language material."
+        }, {
+            "T0854": "Tip critical or time-sensitive information to appropriate customers."
+        }, {
+            "T0855": "Transcribe target voice materials in the target language."
+        }, {
+            "T0856": "Translate (e.g., verbatim, gist, and/or summaries) target graphic material."
+        }, {
+            "T0857": "Translate (e.g., verbatim, gist, and/or summaries) target voice material."
+        }, {
+            "T0858": "Identify foreign language terminology within computer programs (e.g., comments, variable names)."
+        }, {
+            "T0859": "Provide near-real time language analysis support (e.g., live operations)."
+        }, {
+            "T0860": "Identify cyber/technology-related terminology in the target language."
+        }]
+    }
+}

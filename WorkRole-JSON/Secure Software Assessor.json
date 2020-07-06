@@ -1,0 +1,172 @@
+{
+    "Secure Software Assessor": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0014": "Knowledge of complex data structures."
+        }, {
+            "K0016": "Knowledge of computer programming principles"
+        }, {
+            "K0027": "Knowledge of organization's enterprise information security architecture."
+        }, {
+            "K0028": "Knowledge of organization's evaluation and validation requirements."
+        }, {
+            "K0039": "Knowledge of cybersecurity and privacy principles and methods that apply to software development."
+        }, {
+            "K0044": "Knowledge of cybersecurity and privacy principles and organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "K0050": "Knowledge of local area and wide area networking principles and concepts including bandwidth management."
+        }, {
+            "K0051": "Knowledge of low-level computer languages (e.g., assembly languages)."
+        }, {
+            "K0060": "Knowledge of operating systems."
+        }, {
+            "K0066": "Knowledge of Privacy Impact Assessments."
+        }, {
+            "K0068": "Knowledge of programming language structures and logic."
+        }, {
+            "K0070": "Knowledge of system and application security threats and vulnerabilities (e.g., buffer overflow, mobile code, cross-site scripting, Procedural Language/Structured Query Language [PL/SQL] and injections, race conditions, covert channel, replay, return-oriented attacks, malicious code)."
+        }, {
+            "K0073": "Knowledge of secure configuration management techniques."
+        }, {
+            "K0079": "Knowledge of software debugging principles."
+        }, {
+            "K0080": "Knowledge of software design tools, methods, and techniques."
+        }, {
+            "K0081": "Knowledge of software development models (e.g., Waterfall Model, Spiral Model)."
+        }, {
+            "K0082": "Knowledge of software engineering."
+        }, {
+            "K0084": "Knowledge of structured analysis principles and methods."
+        }, {
+            "K0086": "Knowledge of system design tools, methods, and techniques, including automated systems analysis and design tools."
+        }, {
+            "K0105": "Knowledge of web services (e.g., service-oriented architecture, Simple Object Access Protocol, and web service description language)."
+        }, {
+            "K0139": "Knowledge of interpreted and compiled computer languages."
+        }, {
+            "K0140": "Knowledge of secure coding techniques."
+        }, {
+            "K0152": "Knowledge of software related information technology (IT) security principles and methods (e.g., modularization, layering, abstraction, data hiding, simplicity/minimization)."
+        }, {
+            "K0153": "Knowledge of software quality assurance process."
+        }, {
+            "K0154": "Knowledge of supply chain risk management standards, processes, and practices."
+        }, {
+            "K0170": "Knowledge of critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }, {
+            "K0178": "Knowledge of secure software deployment methodologies, tools, and practices."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0199": "Knowledge of security architecture concepts and enterprise architecture reference models (e.g., Zachman, Federal Enterprise Architecture [FEA])."
+        }, {
+            "K0202": "Knowledge of the application firewall concepts and functions (e.g., Single point of authentication/audit/policy enforcement, message scanning for malicious content, data anonymization for PCI and PII compliance, data loss protection scanning, accelerated cryptographic operations, SSL security, REST/JSON processing)."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0263": "Knowledge of information technology (IT) risk management policies, requirements, and procedures."
+        }, {
+            "K0322": "Knowledge of embedded systems."
+        }, {
+            "K0342": "Knowledge of penetration testing principles, tools, and techniques."
+        }, {
+            "K0343": "Knowledge of root cause analysis techniques."
+        }, {
+            "K0624": "Knowledge of Application Security Risks (e.g. Open Web Application Security Project Top 10 list)"
+        }],
+        "skills_ids": [{
+            "S0001": "Skill in conducting vulnerability scans and recognizing vulnerabilities in security systems."
+        }, {
+            "S0022": "Skill in designing countermeasures to identified security risks."
+        }, {
+            "S0031": "Skill in developing and applying security system access controls."
+        }, {
+            "S0034": "Skill in discerning the protection needs (i.e., security controls) of information systems and networks."
+        }, {
+            "S0083": "Skill in integrating black box security testing tools into quality assurance process of software releases."
+        }, {
+            "S0135": "Skill in secure test plan design (e. g. unit, integration, system, acceptance)."
+        }, {
+            "S0138": "Skill in using Public-Key Infrastructure (PKI) encryption and digital signature capabilities into applications (e.g., S/MIME email, SSL traffic)."
+        }, {
+            "S0174": "Skill in using code analysis tools."
+        }, {
+            "S0175": "Skill in performing root cause analysis."
+        }, {
+            "S0367": "Skill to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }],
+        "abilities_ids": [{
+            "A0021": "Ability to use and understand complex mathematical concepts (e.g., discrete math)."
+        }, {
+            "A0123": "Ability to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "A0170": "Ability to identify critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }],
+        "tasks_ids": [{
+            "T0013": "Apply coding and testing standards, apply security testing tools including 'fuzzing', static-analysis code scanning tools, and conduct code reviews."
+        }, {
+            "T0014": "Apply secure code documentation."
+        }, {
+            "T0022": "Capture security controls used during the requirements phase to integrate security within the process, to identify key security objectives, and to maximize software security while minimizing disruption to plans and schedules."
+        }, {
+            "T0038": "Develop threat model based on customer interviews and requirements."
+        }, {
+            "T0040": "Consult with engineering staff to evaluate interface between hardware and software."
+        }, {
+            "T0100": "Evaluate factors such as reporting formats required, cost constraints, and need for security restrictions to determine hardware configuration."
+        }, {
+            "T0111": "Identify basic common coding flaws at a high level."
+        }, {
+            "T0117": "Identify security implications and apply methodologies within centralized and decentralized environments across the enterprise's computer systems in software development."
+        }, {
+            "T0118": "Identify security issues around steady state operation and management of software and incorporate security measures that must be taken when a product reaches its end of life."
+        }, {
+            "T0171": "Perform integrated quality assurance testing for security functionality and resiliency attack."
+        }, {
+            "T0181": "Perform risk analysis (e.g., threat, vulnerability, and probability of occurrence) whenever an application or system undergoes a major change."
+        }, {
+            "T0217": "Address security implications in the software acceptance phase including completion criteria, risk acceptance and documentation, common criteria, and methods of independent testing."
+        }, {
+            "T0228": "Store, retrieve, and manipulate data for analysis of system capabilities and requirements."
+        }, {
+            "T0236": "Translate security requirements into application design elements including documenting the elements of the software attack surfaces, conducting threat modeling, and defining any specific security criteria."
+        }, {
+            "T0266": "Perform penetration testing as required for new or updated applications."
+        }, {
+            "T0311": "Consult with customers about software system design and maintenance."
+        }, {
+            "T0324": "Direct software programming and development of documentation."
+        }, {
+            "T0337": "Supervise and assign work to programmers, designers, technologists and technicians, and other engineering and scientific personnel."
+        }, {
+            "T0424": "Analyze and provide information to stakeholders that will support the development of security application or modification of an existing security application."
+        }, {
+            "T0428": "Analyze security needs and software requirements to determine feasibility of design within time and cost constraints and security mandates."
+        }, {
+            "T0436": "Conduct trial runs of programs and software applications to ensure that the desired information is produced and instructions and security levels are correct."
+        }, {
+            "T0456": "Develop secure software testing and validation procedures."
+        }, {
+            "T0457": "Develop system testing and validation procedures, programming, and documentation."
+        }, {
+            "T0516": "Perform secure program testing, review, and/or assessment to identify potential flaws in codes and mitigate vulnerabilities."
+        }, {
+            "T0554": "Determine and document software patches or the extent of releases that would leave software vulnerable."
+        }]
+    }
+}

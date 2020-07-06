@@ -1,0 +1,320 @@
+{
+    "All Source-Collection Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0036": "Knowledge of human-computer interaction principles."
+        }, {
+            "K0058": "Knowledge of network traffic analysis methods."
+        }, {
+            "K0109": "Knowledge of physical computer components and architectures, including the functions of various components and peripherals (e.g., CPUs, Network Interface Cards, data storage)."
+        }, {
+            "K0177": "Knowledge of cyber attack stages (e.g., reconnaissance, scanning, enumeration, gaining access, escalation of privileges, maintaining access, network exploitation, covering tracks)."
+        }, {
+            "K0353": "Knowledge of possible circumstances that would result in changing collection management authorities."
+        }, {
+            "K0361": "Knowledge of asset availability, capabilities and limitations."
+        }, {
+            "K0364": "Knowledge of available databases and tools necessary to assess appropriate collection tasking."
+        }, {
+            "K0380": "Knowledge of collaborative tools and environments."
+        }, {
+            "K0382": "Knowledge of collection capabilities and limitations."
+        }, {
+            "K0383": "Knowledge of collection capabilities, accesses, performance specifications, and constraints utilized to satisfy collection plan."
+        }, {
+            "K0386": "Knowledge of collection management tools."
+        }, {
+            "K0387": "Knowledge of collection planning process and collection plan."
+        }, {
+            "K0390": "Knowledge of collection strategies."
+        }, {
+            "K0392": "Knowledge of common computer/network infections (virus, Trojan, etc.) and methods of infection (ports, attachments, etc.)."
+        }, {
+            "K0395": "Knowledge of computer networking fundamentals (i.e., basic computer components of a network, types of networks, etc.)."
+        }, {
+            "K0401": "Knowledge of criteria for evaluating collection products."
+        }, {
+            "K0404": "Knowledge of current collection requirements."
+        }, {
+            "K0405": "Knowledge of current computer-based intrusion sets."
+        }, {
+            "K0412": "Knowledge of cyber lexicon/terminology"
+        }, {
+            "K0417": "Knowledge of data communications terminology (e.g., networking protocols, Ethernet, IP, encryption, optical devices, removable media)."
+        }, {
+            "K0419": "Knowledge of database administration and maintenance."
+        }, {
+            "K0425": "Knowledge of different organization objectives at all levels, including subordinate, lateral and higher."
+        }, {
+            "K0427": "Knowledge of encryption algorithms and cyber capabilities/tools (e.g., SSL, PGP)."
+        }, {
+            "K0431": "Knowledge of evolving/emerging communications technologies."
+        }, {
+            "K0435": "Knowledge of fundamental cyber concepts, principles, limitations, and effects."
+        }, {
+            "K0440": "Knowledge of host-based security products and how those products affect exploitation and reduce vulnerability."
+        }, {
+            "K0444": "Knowledge of how Internet applications work (SMTP email, web-based email, chat clients, VOIP)."
+        }, {
+            "K0445": "Knowledge of how modern digital and telephony networks impact cyber operations."
+        }, {
+            "K0446": "Knowledge of how modern wireless communications systems impact cyber operations."
+        }, {
+            "K0448": "Knowledge of how to establish priorities for resources."
+        }, {
+            "K0449": "Knowledge of how to extract, analyze, and use metadata."
+        }, {
+            "K0453": "Knowledge of indications and warning."
+        }, {
+            "K0454": "Knowledge of information needs."
+        }, {
+            "K0467": "Knowledge of internal and external partner organization capabilities and limitations (those with tasking, collection, processing, exploitation and dissemination responsibilities)."
+        }, {
+            "K0471": "Knowledge of Internet network addressing (IP addresses, classless inter-domain routing, TCP/UDP port numbering)."
+        }, {
+            "K0474": "Knowledge of key cyber threat actors and their equities."
+        }, {
+            "K0475": "Knowledge of key factors of the operational environment and threat."
+        }, {
+            "K0477": "Knowledge of leadership's Intent and objectives."
+        }, {
+            "K0480": "Knowledge of malware."
+        }, {
+            "K0482": "Knowledge of methods for ascertaining collection asset posture and availability."
+        }, {
+            "K0492": "Knowledge of non-traditional collection methodologies."
+        }, {
+            "K0495": "Knowledge of ongoing and future operations."
+        }, {
+            "K0496": "Knowledge of operational asset constraints."
+        }, {
+            "K0498": "Knowledge of operational planning processes."
+        }, {
+            "K0503": "Knowledge of organization formats of resource and asset readiness reporting, its operational relevance and intelligence collection impact."
+        }, {
+            "K0505": "Knowledge of organization objectives and associated demand on collection management."
+        }, {
+            "K0513": "Knowledge of organizational priorities, legal authorities and requirements submission processes."
+        }, {
+            "K0516": "Knowledge of physical and logical network devices and infrastructure to include hubs, switches, routers, firewalls, etc."
+        }, {
+            "K0521": "Knowledge of priority information, how it is derived, where it is published, how to access, etc."
+        }, {
+            "K0522": "Knowledge of production exploitation and dissemination needs and architectures."
+        }, {
+            "K0526": "Knowledge of research strategies and knowledge management."
+        }, {
+            "K0527": "Knowledge of risk management and mitigation strategies."
+        }, {
+            "K0552": "Knowledge of tasking mechanisms."
+        }, {
+            "K0553": "Knowledge of tasking processes for organic and subordinate collection assets."
+        }, {
+            "K0554": "Knowledge of tasking, collection, processing, exploitation and dissemination."
+        }, {
+            "K0558": "Knowledge of the available tools and applications associated with collection requirements and collection management."
+        }, {
+            "K0560": "Knowledge of the basic structure, architecture, and design of modern communication networks."
+        }, {
+            "K0561": "Knowledge of the basics of network security (e.g., encryption, firewalls, authentication, honey pots, perimeter protection)."
+        }, {
+            "K0562": "Knowledge of the capabilities and limitations of new and emerging collection capabilities, accesses and/or processes."
+        }, {
+            "K0563": "Knowledge of the capabilities, limitations and tasking methodologies of internal and external collections as they apply to planned cyber activities."
+        }, {
+            "K0565": "Knowledge of the common networking and routing protocols (e.g. TCP/IP), services (e.g., web, mail, DNS), and how they interact to provide network communications."
+        }, {
+            "K0569": "Knowledge of the existent tasking, collection, processing, exploitation and dissemination architecture."
+        }, {
+            "K0570": "Knowledge of the factors of threat that could impact collection operations."
+        }, {
+            "K0579": "Knowledge of the organization, roles and responsibilities of higher, lower and adjacent sub-elements."
+        }, {
+            "K0580": "Knowledge of the organization's established format for collection plan."
+        }, {
+            "K0581": "Knowledge of the organization's planning, operations and targeting cycles."
+        }, {
+            "K0583": "Knowledge of the organizational plans/directives/guidance that describe objectives."
+        }, {
+            "K0584": "Knowledge of the organizational policies/procedures for temporary transfer of collection authority."
+        }, {
+            "K0587": "Knowledge of the POC's, databases, tools and applications necessary to establish environment preparation and surveillance products."
+        }, {
+            "K0588": "Knowledge of the priority information requirements from subordinate, lateral and higher levels of the organization."
+        }, {
+            "K0596": "Knowledge of the request for information process."
+        }, {
+            "K0601": "Knowledge of the systems/architecture/communications used for coordination."
+        }, {
+            "K0605": "Knowledge of tipping, cueing, mixing, and redundancy."
+        }, {
+            "K0610": "Knowledge of virtualization products (VMware, Virtual PC)."
+        }, {
+            "K0612": "Knowledge of what constitutes a 'threat' to a network."
+        }, {
+            "K0613": "Knowledge of who the organization's operational planners are, how and where they can be contacted, and what are their expectations."
+        }],
+        "skills_ids": [{
+            "S0238": "Skill in information prioritization as it relates to operations."
+        }, {
+            "S0304": "Skill to access information on current assets available, usage."
+        }, {
+            "S0305": "Skill to access the databases where plans/directives/guidance are maintained."
+        }, {
+            "S0311": "Skill to apply the capabilities, limitations and tasking methodologies of available platforms, sensors, architectures and apparatus as they apply to organization objectives."
+        }, {
+            "S0313": "Skill to articulate a needs statement/requirement and integrate new and emerging collection capabilities, accesses and/or processes into collection operations."
+        }, {
+            "S0316": "Skill to associate Intelligence gaps to priority information requirements and observables."
+        }, {
+            "S0317": "Skill to compare indicators/observables with requirements."
+        }, {
+            "S0324": "Skill to determine feasibility of collection."
+        }, {
+            "S0325": "Skill to develop a collection plan that clearly shows the discipline that can be used to collect the information needed."
+        }, {
+            "S0327": "Skill to ensure that the collection strategy leverages all available resources."
+        }, {
+            "S0328": "Skill to evaluate factors of the operational environment to objectives, and information requirements."
+        }, {
+            "S0330": "Skill to evaluate the capabilities, limitations and tasking methodologies of organic, theater, national, coalition and other collection capabilities."
+        }, {
+            "S0332": "Skill to extract information from available tools and applications associated with collection requirements and collection operations management."
+        }, {
+            "S0334": "Skill to identify and apply tasking, collection, processing, exploitation and dissemination to associated collection disciplines."
+        }, {
+            "S0335": "Skill to identify Intelligence gaps."
+        }, {
+            "S0336": "Skill to identify when priority information requirements are satisfied."
+        }, {
+            "S0339": "Skill to interpret readiness reporting, its operational relevance and intelligence collection impact."
+        }, {
+            "S0342": "Skill to optimize collection system performance through repeated adjustment, testing, and re-adjustment."
+        }, {
+            "S0344": "Skill to prepare and deliver reports, presentations and briefings, to include using visual aids or presentation technology."
+        }, {
+            "S0347": "Skill to review performance specifications and historical information about collection assets."
+        }, {
+            "S0351": "Skill to translate the capabilities, limitations and tasking methodologies of organic, theater, national, coalition and other collection capabilities."
+        }, {
+            "S0352": "Skill to use collaborative tools and environments."
+        }, {
+            "S0362": "Skill to analyze and assess internal and external partner organization capabilities and limitations (those with tasking, collection, processing, exploitation and dissemination responsibilities)."
+        }],
+        "abilities_ids": [{
+            "A0069": "Ability to apply collaborative skills and strategies."
+        }, {
+            "A0070": "Ability to apply critical reading/thinking skills."
+        }, {
+            "A0076": "Ability to coordinate and collaborate with analysts regarding surveillance requirements and essential information development."
+        }, {
+            "A0078": "Ability to coordinate, collaborate and disseminate information to subordinate, lateral and higher-level organizations."
+        }, {
+            "A0079": "Ability to correctly employ each organization or element into the collection plan and matrix."
+        }],
+        "tasks_ids": [{
+            "T0562": "Adjust collection operations or collection plan to address identified issues/challenges and to synchronize collections with overall operational requirements."
+        }, {
+            "T0564": "Analyze feedback to determine extent to which collection products and services are meeting requirements."
+        }, {
+            "T0568": "Analyze plans, directives, guidance and policy for factors that would influence collection management's operational structure and requirement s (e.g., duration, scope, communication requirements, interagency/international agreements)."
+        }, {
+            "T0573": "Assess and apply operational environment factors and risks to collection management process."
+        }, {
+            "T0578": "Assess performance of collection assets against prescribed specifications."
+        }, {
+            "T0604": "Compare allocated and available assets to collection demand as expressed through requirements."
+        }, {
+            "T0605": "Compile lessons learned from collection management activity's execution of organization collection objectives."
+        }, {
+            "T0625": "Consider efficiency and effectiveness of collection assets and resources if/when applied against priority information requirements."
+        }, {
+            "T0626": "Construct collection plans and matrixes using established guidance and procedures."
+        }, {
+            "T0631": "Coordinate resource allocation of collection assets against prioritized collection requirements with collection discipline leads."
+        }, {
+            "T0632": "Coordinate inclusion of collection plan in appropriate documentation."
+        }, {
+            "T0634": "Re-task or re-direct collection assets and resources."
+        }, {
+            "T0645": "Determine course of action for addressing changes to objectives, guidance, and operational environment."
+        }, {
+            "T0646": "Determine existing collection management webpage databases, libraries and storehouses."
+        }, {
+            "T0647": "Determine how identified factors affect the tasking, collection, processing, exploitation and dissemination architecture's form and function."
+        }, {
+            "T0649": "Determine organizations and/or echelons with collection authority over all accessible collection assets."
+        }, {
+            "T0651": "Develop a method for comparing collection reports to outstanding requirements to identify information gaps."
+        }, {
+            "T0657": "Develop coordinating instructions by collection discipline for each phase of an operation."
+        }, {
+            "T0662": "Allocate collection assets based on leadership's guidance, priorities, and/or operational emphasis."
+        }, {
+            "T0674": "Disseminate tasking messages and collection plans."
+        }, {
+            "T0681": "Establish alternative processing, exploitation and dissemination pathways to address identified issues or problems."
+        }, {
+            "T0683": "Establish processing, exploitation and dissemination management activity using approved guidance and/or procedures."
+        }, {
+            "T0698": "Facilitate continuously updated intelligence, surveillance, and visualization input to common operational picture managers."
+        }, {
+            "T0702": "Formulate collection strategies based on knowledge of available intelligence discipline capabilities and gathering methods that align multi-discipline collection capabilities and accesses with targets and their observables."
+        }, {
+            "T0714": "Identify collaboration forums that can serve as mechanisms for coordinating processes, functions, and outputs with specified organizations and functional groups."
+        }, {
+            "T0716": "Identify coordination requirements and procedures with designated collection authorities."
+        }, {
+            "T0721": "Identify issues or problems that can disrupt and/or degrade processing, exploitation and dissemination architecture effectiveness."
+        }, {
+            "T0723": "Identify potential collection disciplines for application against priority information requirements."
+        }, {
+            "T0725": "Identify and mitigate risks to collection management ability to support the plan, operations and target cycle."
+        }, {
+            "T0734": "Issue requests for information."
+        }, {
+            "T0737": "Link priority collection requirements to optimal assets and resources."
+        }, {
+            "T0750": "Monitor completion of reallocated collection efforts."
+        }, {
+            "T0753": "Monitor operational status and effectiveness of the processing, exploitation and dissemination architecture."
+        }, {
+            "T0755": "Monitor the operational environment for potential factors and risks to the collection operation management process."
+        }, {
+            "T0757": "Optimize mix of collection assets and resources to increase effectiveness and efficiency against essential information associated with priority intelligence requirements."
+        }, {
+            "T0773": "Prioritize collection requirements for collection platforms based on platform capabilities."
+        }, {
+            "T0779": "Provide advice/assistance to operations and intelligence decision makers with reassignment of collection assets and resources in response to dynamic operational situations."
+        }, {
+            "T0806": "Request discipline-specific processing, exploitation, and disseminate information collected using discipline's collection assets and resources in accordance with approved guidance and/or procedures."
+        }, {
+            "T0809": "Review capabilities of allocated collection assets."
+        }, {
+            "T0810": "Review intelligence collection guidance for accuracy/applicability."
+        }, {
+            "T0811": "Review list of prioritized collection requirements and essential information."
+        }, {
+            "T0812": "Review and update overarching collection plan, as required."
+        }, {
+            "T0814": "Revise collection matrix based on availability of optimal assets and resources."
+        }, {
+            "T0820": "Specify changes to collection plan and/or operational environment that necessitate re-tasking or re-directing of collection assets and resources."
+        }, {
+            "T0821": "Specify discipline-specific collections and/or taskings that must be executed in the near term."
+        }, {
+            "T0827": "Synchronize the integrated employment of all available organic and partner intelligence collection assets using available collaboration capabilities and techniques."
+        }]
+    }
+}

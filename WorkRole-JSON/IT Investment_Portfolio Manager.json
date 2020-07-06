@@ -1,0 +1,62 @@
+{
+    "IT Investment/Portfolio Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0048": "Knowledge of Risk Management Framework (RMF) requirements."
+        }, {
+            "K0072": "Knowledge of resource management principles and techniques."
+        }, {
+            "K0120": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0146": "Knowledge of the organization's core business/mission processes."
+        }, {
+            "K0154": "Knowledge of supply chain risk management standards, processes, and practices."
+        }, {
+            "K0165": "Knowledge of risk threat assessment."
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0235": "Knowledge of how to leverage research and development centers, think tanks, academic research, and industry systems."
+        }, {
+            "K0257": "Knowledge of information technology (IT) acquisition/procurement requirements."
+        }, {
+            "K0270": "Knowledge of the acquisition/procurement life cycle process."
+        }],
+        "skills_ids": [{
+            "S0372": "Skill to translate, track, and prioritize information needs and intelligence collection requirements across the extended enterprise."
+        }],
+        "abilities_ids": [{
+            "A0039": "Ability to oversee the development and update of the life cycle cost estimate."
+        }],
+        "tasks_ids": [{
+            "T0220": "Resolve conflicts in laws, regulations, policies, standards, or procedures."
+        }, {
+            "T0223": "Review or conduct audits of information technology (IT) programs and projects."
+        }, {
+            "T0277": "Ensure that all acquisitions, procurements, and outsourcing efforts address information security requirements consistent with organization goals."
+        }, {
+            "T0302": "Develop contract language to ensure supply chain, system, network, and operational security are met."
+        }, {
+            "T0377": "Gather feedback on customer satisfaction and internal service performance to foster continual improvement."
+        }, {
+            "T0415": "Ensure that supply chain, system, network, performance, and cybersecurity requirements are included in contract language and delivered."
+        }, {
+            "T0493": "Lead and oversee budget, staffing, and contracting."
+        }, {
+            "T0551": "Draft and publish supply chain security and risk management documents."
+        }]
+    }
+}

@@ -1,0 +1,131 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('general.show_top10_wk_role') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+        font-size:25px
+    }
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+</style>
+
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            {{ _(title) }}
+        </h3>
+    </div>
+    
+    <div class="box global">
+      <div class="box has-text-centered">
+          <b>List of the 10 work roles that most resemble you. And the Work Role that looks most like you is on the right.</b>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div id="donutchart_0"></div>
+        </div>
+        <div class="column">
+          <div id="donutchart_x" style="width: 900px;height:900px"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    var wk_names = {{top10_wkname|safe}};
+    var values = {{top10_values|safe}};
+
+
+    /* Adds Element AFTER NeighborElement */
+    Element.prototype.appendAfter = function(element) {
+      element.parentNode.insertBefore(this, element.nextSibling);
+    }, false;
+
+
+    function addElement (indice) { 
+
+      var newDiv = document.createElement("div");
+      newDiv.id = "donutchart_"+indice;
+      /*newDiv.style.width = '450px';
+      newDiv.style.height = '450px';*/
+      indice--;
+      var currentDiv = document.getElementById("donutchart_"+indice); 
+      newDiv.appendAfter(currentDiv);
+    }
+
+      function drawChart() {
+
+        for (var i = 0; i < wk_names.length; i++) {
+          var data = google.visualization.arrayToDataTable([
+            ['WorkRole', 'Percent'],
+            [wk_names[i],values[i]],
+            ['None',100-values[i]]
+          ]);
+
+          var options = {
+            title: (i+1)+'º Work Role',
+            pieHole: 0.4,
+            height:400,
+          };
+
+          /*Anadimos el elemento en su secuencia id*/
+          addElement(i+1);
+
+
+          var chart = new google.visualization.PieChart(document.getElementById('donutchart_'+i));
+          chart.draw(data, options);
+
+          if(i==0){
+            var data_x = google.visualization.arrayToDataTable([
+              ['WorkRole', 'Percent'],
+              [wk_names[i],values[i]],
+              ['None',100-values[i]]
+            ]);
+
+            var options_x = {
+              title: 'You look more like '+wk_names[i]+' at '+values[i]+'%',
+              pieHole: 0.4
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart_x'));
+            chart.draw(data_x, options_x);
+
+          }
+        }
+        
+      }
+
+
+</script>
+{% endblock %}

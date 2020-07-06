@@ -1,0 +1,159 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('lo.show_lo_general') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .title{
+        font-size: 14px
+    }
+
+    .slider-pagination .slider-page{
+        background: black
+    }
+</style>
+
+<!-- En este if mejor seria un notify 1! -->
+{% if conectionFailed %}
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">{{ _('Microservice connection failure') }}</h3>
+    </div>
+{% elif not los%}
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">{{ _('There aren\'t Learning Objects') }}</h3>
+    </div>
+{% else %}
+    <h2 class="title is-2 has-text-centered">
+    {{ _('Learning Objects of CyberWorkRole') }}
+    </h2>
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel">
+                {% for i in range(25) %}
+                    {% if los.items[i] %}
+                    <div class="item-{{i}} ">
+                        <!-- Slide Content -->
+                        <div class="box">
+                            <img src="{{url_for('static', filename='img/cyber1.jpg')}}" align="middle" />
+                            <p><strong>Time: </strong>{{los.items[i].total_time}}Horas</p>
+                            <p><strong>Cost: </strong>{{los.items[i].cost}}€</p>
+                            <p><strong>Reputation: </strong>{{los.items[i].reputation}}/50</p>
+                            <p><strong>The Course it belongs: </strong>Course_Optimal_{{los.items[i].course_id}}</p>
+                            <!--   -->
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </section>
+    {% if los.items[25] %}
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel">
+                {% for i in range(25,50) %}
+                    {% if los.items[i] %}
+                    <div class="item-{{i}} ">
+                        <!-- Slide Content -->
+                        <div class="box">
+                            <img src="{{url_for('static', filename='img/cyber2.jpeg')}}" align="middle" />
+                            <p><strong>Time: </strong>{{los.items[i].total_time}}Horas</p>
+                            <p><strong>Cost: </strong>{{los.items[i].cost}}€</p>
+                            <p><strong>Reputation: </strong>{{los.items[i].reputation}}/50</p>
+                            <p><strong>The Course it belongs: </strong>Course_Optimal_{{los.items[i].course_id}}</p>
+                            <!-- <p>{{los.items[i].req_KSAT_name}}</p>
+                            <p>{{los.items[i].out_KSAT_name}}</p> -->
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </section>
+    {% endif %}
+    {% if los.items[50] %}
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel">
+                {% for i in range(50,75) %}
+                    {% if los.items[i] %}
+                    <div class="item-{{i}} ">
+                        <!-- Slide Content -->
+                        <div class="box">
+                            <img src="{{url_for('static', filename='img/cyber3.jpeg')}}" align="middle" />
+                            <p><strong>Time: </strong>{{los.items[i].total_time}}Horas</p>
+                            <p><strong>Cost: </strong>{{los.items[i].cost}}€</p>
+                            <p><strong>Reputation: </strong>{{los.items[i].reputation}}/50</p>
+                            <p><strong>The Course it belongs: </strong>Course_Optimal_{{los.items[i].course_id}}</p>
+                            <!-- <p>{{los.items[i].req_KSAT_name}}</p>
+                            <p>{{los.items[i].out_KSAT_name}}</p> -->
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </section>
+    {% endif %}
+    {% if los.items[75] %}
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel">
+                {% for i in range(75,100) %}
+                    {% if los.items[i] %}
+                    <div class="item-{{i}} ">
+                        <!-- Slide Content -->
+                        <div class="box">
+                            <img src="{{url_for('static', filename='img/cyber4.jpeg')}}" align="middle" />
+                            <p><strong>Time: </strong>{{los.items[i].total_time}}Horas</p>
+                            <p><strong>Cost: </strong>{{los.items[i].cost}}€</p>
+                            <p><strong>Reputation: </strong>{{los.items[i].reputation}}/50</p>
+                            <p><strong>The Course it belongs: </strong>Course_Optimal_{{los.items[i].course_id}}</p>
+                            <!-- <p>{{los.items[i].req_KSAT_name}}</p>
+                            <p>{{los.items[i].out_KSAT_name}}</p> -->
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </section>
+    {% endif %}
+    {{ macros.render_pagination(los) }}
+{% endif %}
+
+<script type="text/javascript">
+    bulmaCarousel.attach('#carousel-demo', {
+        initialSlide:3,
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        loop:true
+    });
+</script>
+{% endblock %}

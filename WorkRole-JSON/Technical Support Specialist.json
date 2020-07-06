@@ -1,0 +1,246 @@
+{
+    "Technical Support Specialist": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0108": "Knowledge of concepts, terminology, and operations of a wide range of communications media (computer and telephone networks, satellite, fiber, wireless)."
+        }, {
+            "K0109": "Knowledge of physical computer components and architectures, including the functions of various components and peripherals (e.g., CPUs, Network Interface Cards, data storage)."
+        }, {
+            "K0177": "Knowledge of cyber attack stages (e.g., reconnaissance, scanning, enumeration, gaining access, escalation of privileges, maintaining access, network exploitation, covering tracks)."
+        }, {
+            "K0349": "Knowledge of website types, administration, functions, and content management system (CMS)."
+        }, {
+            "K0362": "Knowledge of attack methods and techniques (DDoS, brute force, spoofing, etc.)."
+        }, {
+            "K0379": "Knowledge of client organizations, including information needs, objectives, structure, capabilities, etc."
+        }, {
+            "K0389": "Knowledge of collection sources including conventional and non-conventional sources."
+        }, {
+            "K0392": "Knowledge of common computer/network infections (virus, Trojan, etc.) and methods of infection (ports, attachments, etc.)."
+        }, {
+            "K0395": "Knowledge of computer networking fundamentals (i.e., basic computer components of a network, types of networks, etc.)."
+        }, {
+            "K0403": "Knowledge of cryptologic capabilities, limitations, and contributions to cyber operations."
+        }, {
+            "K0413": "Knowledge of cyber operation objectives, policies, and legalities."
+        }, {
+            "K0424": "Knowledge of denial and deception techniques."
+        }, {
+            "K0431": "Knowledge of evolving/emerging communications technologies."
+        }, {
+            "K0436": "Knowledge of fundamental cyber operations concepts, terminology/lexicon (i.e., environment preparation, cyber-attack, cyber defense), principles, capabilities, limitations, and effects."
+        }, {
+            "K0439": "Knowledge of governing authorities for targeting."
+        }, {
+            "K0440": "Knowledge of host-based security products and how those products affect exploitation and reduce vulnerability."
+        }, {
+            "K0442": "Knowledge of how converged technologies impact cyber operations (e.g., digital, telephony, wireless)."
+        }, {
+            "K0444": "Knowledge of how Internet applications work (SMTP email, web-based email, chat clients, VOIP)."
+        }, {
+            "K0445": "Knowledge of how modern digital and telephony networks impact cyber operations."
+        }, {
+            "K0449": "Knowledge of how to extract, analyze, and use metadata."
+        }, {
+            "K0462": "Knowledge of intelligence reporting principles, policies, procedures, and vehicles, including report formats, reportability criteria (requirements and priorities), dissemination practices, and legal authorities and restrictions."
+        }, {
+            "K0471": "Knowledge of Internet network addressing (IP addresses, classless inter-domain routing, TCP/UDP port numbering)."
+        }, {
+            "K0472": "Knowledge of intrusion detection systems and signature development."
+        }, {
+            "K0473": "Knowledge of intrusion sets."
+        }, {
+            "K0479": "Knowledge of malware analysis and characteristics."
+        }, {
+            "K0483": "Knowledge of methods to integrate and summarize information from any potential sources."
+        }, {
+            "K0487": "Knowledge of network security (e.g., encryption, firewalls, authentication, honey pots, perimeter protection)."
+        }, {
+            "K0499": "Knowledge of operations security."
+        }, {
+            "K0500": "Knowledge of organization and/or partner collection systems, capabilities, and processes (e.g., collection and protocol processors)."
+        }, {
+            "K0516": "Knowledge of physical and logical network devices and infrastructure to include hubs, switches, routers, firewalls, etc."
+        }, {
+            "K0520": "Knowledge of principles and practices related to target development such as target knowledge, associations, communication systems, and infrastructure."
+        }, {
+            "K0544": "Knowledge of target intelligence gathering and operational preparation techniques and life cycles."
+        }, {
+            "K0547": "Knowledge of target methods and procedures."
+        }, {
+            "K0550": "Knowledge of target, including related current events, communication profile, actors, and history (language, culture) and/or frame of reference."
+        }, {
+            "K0559": "Knowledge of the basic structure, architecture, and design of converged applications."
+        }, {
+            "K0567": "Knowledge of the data flow from collection origin to repositories and tools."
+        }, {
+            "K0592": "Knowledge of the purpose and contribution of target templates."
+        }, {
+            "K0599": "Knowledge of the structure, architecture, and design of modern digital and telephony networks."
+        }, {
+            "K0600": "Knowledge of the structure, architecture, and design of modern wireless communications systems."
+        }],
+        "skills_ids": [{
+            "S0177": "Skill in analyzing a target's communication networks."
+        }, {
+            "S0178": "Skill in analyzing essential network data (e.g., router configuration files, routing protocols)."
+        }, {
+            "S0181": "Skill in analyzing midpoint collection data."
+        }, {
+            "S0183": "Skill in analyzing terminal or environment collection data."
+        }, {
+            "S0187": "Skill in applying various analytical methods, tools, and techniques (e.g., competing hypotheses; chain of reasoning; scenario methods; denial and deception detection; high impact-low probability; network/association or link analysis; Bayesian, Delphi, and Pattern analyses)."
+        }, {
+            "S0191": "Skill in assessing the applicability of available analytical tools to various situations."
+        }, {
+            "S0194": "Skill in conducting non-attributable research."
+        }, {
+            "S0196": "Skill in conducting research using deep web."
+        }, {
+            "S0197": "Skill in conducting social network analysis, buddy list analysis, and/or cookie analysis."
+        }, {
+            "S0203": "Skill in defining and characterizing all pertinent aspects of the operational environment."
+        }, {
+            "S0205": "Skill in determining appropriate targeting options through the evaluation of available capabilities against desired effects."
+        }, {
+            "S0208": "Skill in determining the physical location of network devices."
+        }, {
+            "S0217": "Skill in evaluating data sources for relevance, reliability, and objectivity."
+        }, {
+            "S0219": "Skill in evaluating information to recognize relevance, priority, etc."
+        }, {
+            "S0220": "Skill in exploiting/querying organizational and/or partner collection databases."
+        }, {
+            "S0222": "Skill in fusion analysis"
+        }, {
+            "S0225": "Skill in identifying a target's communications networks."
+        }, {
+            "S0228": "Skill in identifying critical target elements, to include critical target elements for the cyber domain."
+        }, {
+            "S0229": "Skill in identifying cyber threats which may jeopardize organization and/or partner interests."
+        }, {
+            "S0231": "Skill in identifying how a target communicates."
+        }, {
+            "S0234": "Skill in identifying leads for target development."
+        }, {
+            "S0244": "Skill in managing client relationships, including determining client needs/requirements, managing client expectations, and demonstrating commitment to delivering quality results."
+        }, {
+            "S0246": "Skill in number normalization."
+        }, {
+            "S0248": "Skill in performing target system analysis."
+        }, {
+            "S0256": "Skill in providing understanding of target or threat systems through the identification and link analysis of physical, functional, or behavioral relationships."
+        }, {
+            "S0259": "Skill in recognizing denial and deception techniques of the target."
+        }, {
+            "S0261": "Skill in recognizing relevance of information."
+        }, {
+            "S0262": "Skill in recognizing significant changes in a target's communication patterns."
+        }, {
+            "S0263": "Skill in recognizing technical information that may be used for leads for metadata analysis."
+        }, {
+            "S0268": "Skill in researching essential information."
+        }, {
+            "S0274": "Skill in reviewing and editing target materials."
+        }, {
+            "S0277": "Skill in synthesizing, analyzing, and prioritizing meaning across data sets."
+        }, {
+            "S0280": "Skill in target network anomaly identification (e.g., intrusions, dataflow or processing, target implementation of new technologies)."
+        }, {
+            "S0287": "Skill in using geospatial data and applying geospatial resources."
+        }, {
+            "S0291": "Skill in using research methods including multiple, different sources to reconstruct a target network."
+        }, {
+            "S0301": "Skill in writing about facts and ideas in a clear, convincing, and organized manner."
+        }],
+        "abilities_ids": [{
+            "A0013": "Ability to communicate complex information, concepts, or ideas in a confident and well-organized manner through verbal, written, and/or visual means."
+        }, {
+            "A0066": "Ability to accurately and completely source all data used in intelligence, assessment and/or planning products."
+        }, {
+            "A0073": "Ability to clearly articulate intelligence requirements into well-formulated research questions and requests for information."
+        }, {
+            "A0080": "Ability to develop or recommend analytic approaches or solutions to problems and situations for which information is incomplete or for which no precedent exists."
+        }, {
+            "A0084": "Ability to evaluate, analyze, and synthesize large quantities of data (which may be fragmented and contradictory) into high quality, fused targeting/intelligence products."
+        }, {
+            "A0085": "Ability to exercise judgment when policies are not well-defined."
+        }, {
+            "A0087": "Ability to focus research efforts to meet the customer's decision-making needs."
+        }, {
+            "A0088": "Ability to function effectively in a dynamic, fast-paced environment."
+        }, {
+            "A0089": "Ability to function in a collaborative environment, seeking continuous consultation with other analysts and experts--both internal and external to the organization--to leverage analytical and technical expertise."
+        }, {
+            "A0091": "Ability to identify intelligence gaps."
+        }, {
+            "A0101": "Ability to recognize and mitigate cognitive biases which may affect analysis."
+        }, {
+            "A0102": "Ability to recognize and mitigate deception in reporting and analysis."
+        }, {
+            "A0106": "Ability to think critically."
+        }, {
+            "A0109": "Ability to utilize multiple intelligence sources across all intelligence disciplines."
+        }],
+        "tasks_ids": [{
+            "T0582": "Provide expertise to course of action development."
+        }, {
+            "T0595": "Classify documents in accordance with classification guidelines."
+        }, {
+            "T0599": "Collaborate with other customer, Intelligence and targeting organizations involved in related cyber areas."
+        }, {
+            "T0606": "Compile, integrate, and/or interpret all-source data for intelligence or vulnerability value with respect to specific targets."
+        }, {
+            "T0607": "Identify and conduct analysis of target communications to identify information essential to support operations."
+        }, {
+            "T0617": "Conduct nodal analysis."
+        }, {
+            "T0621": "Conduct quality control to determine validity and relevance of information gathered about networks."
+        }, {
+            "T0624": "Conduct target research and analysis."
+        }, {
+            "T0650": "Determine what technologies are used by a given target."
+        }, {
+            "T0653": "Apply analytic techniques to gain more target information."
+        }, {
+            "T0692": "Generate and evaluate the effectiveness of network analysis strategies."
+        }, {
+            "T0706": "Gather information about networks through traditional and alternative techniques, (e.g., social network analysis, call-chaining, traffic analysis.)"
+        }, {
+            "T0707": "Generate requests for information."
+        }, {
+            "T0710": "Identify and evaluate threat critical capabilities, requirements, and vulnerabilities."
+        }, {
+            "T0715": "Identify collection gaps and potential collection strategies against targets."
+        }, {
+            "T0722": "Identify network components and their functionality to enable analysis and target development."
+        }, {
+            "T0745": "Make recommendations to guide collection in support of customer requirements."
+        }, {
+            "T0765": "Provide subject matter expertise to development of exercises."
+        }, {
+            "T0767": "Perform content and/or metadata analysis to meet organization objectives."
+        }, {
+            "T0778": "Profile targets and their activities."
+        }, {
+            "T0797": "Provide target recommendations which meet leadership objectives."
+        }, {
+            "T0802": "Review appropriate information sources to determine validity and relevance of information gathered."
+        }, {
+            "T0803": "Reconstruct networks in diagram or report format."
+        }, {
+            "T0807": "Research communications trends in emerging technologies (in computer and telephony networks, satellite, cable, and wireless) in both open and classified sources."
+        }]
+    }
+}

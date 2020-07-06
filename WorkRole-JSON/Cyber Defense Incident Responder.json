@@ -1,0 +1,122 @@
+{
+    "Cyber Defense Incident Responder": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0021": "Knowledge of data backup and recovery."
+        }, {
+            "K0026": "Knowledge of business continuity and disaster recovery continuity of operations plans."
+        }, {
+            "K0033": "Knowledge of host/network access control mechanisms (e.g., access control list, capabilities lists)."
+        }, {
+            "K0034": "Knowledge of network services and protocols interactions that provide network communications."
+        }, {
+            "K0041": "Knowledge of incident categories, incident responses, and timelines for responses."
+        }, {
+            "K0042": "Knowledge of incident response and handling methodologies."
+        }, {
+            "K0046": "Knowledge of intrusion detection methodologies and techniques for detecting host and network-based intrusions."
+        }, {
+            "K0058": "Knowledge of network traffic analysis methods."
+        }, {
+            "K0062": "Knowledge of packet-level analysis."
+        }, {
+            "K0070": "Knowledge of system and application security threats and vulnerabilities (e.g., buffer overflow, mobile code, cross-site scripting, Procedural Language/Structured Query Language [PL/SQL] and injections, race conditions, covert channel, replay, return-oriented attacks, malicious code)."
+        }, {
+            "K0106": "Knowledge of what constitutes a network attack and a network attack's relationship to both threats and vulnerabilities."
+        }, {
+            "K0157": "Knowledge of cyber defense and information security policies, procedures, and regulations."
+        }, {
+            "K0161": "Knowledge of different classes of attacks (e.g., passive, active, insider, close-in, distribution attacks)."
+        }, {
+            "K0162": "Knowledge of cyber attackers (e.g., script kiddies, insider threat, non-nation state sponsored, and nation sponsored)."
+        }, {
+            "K0167": "Knowledge of system administration, network, and operating system hardening techniques."
+        }, {
+            "K0177": "Knowledge of cyber attack stages (e.g., reconnaissance, scanning, enumeration, gaining access, escalation of privileges, maintaining access, network exploitation, covering tracks)."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0221": "Knowledge of OSI model and underlying network protocols (e.g., TCP/IP)."
+        }, {
+            "K0230": "Knowledge of cloud service models and how those models can limit incident response."
+        }, {
+            "K0259": "Knowledge of malware analysis concepts and methodologies."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0332": "Knowledge of network protocols such as TCP/IP, Dynamic Host Configuration, Domain Name System (DNS), and directory services."
+        }, {
+            "K0565": "Knowledge of the common networking and routing protocols (e.g. TCP/IP), services (e.g., web, mail, DNS), and how they interact to provide network communications."
+        }, {
+            "K0624": "Knowledge of Application Security Risks (e.g. Open Web Application Security Project Top 10 list)"
+        }],
+        "skills_ids": [{
+            "S0003": "Skill of identifying, capturing, containing, and reporting malware."
+        }, {
+            "S0047": "Skill in preserving evidence integrity according to standard operating procedures or national standards."
+        }, {
+            "S0077": "Skill in securing network communications."
+        }, {
+            "S0078": "Skill in recognizing and categorizing types of vulnerabilities and associated attacks."
+        }, {
+            "S0079": "Skill in protecting a network against malware. (e.g., NIPS, anti-malware, restrict/prevent external devices, spam filters)."
+        }, {
+            "S0080": "Skill in performing damage assessments."
+        }, {
+            "S0173": "Skill in using security event correlation tools."
+        }, {
+            "S0365": "Skill to design incident response for cloud service models."
+        }],
+        "abilities_ids": [{
+            "A0121": "Ability to design incident response for cloud service models."
+        }, {
+            "A0128": "Ability to apply techniques for detecting host and network-based intrusions using intrusion detection technologies."
+        }],
+        "tasks_ids": [{
+            "T0041": "Coordinate and provide expert technical support to enterprise-wide cyber defense technicians to resolve cyber defense incidents."
+        }, {
+            "T0047": "Correlate incident data to identify specific vulnerabilities and make recommendations that enable expeditious remediation."
+        }, {
+            "T0161": "Perform analysis of log files from a variety of sources (e.g., individual host logs, network traffic logs, firewall logs, and intrusion detection system [IDS] logs) to identify possible threats to network security."
+        }, {
+            "T0163": "Perform cyber defense incident triage, to include determining scope, urgency, and potential impact, identifying the specific vulnerability, and making recommendations that enable expeditious remediation."
+        }, {
+            "T0164": "Perform cyber defense trend analysis and reporting."
+        }, {
+            "T0170": "Perform initial, forensically sound collection of images and inspect to discern possible mitigation/remediation on enterprise systems."
+        }, {
+            "T0175": "Perform real-time cyber defense incident handling (e.g., forensic collections, intrusion correlation and tracking, threat analysis, and direct system remediation) tasks to support deployable Incident Response Teams (IRTs)."
+        }, {
+            "T0214": "Receive and analyze network alerts from various sources within the enterprise and determine possible causes of such alerts."
+        }, {
+            "T0233": "Track and document cyber defense incidents from initial detection through final resolution."
+        }, {
+            "T0246": "Write and publish cyber defense techniques, guidance, and reports on incident findings to appropriate constituencies."
+        }, {
+            "T0262": "Employ approved defense-in-depth principles and practices (e.g., defense-in-multiple places, layered defenses, security robustness)."
+        }, {
+            "T0278": "Collect intrusion artifacts (e.g., source code, malware, Trojans) and use discovered data to enable mitigation of potential cyber defense incidents within the enterprise."
+        }, {
+            "T0279": "Serve as technical expert and liaison to law enforcement personnel and explain incident details as required."
+        }, {
+            "T0312": "Coordinate with intelligence analysts to correlate threat assessment data."
+        }, {
+            "T0395": "Write and publish after action reviews."
+        }, {
+            "T0503": "Monitor external data sources (e.g., cyber defense vendor sites, Computer Emergency Response Teams, Security Focus) to maintain currency of cyber defense threat condition and determine which security issues may have an impact on the enterprise."
+        }, {
+            "T0510": "Coordinate incident response functions."
+        }]
+    }
+}

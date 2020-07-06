@@ -1,0 +1,178 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+{% block title %}{{ _(title) }}{% endblock %}
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('general.test_ksat') }}">
+                {{ title }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .title{
+        font-size: 14px
+    }
+    .select_ksa{
+        width:125px; 
+        height:400px; 
+        overflow: auto;
+    }
+</style>
+<h2 class="title is-2 has-text-centered">
+    {{ _('KSAT Concept Test') }}
+</h2>
+<div class="columns is-centered">
+    <div class="colum is-two-thirds">
+        <div class="box">
+            <article class="media">
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <h4 class="subtitle is-4 has-text-centered">
+                                Before you begin, what do you know about KSAT?
+                            </h4>
+                        </p>
+                        <ul>
+                             <li class="has-text-centered">
+                                <a href="{{url_for('general.show_k')}}">Show more about the KSAT</a>
+                            </li>
+                            <li class="has-text-centered"><b>You can click on each KSAT title.</b></li>
+                        </ul>
+                        <div class="box">
+                            <h3 class="has-text-centered">Legend</h3>
+                            <table class="table is-bordered is-striped is-narrow is-hoverable">
+                                <caption>KSAs will have levels to select from according to this criterion.</caption>
+                                <thead>
+                                    <tr>
+                                        <th class="is-selected has-background-link">Level</th>
+                                        <th class="is-selected has-background-link">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>Not applicable</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Fundamental Awareness</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Novice</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Intermediate</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Advanced</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Expert</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <form action="" method="POST" role="form">
+                            {{ form.hidden_tag() }}
+                            <div class="box ">
+                                <label class="label title is-4 has-text-centered">
+                                    <a href="{{ url_for('general.show_k') }}">Knowledges</a>
+                                </label>
+                                <div class="box select_ksa" style="">
+                                    {% for fo in range(list_K|count) %}
+                                        <label class="has-text-weight-bold">
+                                            {{ form.ksas[fo]['levelK'].label }}
+                                        </label>
+                                        <span class="level-left" style="margin-bottom: 5px">
+                                            {{ form.ksas[fo]['levelK'] }}
+                                        </span>
+                                    {% endfor%}
+                                </div>
+                                <!-- {% if form.errors.knowledges %}
+                                        {{ macros.render_messages(form.errors.knowledges, size="") }}
+                                {% endif %} -->
+                            </div>
+                            <div class="box">
+                                <label class="label title is-4 has-text-centered">
+                                    <a href="{{ url_for('general.show_s') }}">Skills</a>
+                                </label>
+
+                                <div class="box select_ksa" style="">
+                                    {% for fo in range(list_S|count) %}
+                                        <label class="has-text-weight-bold">
+                                            {{ form.ksas[fo]['levelS'].label }}
+                                        </label>
+                                        <span class="level-left" style="margin-bottom: 5px">
+                                            {{ form.ksas[fo]['levelS'] }}
+                                        </span>
+                                    {% endfor%}
+                                </div>
+                                    <!-- {% if form.errors.skills %}
+                                        {{ macros.render_messages(form.errors.skills, size="") }}
+                                    {% endif %} -->
+                            </div>
+                            <div class="box">
+                                <label class="label title is-4 has-text-centered">
+                                    <a href="{{ url_for('general.show_a') }}">Abilities</a>
+                                </label>
+                                <div class="box select_ksa" >
+                                    {% for fo in range(list_A|count) %}
+                                        <label class="has-text-weight-bold">
+                                            {{ form.ksas[fo]['levelA'].label }}
+                                        </label>
+                                        <span class="level-left" style="margin-bottom: 5px">
+                                            {{ form.ksas[fo]['levelA'] }}
+                                        </span>
+                                    {% endfor%}
+                                </div>
+                                <!-- {% if form.errors.abilities %}
+                                        {{ macros.render_messages(form.errors.abilities, size="") }}
+                                {% endif %} -->
+                            </div>
+                            <div class="box">
+                                <label class="label title is-4 has-text-centered">
+                                    <a href="{{ url_for('general.show_t') }}">{{form.tasks.label.text}}</a>
+                                </label>
+                                    <!-- Size indica los nombres que se listaran, mas de esos salen como numeros -->
+                                    {{form.tasks(size=5) }}
+                                    {% if form.errors.tasks %}
+                                        {{ macros.render_messages(form.errors.tasks, size="") }}
+                                    {% endif %}
+                            </div>
+                            {# Submit #}
+                            {{ macros.render_submit(form.submit, label=_('Next')) }}
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+
+    let mySelectT = new vanillaSelectBox("#tasks",{
+        search:true,
+        placeHolder:"Select your tasks",
+        stayOpen:true
+    });
+
+</script>
+{% endblock %}

@@ -1,0 +1,210 @@
+{
+    "Partner Integration Planner": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0108": "Knowledge of concepts, terminology, and operations of a wide range of communications media (computer and telephone networks, satellite, fiber, wireless)."
+        }, {
+            "K0109": "Knowledge of physical computer components and architectures, including the functions of various components and peripherals (e.g., CPUs, Network Interface Cards, data storage)."
+        }, {
+            "K0350": "Knowledge of accepted organization planning systems."
+        }, {
+            "K0362": "Knowledge of attack methods and techniques (DDoS, brute force, spoofing, etc.)."
+        }, {
+            "K0377": "Knowledge of classification and control markings standards, policies and procedures."
+        }, {
+            "K0379": "Knowledge of client organizations, including information needs, objectives, structure, capabilities, etc."
+        }, {
+            "K0392": "Knowledge of common computer/network infections (virus, Trojan, etc.) and methods of infection (ports, attachments, etc.)."
+        }, {
+            "K0395": "Knowledge of computer networking fundamentals (i.e., basic computer components of a network, types of networks, etc.)."
+        }, {
+            "K0400": "Knowledge of crisis action planning for cyber operations."
+        }, {
+            "K0403": "Knowledge of cryptologic capabilities, limitations, and contributions to cyber operations."
+        }, {
+            "K0408": "Knowledge of cyber actions (i.e. cyber defense, information gathering, environment preparation, cyber-attack) principles, capabilities, limitations, and effects."
+        }, {
+            "K0411": "Knowledge of cyber laws and legal considerations and their effect on cyber planning."
+        }, {
+            "K0414": "Knowledge of cyber operations support or enabling processes."
+        }, {
+            "K0417": "Knowledge of data communications terminology (e.g., networking protocols, Ethernet, IP, encryption, optical devices, removable media)."
+        }, {
+            "K0422": "Knowledge of deconfliction processes and procedures."
+        }, {
+            "K0431": "Knowledge of evolving/emerging communications technologies."
+        }, {
+            "K0432": "Knowledge of existing, emerging, and long-range issues related to cyber operations strategy, policy, and organization."
+        }, {
+            "K0435": "Knowledge of fundamental cyber concepts, principles, limitations, and effects."
+        }, {
+            "K0436": "Knowledge of fundamental cyber operations concepts, terminology/lexicon (i.e., environment preparation, cyber-attack, cyber defense), principles, capabilities, limitations, and effects."
+        }, {
+            "K0444": "Knowledge of how Internet applications work (SMTP email, web-based email, chat clients, VOIP)."
+        }, {
+            "K0455": "Knowledge of information security concepts, facilitating technologies and methods."
+        }, {
+            "K0465": "Knowledge of internal and external partner cyber operations capabilities and tools."
+        }, {
+            "K0499": "Knowledge of operations security."
+        }, {
+            "K0501": "Knowledge of organization cyber operations programs, strategies, and resources."
+        }, {
+            "K0504": "Knowledge of organization issues, objectives, and operations in cyber as well as regulations and policy directives governing cyber operations."
+        }, {
+            "K0506": "Knowledge of organization objectives, leadership priorities, and decision-making risks."
+        }, {
+            "K0507": "Knowledge of organization or partner exploitation of digital networks."
+        }, {
+            "K0508": "Knowledge of organization policies and planning concepts for partnering with internal and/or external organizations."
+        }, {
+            "K0511": "Knowledge of organizational hierarchy and cyber decision-making processes."
+        }, {
+            "K0512": "Knowledge of organizational planning concepts."
+        }, {
+            "K0514": "Knowledge of organizational structures and associated intelligence capabilities."
+        }, {
+            "K0538": "Knowledge of target and threat organization structures, critical capabilities, and critical vulnerabilities"
+        }, {
+            "K0585": "Knowledge of the organizational structure as it pertains to full spectrum cyber operations, including the functions, responsibilities, and interrelationships among distinct internal elements."
+        }, {
+            "K0598": "Knowledge of the structure and intent of organization specific plans, guidance and authorizations."
+        }, {
+            "K0599": "Knowledge of the structure, architecture, and design of modern digital and telephony networks."
+        }],
+        "skills_ids": [{
+            "S0185": "Skill in applying analytical methods typically employed to support planning and to justify recommended strategies and courses of action."
+        }, {
+            "S0186": "Skill in applying crisis planning procedures."
+        }, {
+            "S0213": "Skill in documenting and communicating complex technical and programmatic information."
+        }, {
+            "S0218": "Skill in evaluating information for reliability, validity, and relevance."
+        }, {
+            "S0249": "Skill in preparing and presenting briefings."
+        }, {
+            "S0250": "Skill in preparing plans and related correspondence."
+        }, {
+            "S0296": "Skill in utilizing feedback to improve processes, products, and services."
+        }, {
+            "S0297": "Skill in utilizing virtual collaborative workspaces and/or tools (e.g., IWS, VTCs, chat rooms, SharePoint)."
+        }, {
+            "S0326": "Skill to distinguish between notional and actual resources and their applicability to the plan under development."
+        }, {
+            "S0360": "Skill to analyze and assess internal and external partner cyber operations capabilities and tools."
+        }],
+        "abilities_ids": [{
+            "A0013": "Ability to communicate complex information, concepts, or ideas in a confident and well-organized manner through verbal, written, and/or visual means."
+        }, {
+            "A0066": "Ability to accurately and completely source all data used in intelligence, assessment and/or planning products."
+        }, {
+            "A0067": "Ability to adjust to and operate in a diverse, unpredictable, challenging, and fast-paced work environment."
+        }, {
+            "A0068": "Ability to apply approved planning development and staffing processes."
+        }, {
+            "A0070": "Ability to apply critical reading/thinking skills."
+        }, {
+            "A0074": "Ability to collaborate effectively with others."
+        }, {
+            "A0077": "Ability to coordinate cyber operations with other organization functions or support activities."
+        }, {
+            "A0081": "Ability to develop or recommend planning solutions to problems and situations for which no precedent exists."
+        }, {
+            "A0082": "Ability to effectively collaborate via virtual teams."
+        }, {
+            "A0085": "Ability to exercise judgment when policies are not well-defined."
+        }, {
+            "A0089": "Ability to function in a collaborative environment, seeking continuous consultation with other analysts and experts--both internal and external to the organization--to leverage analytical and technical expertise."
+        }, {
+            "A0090": "Ability to identify external partners with common cyber operations interests."
+        }, {
+            "A0094": "Ability to interpret and apply laws, regulations, policies, and guidance relevant to organization cyber objectives."
+        }, {
+            "A0096": "Ability to interpret and understand complex and rapidly evolving concepts."
+        }, {
+            "A0098": "Ability to participate as a member of planning teams, coordination groups, and task forces as necessary."
+        }, {
+            "A0105": "Ability to tailor technical and planning information to a customer's level of understanding."
+        }],
+        "tasks_ids": [{
+            "T0571": "Apply expertise in policy and processes to facilitate the development, negotiation, and internal staffing of plans and/or memorandums of agreement."
+        }, {
+            "T0581": "Assist and advise interagency partners in identifying and developing best practices for facilitating operational support to achievement of organization objectives."
+        }, {
+            "T0582": "Provide expertise to course of action development."
+        }, {
+            "T0601": "Collaborate with other team members or partner organizations to develop a diverse program of information materials (e.g., web pages, briefings, print materials)."
+        }, {
+            "T0627": "Contribute to crisis action planning for cyber operations."
+        }, {
+            "T0629": "Contribute to the development, staffing, and coordination of cyber operations policies, performance standards, plans and approval packages with appropriate internal and/or external decision makers."
+        }, {
+            "T0635": "Coordinate with intelligence and cyber defense partners to obtain relevant essential information."
+        }, {
+            "T0665": "Develop or participate in the development of standards for providing, requesting, and/or obtaining support from external partners to synchronize cyber operations."
+        }, {
+            "T0666": "Develop or shape international cyber engagement strategies, policies, and activities to meet organization objectives."
+        }, {
+            "T0669": "Develop strategy and processes for partner planning, operations, and capability development."
+        }, {
+            "T0670": "Develop, implement, and recommend changes to appropriate planning procedures and policies."
+        }, {
+            "T0671": "Develop, maintain, and assess cyber cooperation security agreements with external partners."
+        }, {
+            "T0699": "Facilitate interactions between internal and external partner decision makers to synchronize and integrate courses of action in support of objectives."
+        }, {
+            "T0700": "Facilitate the sharing of 'best practices' and 'lessons learned' throughout the cyber operations community."
+        }, {
+            "T0712": "Identify and manage security cooperation priorities with external partners."
+        }, {
+            "T0729": "Inform external partners of the potential effects of new or revised policy and guidance on cyber operations partnering activities."
+        }, {
+            "T0732": "Integrate cyber planning/targeting efforts with other organizations."
+        }, {
+            "T0739": "Maintain relationships with internal and external partners involved in cyber planning or related areas."
+        }, {
+            "T0747": "Monitor and evaluate integrated cyber operations to identify opportunities to meet organization objectives."
+        }, {
+            "T0759": "Contribute to the review and refinement of policy, to include assessments of the consequences of endorsing or not endorsing such policy."
+        }, {
+            "T0760": "Provide subject matter expertise to planning teams, coordination groups, and task forces as necessary."
+        }, {
+            "T0763": "Conduct long-range, strategic planning efforts with internal and external partners in cyber activities."
+        }, {
+            "T0764": "Provide subject matter expertise to planning efforts with internal and external cyber operations partners."
+        }, {
+            "T0766": "Propose policy which governs interactions with external coordination groups."
+        }, {
+            "T0772": "Prepare for and provide subject matter expertise to exercises."
+        }, {
+            "T0784": "Provide cyber focused guidance and advice on intelligence support plan inputs."
+        }, {
+            "T0787": "Provide input for the development and refinement of the cyber operations objectives, priorities, strategies, plans, and programs."
+        }, {
+            "T0795": "Provide planning support between internal and external partners."
+        }, {
+            "T0817": "Serve as a conduit of information from partner teams by identifying subject matter experts who can assist in the investigation of complex or unusual situations."
+        }, {
+            "T0818": "Serve as a liaison with external partners."
+        }, {
+            "T0823": "Submit or respond to requests for deconfliction of cyber operations."
+        }, {
+            "T0825": "Synchronize cyber international engagement activities and associated resource requirements as appropriate."
+        }, {
+            "T0826": "Synchronize cyber portions of security cooperation plans."
+        }, {
+            "T0836": "Document lessons learned that convey the results of events and/or exercises."
+        }]
+    }
+}

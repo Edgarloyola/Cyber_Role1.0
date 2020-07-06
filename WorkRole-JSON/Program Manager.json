@@ -1,0 +1,114 @@
+{
+    "Program Manager": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0047": "Knowledge of information technology (IT) architectural concepts and frameworks."
+        }, {
+            "K0048": "Knowledge of Risk Management Framework (RMF) requirements."
+        }, {
+            "K0072": "Knowledge of resource management principles and techniques."
+        }, {
+            "K0090": "Knowledge of system life cycle management principles, including software security and usability."
+        }, {
+            "K0101": "Knowledge of the organization's enterprise information technology (IT) goals and objectives."
+        }, {
+            "K0120": "Knowledge of how information needs and collection requirements are translated, tracked, and prioritized across the extended enterprise."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0146": "Knowledge of the organization's core business/mission processes."
+        }, {
+            "K0148": "Knowledge of import/export control regulations and responsible agencies for the purposes of reducing supply chain risk."
+        }, {
+            "K0154": "Knowledge of supply chain risk management standards, processes, and practices."
+        }, {
+            "K0164": "Knowledge of functionality, quality, and security requirements and how these will apply to specific items of supply (i.e., elements and processes)."
+        }, {
+            "K0165": "Knowledge of risk threat assessment."
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0194": "Knowledge of Cloud-based knowledge management technologies and concepts related to security, governance, procurement, and administration."
+        }, {
+            "K0196": "Knowledge of Import/Export Regulations related to cryptography and other security technologies."
+        }, {
+            "K0198": "Knowledge of organizational process improvement concepts and process maturity models (e.g., Capability Maturity Model Integration (CMMI) for Development, CMMI for Services, and CMMI for Acquisitions)."
+        }, {
+            "K0200": "Knowledge of service management concepts for networks and related standards (e.g., Information Technology Infrastructure Library, current version [ITIL])."
+        }, {
+            "K0235": "Knowledge of how to leverage research and development centers, think tanks, academic research, and industry systems."
+        }, {
+            "K0257": "Knowledge of information technology (IT) acquisition/procurement requirements."
+        }, {
+            "K0270": "Knowledge of the acquisition/procurement life cycle process."
+        }],
+        "skills_ids": [{
+            "S0038": "Skill in identifying measures or indicators of system performance and the actions needed to improve or correct performance, relative to the goals of the system."
+        }, {
+            "S0372": "Skill to translate, track, and prioritize information needs and intelligence collection requirements across the extended enterprise."
+        }],
+        "abilities_ids": [{
+            "A0009": "Ability to apply supply chain risk management standards."
+        }, {
+            "A0039": "Ability to oversee the development and update of the life cycle cost estimate."
+        }, {
+            "A0045": "Ability to evaluate/ensure the trustworthiness of the supplier and/or product."
+        }, {
+            "A0056": "Ability to ensure security practices are followed throughout the acquisition process."
+        }],
+        "tasks_ids": [{
+            "T0066": "Develop and maintain strategic plans."
+        }, {
+            "T0072": "Develop methods to monitor and measure risk, compliance, and assurance efforts."
+        }, {
+            "T0174": "Perform needs analysis to determine opportunities for new and improved business process solutions."
+        }, {
+            "T0199": "Provide enterprise cybersecurity and supply chain risk management guidance for development of the Continuity of Operations Plans."
+        }, {
+            "T0220": "Resolve conflicts in laws, regulations, policies, standards, or procedures."
+        }, {
+            "T0223": "Review or conduct audits of information technology (IT) programs and projects."
+        }, {
+            "T0256": "Evaluate the effectiveness of procurement function in addressing information security requirements and supply chain risks through procurement activities and recommend improvements."
+        }, {
+            "T0273": "Develop and document supply chain risks for critical system elements, as appropriate."
+        }, {
+            "T0277": "Ensure that all acquisitions, procurements, and outsourcing efforts address information security requirements consistent with organization goals."
+        }, {
+            "T0302": "Develop contract language to ensure supply chain, system, network, and operational security are met."
+        }, {
+            "T0340": "Act as a primary stakeholder in the underlying information technology (IT) operational processes and functions that support the service, provide direction and monitor all significant activities so the service is delivered successfully."
+        }, {
+            "T0354": "Coordinate and manage the overall service provided to a customer end-to-end."
+        }, {
+            "T0377": "Gather feedback on customer satisfaction and internal service performance to foster continual improvement."
+        }, {
+            "T0379": "Manage the internal relationship with information technology (IT) process owners supporting the service, assisting with the definition and agreement of Operating Level Agreements (OLAs)."
+        }, {
+            "T0407": "Participate in the acquisition process as necessary."
+        }, {
+            "T0412": "Conduct import/export reviews for acquiring systems and software."
+        }, {
+            "T0414": "Develop supply chain, system, network, performance, and cybersecurity requirements."
+        }, {
+            "T0415": "Ensure that supply chain, system, network, performance, and cybersecurity requirements are included in contract language and delivered."
+        }, {
+            "T0481": "Identify and address cyber workforce planning and management issues (e.g. recruitment, retention, and training)."
+        }, {
+            "T0493": "Lead and oversee budget, staffing, and contracting."
+        }, {
+            "T0551": "Draft and publish supply chain security and risk management documents."
+        }]
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "System Testing and Evaluation Specialist": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0027": "Knowledge of organization's enterprise information security architecture."
+        }, {
+            "K0028": "Knowledge of organization's evaluation and validation requirements."
+        }, {
+            "K0037": "Knowledge of Security Assessment and Authorization process."
+        }, {
+            "K0044": "Knowledge of cybersecurity and privacy principles and organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }, {
+            "K0057": "Knowledge of network hardware devices and functions."
+        }, {
+            "K0088": "Knowledge of systems administration concepts."
+        }, {
+            "K0091": "Knowledge of systems testing and evaluation methods."
+        }, {
+            "K0102": "Knowledge of the systems engineering process."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0139": "Knowledge of interpreted and compiled computer languages."
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0170": "Knowledge of critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0199": "Knowledge of security architecture concepts and enterprise architecture reference models (e.g., Zachman, Federal Enterprise Architecture [FEA])."
+        }, {
+            "K0203": "Knowledge of security models (e.g., Bell-LaPadula model, Biba integrity model, Clark-Wilson integrity model)."
+        }, {
+            "K0212": "Knowledge of cybersecurity-enabled software products."
+        }, {
+            "K0250": "Knowledge of Test & Evaluation processes for learners."
+        }, {
+            "K0260": "Knowledge of Personally Identifiable Information (PII) data security standards."
+        }, {
+            "K0261": "Knowledge of Payment Card Industry (PCI) data security standards."
+        }, {
+            "K0262": "Knowledge of Personal Health Information (PHI) data security standards."
+        }, {
+            "K0287": "Knowledge of an organization's information classification program and procedures for information compromise."
+        }, {
+            "K0332": "Knowledge of network protocols such as TCP/IP, Dynamic Host Configuration, Domain Name System (DNS), and directory services."
+        }],
+        "skills_ids": [{
+            "S0015": "Skill in conducting test events."
+        }, {
+            "S0021": "Skill in designing a data analysis structure (i.e., the types of data a test must generate and how to analyze that data)."
+        }, {
+            "S0026": "Skill in determining an appropriate level of test rigor for a given system."
+        }, {
+            "S0030": "Skill in developing operations-based testing scenarios."
+        }, {
+            "S0048": "Skill in systems integration testing."
+        }, {
+            "S0060": "Skill in writing code in a currently supported programming language (e.g., Java, C++)."
+        }, {
+            "S0061": "Skill in writing test plans."
+        }, {
+            "S0082": "Skill in evaluating test plans for applicability and completeness."
+        }, {
+            "S0104": "Skill in conducting Test Readiness Reviews."
+        }, {
+            "S0107": "Skill in designing and documenting overall program Test & Evaluation strategies."
+        }, {
+            "S0110": "Skill in identifying Test & Evaluation infrastructure (people, ranges, tools, instrumentation) requirements."
+        }, {
+            "S0112": "Skill in managing test assets, test resources, and test personnel to ensure effective completion of test events."
+        }, {
+            "S0115": "Skill in preparing Test & Evaluation reports."
+        }, {
+            "S0117": "Skill in providing Test & Evaluation resource estimate."
+        }, {
+            "S0367": "Skill to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }],
+        "abilities_ids": [{
+            "A0026": "Ability to analyze test data."
+        }, {
+            "A0030": "Ability to collect, verify, and validate test data."
+        }, {
+            "A0040": "Ability to translate data and test results into evaluative conclusions."
+        }, {
+            "A0123": "Ability to apply cybersecurity and privacy principles to organizational requirements (relevant to confidentiality, integrity, availability, authentication, non-repudiation)."
+        }],
+        "tasks_ids": [{
+            "T0058": "Determine level of assurance of developed capabilities based on test results."
+        }, {
+            "T0080": "Develop test plans to address specifications and requirements."
+        }, {
+            "T0125": "Install and maintain network infrastructure device operating system software (e.g., IOS, firmware)."
+        }, {
+            "T0143": "Make recommendations based on test results."
+        }, {
+            "T0257": "Determine scope, infrastructure, resources, and data sample size to ensure system requirements are adequately demonstrated."
+        }, {
+            "T0274": "Create auditable evidence of security measures."
+        }, {
+            "T0393": "Validate specifications and requirements for testability."
+        }, {
+            "T0426": "Analyze the results of software, hardware, or interoperability testing."
+        }, {
+            "T0511": "Perform developmental testing on systems under development."
+        }, {
+            "T0512": "Perform interoperability testing on systems exchanging electronic information with other systems."
+        }, {
+            "T0513": "Perform operational testing."
+        }, {
+            "T0539": "Test, evaluate, and verify hardware and/or software to determine compliance with defined specifications and requirements."
+        }, {
+            "T0540": "Record and manage test data."
+        }]
+    }
+}

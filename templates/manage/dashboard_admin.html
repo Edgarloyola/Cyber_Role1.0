@@ -1,0 +1,157 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }}
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    .title{
+
+        font-size: 14px
+    }
+    .box{
+
+        box-shadow:none;
+    }
+    .global{
+
+        box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+
+    }
+</style>
+<h3 class="title is-1 has-text-centered">
+    {{ _('Welcome to Cyber Role Admin') }}
+</h3>
+
+
+<div class="box global">
+    
+
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            User Manager
+        </h3>
+    </div>
+
+
+    <!-- modifyUser -->
+    <div class="box">
+        <div class="columns is-4 is-centered">
+            <div class="column is-4">
+                <a href="{{ url_for('user_ksat.manage_user') }}" class="box button is-large is-success">
+                    Show Users
+                </a>
+            </div>
+            <div class="column is-4">
+                <a href="{{ url_for('user_ksat.manage_role') }}" class="box button is-large is-success">
+                    Show Roles
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="has-background-grey-light">
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            Learning Object Manager
+        </h3>
+    </div>
+
+    <div class="box">
+        <div class="columns is-centered">
+            <div class="column">
+                <a href="{{ url_for('lo.manage_optimal_course') }}" class="box button is-large is-link">
+                   Show Optimal Courses
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('lo.manage_learning_object') }}" class="box button is-large is-link">
+                   Show Learning Objects
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('lo.create_rnd_lo') }}" class="box button is-large is-link">
+                    Create Learning Objects Random
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="has-background-grey-light">
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            KSATs Manager
+        </h3>
+    </div>
+
+    <div class="box">
+        <div class="columns is-centered">
+            <div class="column">
+                <a href="{{ url_for('manage.manage_ksat') }}" class="box button is-large is-dark">
+                    Show KSATs
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('manage.manage_knowledge') }}" class="box button is-large is-dark">
+                    Show Knowledges
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('manage.manage_skill') }}" class="box button is-large is-dark">
+                    Show Skills
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('manage.manage_ability') }}" class="box button is-large is-dark">
+                    Show Abilities
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('manage.manage_task') }}" class="box button is-large is-dark">
+                    Show Tasks
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr class="has-background-grey-light">
+    <div class="box">
+        <h3 class="title is-3 has-text-centered">
+            WorkRoles and Category/Specialist Manager
+        </h3>
+    </div>
+
+    <div class="box">
+        <div class="columns is-centered">
+            <div class="column">
+                <a href="{{ url_for('manage.manage_category') }}" class="box button is-large is-warning">
+                    Show Category
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('manage.manage_specialist') }}" class="box button is-large is-warning">
+                    Show Specialist
+                </a>
+            </div>
+            <div class="column">
+                <a href="{{ url_for('manage.manage_work_role') }}" class="box button is-large is-warning">
+                    Show WorkRoles
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+</script>
+{% endblock %}

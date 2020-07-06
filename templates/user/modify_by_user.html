@@ -1,0 +1,160 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+            <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }} 
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('user_ksat.show_user') }}">
+                {{ _('Show Profile') }} 
+            </a>
+        </li>
+        <li>
+            <a href="{{ url_for('user_ksat.modify_by_user') }}">
+                {{ title }} 
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+
+        font-size:25px
+
+    }
+
+    .title{
+        font-size: 14px
+    }
+
+    #mieye{
+
+        padding-left: 45%;
+    }
+
+    #eye{
+
+      padding-left: 10px;
+    }
+
+
+    .box{
+      box-shadow: none;
+    }
+
+    .global{
+      box-shadow: 0 .5em 4em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);
+    }
+
+</style>
+
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+       {{ _(title) }}
+    </h2>
+</div>
+
+<div class="box global">
+    <div class="columns is-centered">
+        <div class="column has-text-centered">
+            <form action="" method="POST" role="form">
+                {{ user_form.hidden_tag() }}
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="control has-text-centered">
+                            {# Username #}
+                            {{ macros.render_input(user_form.username, icon="user", label=_('Username')) }}
+                            {% if user_form.errors.username %}
+                                {% set mesage= user_form.errors.username %}
+                                <article class="message is-warning">
+                                    <div class="message-body">
+                                        <li>{{mesage}}</li>
+                                    </div>
+                                </article>
+                            {% endif %}
+                        </div>
+                        <div class="control has-text-centered">
+                            {{ macros.render_input(user_form.first_name, icon="user") }}
+                            {% if user_form.errors.first_name %}
+                                {{ macros.render_messages(user_form.errors.first_name, size="") }}
+                            {% endif %}
+                        </div>
+                        <div class="control has-text-centered">
+                            {{ macros.render_input(user_form.last_name, icon="user") }}
+                            {% if user_form.errors.last_name %}
+                                {{ macros.render_messages(user_form.errors.last_name, size="") }}
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="control has-text-centered">
+                            {# Email field #}
+                            {{ macros.render_input(user_form.email, icon="envelope", label=_('Email')) }}
+                            {% if user_form.errors.email %}
+                                {% set mesage= user_form.errors.email %}
+                                <article class="message is-warning">
+                                    <div class="message-body">
+                                        <li>{{mesage}}</li>
+                                    </div>
+                                </article>
+                            {% endif %}
+                        </div>
+                        <div class="control has-text-centered">
+                            <div id="mieye" class="field has-addons has-text-centered ">
+                                <label class="label">Password <a onclick="doFunction();" >
+                                    <i  class="fas fa-eye"></i>
+                                </a></label>
+                            </div>
+                            {{ macros.render_input(user_form.password, icon="key", label=' ') }}
+                            {% if user_form.errors.password %}
+                                {{ macros.render_messages(user_form.errors.password, size="") }}
+                            {% endif %}
+
+                        </div>
+                        <div class="control has-text-centered">
+                            {# Retype password #}
+                            {{ macros.render_input(user_form.retype_password, icon="key", label=_('Retype Password')) }}
+                            {% if user_form.errors.retype_password %}
+                                {% set mesage= user_form.errors.retype_password %}
+                                <article class="message is-warning">
+                                    <div class="message-body">
+                                        <li>{{mesage}}</li>
+                                    </div>
+                                </article>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="columns box is-centered">
+                    <div class="column is-2">
+                        {{ macros.render_submit(user_form.submit ,label=_('Modify'))}}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function doFunction(){
+      var elem = document.getElementById('password');
+      elem.value = '{{user_form.password.data}}'
+      if(elem.type.localeCompare('password')==0){
+        elem.type = 'text';
+      }else{
+        elem.type = 'password';
+      }
+    }
+</script>
+{% endblock %}

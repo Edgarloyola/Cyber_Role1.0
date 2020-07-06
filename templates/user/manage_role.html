@@ -1,0 +1,157 @@
+{% import "macros.html" as macros %}
+{% extends "layout.html" %}
+
+{% block title %}{{ _(title) }}{% endblock %}
+
+
+{% block breadcrumbs %}
+<nav aria-label="breadcrumbs" class="breadcrumb is-centered">
+    <ul>
+        <li>
+        <a href="{{ url_for('general.show_dash') }}">
+                {{ _('Home') }} 
+            </a>
+        </li>
+        <li>
+        <a href="{{ url_for('user_ksat.manage_role') }}">
+                {{ title }} 
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<style>
+    option{
+
+        font-size:25px
+
+    }
+
+    #next{
+        box-shadow: none;
+    }
+
+
+
+    .box{
+        box-shadow: none;
+    }
+
+
+
+</style>
+
+<div class="box">
+    <h2 class="title is-2 has-text-centered">
+        {{ _('Manage Roles') }}
+    </h2>
+</div>
+
+<div class="box">
+    <div class="columns is-centered">
+        <div class="column has-text-centered is-4">
+            <div class="control has-icons-left ">
+                 <form class="" method="POST" action="{{ url_for('user_ksat.manage_role') }}">
+                    {{ search_form.hidden_tag() }}
+                    {{ search_form.q(placeholder="Search by Name...") }}
+                    <span class="icon is-small is-left icon-search">
+                        <i class=" search fas fa-2x fa-search"></i>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if roles %}
+    {% if roles.count() == 0 %}
+        <div class="box">
+            <h4 class="title is-4 has-text-centered">
+                {{ _('No Roles found.') }}
+            </h4>
+        </div>
+    {% else %}
+    <div class="table-container">
+        <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable">
+            <thead>
+                <tr>
+                    <th class="is-selected has-background-link">ID</th>
+                    <th class="is-selected has-background-link">Name</th>
+                    <th class="is-selected has-background-link"></th>
+                    <th class="is-selected has-background-link"></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in roles %}
+            <tr>
+                <td class="has-text-centered"><b>{{i.id}}</b></td>
+                <td class="has-text-centered">{{i.name}}</td>
+                <td class="has-text-centered">
+                    <a href="{{ url_for('user_ksat.modify_role', id=create_hashid(i.id)) }}" class="button is-warning is-rounded">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                </td>
+                <td class="has-text-centered">
+                    <a href="{{ url_for('user_ksat.manage_role', delete=True, id=create_hashid(i.id)) }}" class="button is-danger is-rounded">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!-- pagination -->
+         <nav class="pagination" role="navigation" aria-label="pagination" data-target="{{ target }}">
+            <a {% if prev_url %}href="{{ prev_url or '#' }}"{% else %}disabled{% endif %} class="pagination-previous">
+                <span class="icon"><i class="fas fa-chevron-left"></i></span>
+                <span>{{ _('Previous') }}</span>
+            </a>
+            <a {% if next_url %}href="{{ next_url or '#' }}"{% else %}disabled{% endif %} class="pagination-next">
+                <span>{{ _('Next') }}</span>
+                <span class="icon"><i class="fas fa-chevron-right"></i></span>
+            </a>
+        </nav>
+    </div>
+    {% endif %}
+{% else %}
+<div class="box table-container">
+    <table class="table is-fullwidth is-bordered is-striped is-narrow is-hoverable ">
+        <thead>
+        <tr >
+            <th class="has-text-centered is-selected has-background-link">ID</th>
+            <th class="has-text-centered is-selected has-background-link">Name</th>
+            <th class="has-text-centered is-selected has-background-link has-text-centered" >
+                <a href="{{ url_for('user_ksat.add_role') }}" class="is-success is-rounded">
+                    <i class="fas fa-plus-circle fa-2x "></i>
+                </a>
+            </th>
+            <th class="is-selected has-background-link"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for i in lista_role.items %}
+        <tr>
+            <td class="has-text-centered"><b>{{i.id}}</b></td>
+            <td class="has-text-centered">{{i.name}}</td>
+            <td class="has-text-centered"> 
+                <a href="{{ url_for('user_ksat.modify_role', id=create_hashid(i.id)) }}" class="button is-small is-warning is-rounded">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+            <td class="has-text-centered"> 
+                <a href="{{ url_for('user_ksat.manage_role', delete=True, id=create_hashid(i.id)) }}"class="button is-small is-danger is-rounded">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {{ macros.render_pagination(lista_role) }}
+</div>
+{% endif %}
+<script type="text/javascript">
+</script>
+{% endblock %}

@@ -1,0 +1,118 @@
+{
+    "Research & Development Specialist": {
+        "knowledges_ids": [{
+            "K0001": "Knowledge of computer networking concepts and protocols, and network security methodologies."
+        }, {
+            "K0002": "Knowledge of risk management processes (e.g., methods for assessing and mitigating risk)."
+        }, {
+            "K0003": "Knowledge of laws, regulations, policies, and ethics as they relate to cybersecurity and privacy."
+        }, {
+            "K0004": "Knowledge of cybersecurity and privacy principles."
+        }, {
+            "K0005": "Knowledge of cyber threats and vulnerabilities."
+        }, {
+            "K0006": "Knowledge of specific operational impacts of cybersecurity lapses."
+        }, {
+            "K0009": "Knowledge of application vulnerabilities."
+        }, {
+            "K0019": "Knowledge of cryptography and cryptographic key management concepts"
+        }, {
+            "K0059": "Knowledge of new and emerging information technology (IT) and cybersecurity technologies."
+        }, {
+            "K0090": "Knowledge of system life cycle management principles, including software security and usability."
+        }, {
+            "K0126": "Knowledge of Supply Chain Risk Management Practices (NIST SP 800-161)"
+        }, {
+            "K0169": "Knowledge of information technology (IT) supply chain security and supply chain risk management policies, requirements, and procedures."
+        }, {
+            "K0170": "Knowledge of critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }, {
+            "K0171": "Knowledge of hardware reverse engineering techniques."
+        }, {
+            "K0172": "Knowledge of middleware (e.g., enterprise service bus and message queuing)."
+        }, {
+            "K0174": "Knowledge of networking protocols."
+        }, {
+            "K0175": "Knowledge of software reverse engineering techniques."
+        }, {
+            "K0176": "Knowledge of Extensible Markup Language (XML) schemas."
+        }, {
+            "K0179": "Knowledge of network security architecture concepts including topology, protocols, components, and principles (e.g., application of defense-in-depth)."
+        }, {
+            "K0202": "Knowledge of the application firewall concepts and functions (e.g., Single point of authentication/audit/policy enforcement, message scanning for malicious content, data anonymization for PCI and PII compliance, data loss protection scanning, accelerated cryptographic operations, SSL security, REST/JSON processing)."
+        }, {
+            "K0209": "Knowledge of covert communication techniques."
+        }, {
+            "K0267": "Knowledge of laws, policies, procedures, or governance relevant to cybersecurity for critical infrastructures."
+        }, {
+            "K0268": "Knowledge of forensic footprint identification."
+        }, {
+            "K0269": "Knowledge of mobile communications architecture."
+        }, {
+            "K0271": "Knowledge of operating system structures and internals (e.g., process management, directory structure, installed applications)."
+        }, {
+            "K0272": "Knowledge of network analysis tools used to identify software communications vulnerabilities."
+        }, {
+            "K0288": "Knowledge of industry standard security models."
+        }, {
+            "K0296": "Knowledge of capabilities, applications, and potential vulnerabilities of network equipment including hubs, routers, switches, bridges, servers, transmission media, and related hardware."
+        }, {
+            "K0310": "Knowledge of hacking methodologies."
+        }, {
+            "K0314": "Knowledge of industry technologie's potential cybersecurity vulnerabilities."
+        }, {
+            "K0321": "Knowledge of engineering concepts as applied to computer architecture and associated computer hardware/software."
+        }, {
+            "K0342": "Knowledge of penetration testing principles, tools, and techniques."
+        }, {
+            "K0499": "Knowledge of operations security."
+        }],
+        "skills_ids": [{
+            "S0005": "Skill in applying and incorporating information technologies into proposed solutions."
+        }, {
+            "S0017": "Skill in creating and utilizing mathematical or statistical models."
+        }, {
+            "S0072": "Skill in using scientific rules and methods to solve problems."
+        }, {
+            "S0140": "Skill in applying the systems engineering process."
+        }, {
+            "S0148": "Skill in designing the integration of technology processes and solutions, including legacy systems and modern programming languages."
+        }, {
+            "S0172": "Skill in applying secure coding techniques."
+        }],
+        "abilities_ids": [{
+            "A0001": "Ability to identify systemic security issues based on the analysis of vulnerability and configuration data."
+        }, {
+            "A0018": "Ability to prepare and present briefings."
+        }, {
+            "A0019": "Ability to produce technical documentation."
+        }, {
+            "A0170": "Ability to identify critical infrastructure systems with information communication technology that were designed without system security considerations."
+        }],
+        "tasks_ids": [{
+            "T0064": "Review and validate data mining and data warehousing programs, processes, and requirements."
+        }, {
+            "T0249": "Research current technology to understand capabilities of required system or network."
+        }, {
+            "T0250": "Identify cyber capabilities strategies for custom hardware and software development based on mission requirements."
+        }, {
+            "T0283": "Collaborate with stakeholders to identify and/or develop appropriate solutions technology."
+        }, {
+            "T0284": "Design and develop new tools/technologies as related to cybersecurity."
+        }, {
+            "T0327": "Evaluate network infrastructure vulnerabilities to enhance capabilities being developed."
+        }, {
+            "T0329": "Follow software and systems engineering life cycle standards and processes."
+        }, {
+            "T0409": "Troubleshoot prototype design and process issues throughout the product design, development, and pre-launch phases."
+        }, {
+            "T0410": "Identify functional- and security-related features to find opportunities for new capability development to exploit or mitigate vulnerabilities."
+        }, {
+            "T0411": "Identify and/or develop reverse engineering tools to enhance capabilities and detect vulnerabilities."
+        }, {
+            "T0413": "Develop data management capabilities (e.g., cloud-based, centralized cryptographic key management) to include support to the mobile workforce."
+        }, {
+            "T0547": "Research and evaluate available technologies and standards to meet customer requirements."
+        }]
+    }
+}
