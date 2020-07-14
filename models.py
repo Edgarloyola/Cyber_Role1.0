@@ -16,9 +16,12 @@ from cyber_role.search import add_to_index, remove_from_index, query_index
 
 
 
-#Configuracion de Elasticsearch para convertir los ids (JSON que devuelve elastic) en objetos sqlachemy
-# Y reset de inddex para que no explote en un futuro
 class SearchableMixin(object):
+
+"""
+Configuracion de Elasticsearch para convertir los ids (JSON que devuelve elastic) en objetos sqlachemy
+Y reindex para que los indices no se saturen con el tiempo.
+"""
     @classmethod
     def search(cls, expression, page, per_page):
         ids, total = query_index(cls.__tablename__, expression, page, per_page)
@@ -60,8 +63,6 @@ class SearchableMixin(object):
 
 db.event.listen(db.session, 'before_commit', SearchableMixin.before_commit)
 db.event.listen(db.session, 'after_commit', SearchableMixin.after_commit)
-
-
 
 
 # Flask-User models
@@ -180,25 +181,6 @@ class UserRoles(db.Model):
         db.Integer,
         db.ForeignKey('roles.id', onupdate='CASCADE', ondelete='CASCADE')
     )
-
-
-# class CourseUsers(db.Model):
-#     """Flask-User model for course-users.
-#     Includes additional attributes.
-#     Attributes:
-
-#     """
-#     __tablename__ = 'course_users'
-
-#     id = db.Column(db.Integer, primary_key=True)
-#     user_id = db.Column(
-#         db.Integer,
-#         db.ForeignKey('users.id', onupdate='CASCADE', ondelete='CASCADE')
-#     )
-#     course_id = db.Column(
-#         db.Integer,
-#         db.ForeignKey('courses.id', onupdate='CASCADE', ondelete='CASCADE')
-#     )
 
 
 class Course(SearchableMixin,db.Model):
@@ -336,11 +318,11 @@ class Specialist(db.Model,SearchableMixin):
         db.Integer,
         db.ForeignKey('categories.id', onupdate='CASCADE', ondelete='CASCADE')
     )
-    #info de su category
+    # Info de su category
     category = db.relationship('Category',backref=db.backref('specialists'))
 
 
-    #los wk roles que tiene un specialist
+    # Los wk roles que tiene un specialist
     wk_roles = db.relationship('WorkRole',backref=db.backref('specialists'))
     wk_names = association_proxy(
         'work_roles',
@@ -435,8 +417,8 @@ class Ksat(db.Model,SearchableMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(400), nullable=False, unique=True)
     date = db.Column(db.DateTime)
-    # Porque solo un usuario tendra un KSA exclusivo, ya que un usuario tiene
-    # un KSa id unico
+    # Porque solo un usuario tendra un KSA exclusivo, ya que un usuario tendra
+    # un id KSA unico
 
     """
     Example de JSON:

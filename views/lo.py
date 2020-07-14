@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-# control supr elimina una lineapñ
-"""This file contains general views."""
+"""This file contains lo views."""
 
 import datetime
 import requests
@@ -25,6 +24,15 @@ bp_lo = Blueprint('lo', __name__)
 
 @celery.task(bind=True)
 def long_task_course(self, target,user_id):
+
+    """ Metodo usado por celery para la obtencion de cursos optimos.
+
+
+    Args:
+        self: servira para poder ver la actualizacion del progreso de obtencion.
+        target: diccionario en el que se encuentran todos los parametros necesarios para el microservicio.
+        user_id: identificador de usuario para filtrar el usuario que usa el algoritmo.
+    """
 
     payload = {'t_min': target['t_min'],
                't_max': target['t_max'],
@@ -193,9 +201,8 @@ def long_task_course(self, target,user_id):
                         count += 1
 
                     # Creamos un KSAT para requisitos del LO
+                    # El name sera la concatenacion de un LO + identificador de un usuario + el identificador de un LO.
                     new_ksat_req = Ksat(
-                        # El name podria ser la concatenacion de username + id del usuario
-                        # + la hora que se creo
                         name=f'{"Learning_object_"}{user_id}{"_"}{id_lo}{"_requirements"}',
                         date=datetime.datetime.utcnow(),
                         ksat_ids={
@@ -207,7 +214,6 @@ def long_task_course(self, target,user_id):
 
                     # Creamos un KSAT para los outcomes de un LO
                     new_ksat_out = Ksat(
-                        # El name sera la concatenacion de un LO + identificador de un usuario + el identificador de un LO.
                         name=f'{"Learning_object_"}{user_id}{"_"}{id_lo}{"_outcomes"}',
                         date=datetime.datetime.utcnow(),
                         ksat_ids={
@@ -217,11 +223,11 @@ def long_task_course(self, target,user_id):
                         }
                     )
 
-                    #anadimos los ksas al new Learning Object
+                    # Anadimos los ksas al new Learning Object
                     new_lo.ksats.extend([new_ksat_req,new_ksat_out])
 
                     correct = True
-                    #anadimos el nuevo LO con sus respectivos req an out
+                    # Anadimos el nuevo LO con sus respectivos req an out
                     db.session.add_all([new_lo, new_ksat_req, new_ksat_out])
 
                 # except UniqueViolation as e:
@@ -236,7 +242,7 @@ def long_task_course(self, target,user_id):
                         print("Error when creating a Learning object with requirements and outcomes.")
                         return {'current': 100, 'total': 100, 'status': 'FAILURE','result': -1}
                     else:
-                        #añadimos los learning objects a un curso
+                        # Anadimos los learning objects a un curso
                         new_course.los.add(new_lo)
 
             new_course.total_time = total_time
@@ -244,7 +250,7 @@ def long_task_course(self, target,user_id):
             new_course.average_reputation = average_reputation/len(i['los'])
             try:
                 correct = True
-                #Añadimos a la DB el curso con sus atributos
+                # Anadimos a la DB el curso con sus atributos
                 db.session.add(new_course)
 
                 user = User.query.filter_by(id=user_id).first()
@@ -283,6 +289,8 @@ def long_task_course(self, target,user_id):
 @roles_required(['User','Admin'])
 def create_optimal_course():
 
+    """ Metodo que sirve para llamar al submetodo de celery para la obtencion de cursos optimos."""
+
     target = {
         "t_min":request.args['t_min'],
         "t_max":request.args['t_max'],
@@ -318,6 +326,10 @@ def create_optimal_course():
 
 @bp_lo.route('/status/<task_id>')
 def taskstatus(task_id):
+
+    """ Metodo para ver el estado de la tarea asincrona de obtencion de cursos optimos."""
+
+    # Llamada AsyncResult para obtener el estado actual de la tarea asincrona
     task = long_task_course.AsyncResult(task_id)
     if task.state == 'PENDING':
         response = {
@@ -343,14 +355,13 @@ def taskstatus(task_id):
             #Seteamos por defecto el task_id
             session.pop('task_id', None)
     else:
-        # si algo salio mal
+        # Si algo salio mal
         response = {
             'state': task.state,
             'current': 1,
             'total': 1,
-            'status': str(task.info),  # aqui se mostrara el error
+            'status': str(task.info),  # Aqui se mostrara el error
         }
-
 
     return jsonify(response)
 
@@ -359,6 +370,9 @@ def taskstatus(task_id):
 @login_required
 @roles_required('Admin')
 def manage_optimal_course():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de Cursos."""
+
     page = request.args.get('page', 1, type=int)
     course_ids = Course.query.order_by(Course.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -369,7 +383,6 @@ def manage_optimal_course():
         flash('There are not Optimal Courses.','error')
         return render_template('lo/manage_optimal_course.html',search_form=search_form,
                                  title='Courses')
-
 
     # Course.reindex()
     # current_app.elasticsearch.indices.delete('courses')
@@ -423,6 +436,9 @@ def manage_optimal_course():
 @login_required
 @roles_required('Admin')
 def manage_learning_object():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de Learning Objects."""
+
     page = request.args.get('page', 1, type=int)
     los_ids = LearningObject.query.order_by(LearningObject.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -484,7 +500,12 @@ def manage_learning_object():
 
 @bp_lo.before_app_request
 def before_request():
-    #Almacenamos de forma global el form de filtros
+
+    """ Metodo especial para crear un formulario global para el filtrado de cursos.
+
+    Este metodo sera llamado siempre antes de cualquier peticion.
+    """
+
     g.filter_form = SearchFilterForm(request.args)
 
 
@@ -493,8 +514,11 @@ def before_request():
 @login_required
 @roles_required(['User','Admin'])
 def show_lo_optimal():
+
+    """ Metodo que sirve para visualizar los cursos optimos paginados."""
+
     page = request.args.get('page', 1, type=int)
-    #ORDENADO  LOS CUROS SEGUN UN FITNESS DEL CONJUNTO DE LOS OTROS FINTESS
+    # ORDENADO  LOS CUROS SEGUN el FITNESS DEL CONJUNTO DE todos los FINTESS
     courses_pages = current_user.course.order_by(Course.fitness_total.asc()).paginate(page, 100, False)
 
     if 'TimeoutMS' in session:
@@ -509,8 +533,6 @@ def show_lo_optimal():
 
     # Course.reindex()
     # current_app.elasticsearch.indices.delete('courses')
-
-
     return render_template('lo/show_optimal_course.html', title='Optimal LOS',
                      search_form=search_form,list_courses= courses_pages)
 
@@ -520,6 +542,8 @@ def show_lo_optimal():
 @roles_required(['User','Admin'])
 def search():
 
+    """ Metodo que sirve para buscar cursos optimos por su titulo o por filtracion de coste, tiempo o reputacion"""
+
     page = request.args.get('page', 1, type=int)
 
     search_form = SearchForm()
@@ -527,7 +551,6 @@ def search():
     time_filter = request.args.get('time')
     cost_filter = request.args.get('cost')
     reput_filter = request.args.get('reput')
-
 
     #Si hacemos un filtrado entraremos por aqui
     if time_filter or cost_filter or reput_filter:
@@ -731,21 +754,18 @@ def search():
             return redirect(url_for('lo.show_lo_optimal'))
 
 
-
-    #HACEMOS UN BUSQUEDA FULL-TEXT-SEARCH CON ELASTICSEARCH
-
+    # HACEMOS UN BUSQUEDA FULL-TEXT-SEARCH CON ELASTICSEARCH
     if request.args.get('q'):
         courses, total = Course.search(request.args.get('q'), page,current_app.config['PAGE_ITEMS'])
     else:
         flash('Please enter any filters.','warn')
         return redirect(url_for('lo.show_lo_optimal'))
-    #estos cursos con elastisearch no tiene paginate , comprobacion en el html con jinja
+    # Estos cursos con elastisearch no tiene paginate , comprobacion en el html con jinja
 
     next_url = url_for('lo.search',q=request.args.get('q'), page=page+1) \
         if total > page * current_app.config['PAGE_ITEMS'] else None
     prev_url = url_for('lo.search', q=request.args.get('q'), page=page-1) \
         if page > 1 else None
-
 
     if not courses.all():
         flash('There are no courses by that name.','warn')
@@ -761,17 +781,25 @@ def search():
 @roles_required(['User','Admin'])
 def show_progress_optimal():
 
+    """ Metodo para ver el progreso de obtencion de cursos optimos."""
+
     if 'task_id' in session:
         return render_template('lo/progress_optimal_course.html', title='Optimal LOS - Progress',
             task_id=session['task_id'])
     else:
-        #No hay ningun Taskkk.....
+        # No hay ningun tarea asincrona
         return render_template('lo/progress_optimal_course.html', title='Optimal LOS - Progress')
 
 
 
 @celery.task(bind=True)
 def long_task_los(self):
+
+    """ Metodo usado por celery para la obtencion de learning objects con valores randoms.
+
+    Args:
+        self: servira para poder ver la actualizacion del progreso de obtencion.
+    """
 
     try:
         correct = True
@@ -969,6 +997,11 @@ def long_task_los(self):
 @login_required
 @roles_required(['Admin'])
 def create_rnd_lo():
+
+    """ Metodo exclusivo del administrador que sirve para llamar al submetodo de celery para la obtencion
+        de learning objects con valores random.
+    """
+
     try:
         task = long_task_los.delay()
         correct=True
@@ -991,6 +1024,8 @@ def create_rnd_lo():
 @roles_required(['User','Admin'])
 def show_lo_general():
 
+    """ Metodo para visualizar todo el catalogo de learning objects."""
+
     page = request.args.get('page', 1, type=int)
     los = LearningObject.query.order_by(LearningObject.id.asc()).paginate(
         page, 100, False)
@@ -1004,6 +1039,8 @@ def show_lo_general():
 @login_required
 @roles_required(['User','Admin'])
 def do_course():
+
+    """ Metodo para realizar un curso optimo y obtener sus KSAs pertinentes."""
 
     course_id = request.args.get('id')
 
@@ -1026,7 +1063,6 @@ def do_course():
     skills_ids = Skill.query.order_by(Skill.id.asc())
     abilities_ids = Ability.query.order_by(Ability.id.asc())
 
-
     k = "myK000"
     knowledges_list = [f'{k}{i.id}' if (i.id < 10) else f'{"myK00"}{i.id}'
                         if (i.id < 100) else f'{"myK0"}{i.id}' for i in knowledges_ids]
@@ -1043,7 +1079,6 @@ def do_course():
     knowledges_user = {}
     skills_user = {}
     abilities_user = {}
-
 
     if current_user.ksat:
         knowledges_user = current_user.ksat.ksat_ids['knowledges_ids']
@@ -1068,13 +1103,12 @@ def do_course():
         abilities_lo = ksat_lo.ksat_ids['abilities_ids']
 
         for x in knowledges_lo:
-            #Reemplazaremos un ksa solo en el caso de que haya un nivel supeior en los
-            #outcomes
+            # Reemplazaremos un ksa solo en el caso de que haya un nivel superior en los
+            # outcomes
             if x in ksas_user:
                 if knowledges_lo[x]["level"] > ksas_user[x]:
                     ksas_user[x] = knowledges_lo[x]["level"]
-
-            #Agregaremos solo en caso de que se mayor que 0, porque si es igual,
+            # Agregaremos solo en caso de que se mayor que 0, porque si es igual,
             # no interesa.
             elif knowledges_lo[x]["level"] > 0:
                 ksas_user[x] = knowledges_lo[x]["level"]
@@ -1098,7 +1132,7 @@ def do_course():
     if current_user.ksat:
         new_ksat_out = Ksat(
                 # Este name lo usaremos para obtener los antiguos ksa de un user
-                # gracias al id del curso se mando este ksa como viejo
+                # gracias al id del curso que se mando en este ksa como viejo
                 # tambien gracias  a la fecha podremos filtrarlo fenomenalmente !
                 name=f'{current_user.username}{"_old_ksa_"}{course.id}',
                 date=current_user.ksat.date,
@@ -1110,11 +1144,12 @@ def do_course():
                 }
         )
 
-    #Variables para la modificacion
+    # Variables para la modificacion
     k_id_level = {}
     s_id_level = {}
     a_id_level = {}
-    #Actualizacion de los ksas del usuario
+
+    # Actualizacion de los ksas del usuario
     for i in ksas_user:
         if i in knowledges_list:
             index = knowledges_list.index(i)
@@ -1156,7 +1191,7 @@ def do_course():
         "skills_ids":     s_id_level,
         "abilities_ids":  a_id_level,
         "tasks_ids":      current_user.ksat.ksat_ids["tasks_ids"],
-        #Agregamos info extra, del curso que se ha hecho
+        # Agregamos info extra, del curso o los cursos que se han hecho
         "finished_courses": list_finished_courses
     }
 
@@ -1186,19 +1221,23 @@ def do_course():
 @roles_required(['User','Admin'])
 def show_evolution():
 
+    """ Metodo que sirve para ver la evolucion de KSAs de un usuario.
+
+    Los niveles de KSAs estaran ordenados de mas antiguo a mas reciente
+    en unos graficos de barras.
+
+    """
 
     if not current_user.ksat:
         flash('You do not have KSAs so you can see your evolution.','warn')
         return redirect(url_for('general.show_dash'))
-    #Cargar el KSAT actual del usuario
-    ksas_user={}
 
+    ksas_user={}
     knowledges_user = {}
     skills_user = {}
     abilities_user = {}
 
-
-
+    #Cargar el KSAT actual del usuario
     if current_user.ksat:
         knowledges_user = current_user.ksat.ksat_ids['knowledges_ids']
         skills_user = current_user.ksat.ksat_ids['skills_ids']
@@ -1210,7 +1249,7 @@ def show_evolution():
         for x in abilities_user:
             ksas_user[x] = abilities_user[x]["level"]
 
-    #YA ESTARIAN ORDENADOS EN FECHAS XQ SIEMPRE AÑADIMOS EL ULTIMO CURSO
+    # YA ESTARIAN ORDENADOS EN FECHAS XQ SIEMPRE AÑADIMOS EL ULTIMO CURSO
     # HECHO, ES DECIR CON APPEND SIEMPRE ESCRIBIMOS EL ULTIMO CURSO
 
     dates= []
@@ -1220,7 +1259,7 @@ def show_evolution():
     #PRIMERO METEMOS LOS IDS
     matrix.append(list(ksas_user.keys()))
 
-#EJEMPLOS DE POSIBLES KJSA
+#EJEMPLOS DE POSIBLES KSA
 #     ++++++++++++Ksas actual++++++++++++
 # {'myK0001': 5, 'myK0002': 4, 'myS0001': 2, 'myS0002': 2, 'myS0011': 5, 'myS0012': 5, 'myA0001': 2, 'myA0002': 5}
 # ++++++++++++Ksas actual++++++++++++
@@ -1233,7 +1272,7 @@ def show_evolution():
         for i in current_user.ksat.ksat_ids["finished_courses"]:
             name_ksat_old = f'{current_user.username}{"_old_ksa_"}{i}'
             ksat_old = Ksat.query.filter_by(name=name_ksat_old).first()
-            #Metemos los dates old primero, ya estan ordenadas porque segun se hace se meten
+            # Metemos los dates old primero, ya estan ordenadas porque segun se hace se meten
             dates.append(str(ksat_old.date.strftime("%d/%m/%Y, %H:%M:%S")))
 
             if ksat_old:
@@ -1241,7 +1280,7 @@ def show_evolution():
                 skills_old = ksat_old.ksat_ids['skills_ids']
                 abilities_old = ksat_old.ksat_ids['abilities_ids']
 
-                #ordenamos segun el ksa actual - current
+                # ordenamos segun el ksa actual - current
                 for x in knowledges_user:
                     if x in knowledges_old:
                         ksat_old_dict[x]=knowledges_old[x]["level"]
@@ -1267,7 +1306,6 @@ def show_evolution():
     # y la añadimos el ultimo ksa, que es el ACTUAL DEL USUARIO!
     matrix.append(list(ksas_user.values()))
     dates.append(str(current_user.ksat.date.strftime("%d/%m/%Y, %H:%M:%S")))
-
 
     #TRANSPONEMOS LOS ARRYAS
     rez = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))] 

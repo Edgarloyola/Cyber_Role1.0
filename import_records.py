@@ -43,7 +43,7 @@ db = records.Database(
 
 # print("+++++++++++++++++++++")
 
-# Este script nos permite actualizar la db con los KSA de los work roles que hemos obtenido en ficheros JSON
+# Este script nos permitira actualizar la db con los KSA de los work roles que hemos obtenido en ficheros JSON
 mi_path = "WorkRole-JSON"
 file_jsons = [
     cosa for cosa in listdir(mi_path)
@@ -62,7 +62,7 @@ for archivo in file_jsons:
         listaKnowledges = []
 
         res = list(data.keys())[0]
-        #Obtenemos el nombre del work role
+        # Obtenemos el nombre del work role
         firstkey = str(res)
 
         for i in data[firstkey]["knowledges_ids"]:
@@ -98,14 +98,12 @@ for archivo in file_jsons:
             listaTasks.append(value)
             count += 1
 
-        #print("**************+YA TENGO LAS DESCRIP DE LOS KnowledgeSS***************")
-
         dictK = {}
         K = "myK000"
         for i in listaKnowledges:
             existe = db.query(
                 'select * from knowledges where description=:descrip', descrip=i)
-            # #print(db.query('select * from knowledges where description=:descrip', descrip=i))
+
             # #print(existe.first())
             elem = existe.first()
             if elem:
@@ -123,13 +121,10 @@ for archivo in file_jsons:
                     dictK[k] = elem.description
 
         # #print(dictK)
-
         data[firstkey]["knowledges_ids"] = dictK
-        #print("**************+YA TENGO LAS DESCRIP DE LOS KnowledgeSS***************")
 
         dictS = {}
         S = "myS000"
-        #print("**************+YA TENGO LAS DESCRIP DE LOS skills***************")
         for i in listaSkills:
             # #print(i)
             existe = db.query(
@@ -155,11 +150,8 @@ for archivo in file_jsons:
         # Seteamos el dictionario original
         data[firstkey]["skills_ids"] = dictS
 
-        #print("**************+YA TENGO LAS DESCRIP DE LOS skills***************")
-
         dictA = {}
         A = "myA000"
-        #print("**************+YA TENGO LAS DESCRIP DE LOS Abilities***************")
         for i in listaAbilities:
             # #print(i)
             existe = db.query(
@@ -184,11 +176,8 @@ for archivo in file_jsons:
         # #print(dictA)
         data[firstkey]["abilities_ids"] = dictA
 
-        #print("**************+YA TENGO LAS DESCRIP DE LOS Abilities***************")
-
         dictT = {}
         T = "myT000"
-        #print("**************+YA TENGO LAS DESCRIP DE LOS tasks***************")
         for i in listaTasks:
             # #print(i)
             existe = db.query(
@@ -216,22 +205,12 @@ for archivo in file_jsons:
         # #print(dictT)
 
         data[firstkey]["tasks_ids"] = dictT
-        #print("**************+YA TENGO LAS DESCRIP DE LOS tasks***************")
-
-        #print("++++++++++++++++++++DICTIONARIO SETEADO Y CONGRUENTE CON NUESTRA DB+++++++++++++++\n")
-
         # #print(data)
 
         # query = f'{"update work_roles set ksat_ids = "} str(data) {" where name = "}{str(firstkey)}'
         # db.query(query)
         print("************La primera clave es***********")
         print(firstkey)
-        # print(str(firstkey))
-        # if "Cyber Workforce Developer and Manager" in data:
-        #     print(data["Cyber Workforce Developer and Manager"])
-        # if "Cyber Workforce Developer and Manager" == str(firstkey):
-        #     print("Entro por aquiii")
-        #     print(data)
         print("************La primera clave es************\n")
         update = db.query('update work_roles set ksat_ids = :values_ksa where name=:name',
                           values_ksa=json.dumps(data), name=firstkey)

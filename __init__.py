@@ -30,37 +30,6 @@ __version__ = '0.1.0'
 
 
 
-# class FlaskCelery(Celery):
-
-#     def __init__(self, *args, **kwargs):
-
-#         super(FlaskCelery, self).__init__(*args, **kwargs)
-#         self.patch_task()
-
-#         if 'app' in kwargs:
-#             self.init_app(kwargs['app'])
-
-#     def patch_task(self):
-#         TaskBase = self.Task
-#         _celery = self
-
-#         class ContextTask(TaskBase):
-#             abstract = True
-
-#             def __call__(self, *args, **kwargs):
-#                 if flask.has_app_context():
-#                     return TaskBase.__call__(self, *args, **kwargs)
-#                 else:
-#                     with _celery.app.app_context():
-#                         return TaskBase.__call__(self, *args, **kwargs)
-
-#         self.Task = ContextTask
-
-#     def init_app(self, app):
-#         self.app = app
-#         self.config_from_object(app.config)
-
-
 def make_celery(app):
     celery = Celery(
         app.import_name,
@@ -92,13 +61,9 @@ db = SQLAlchemy()
 
 #Celery
 celery = Celery(__name__, broker=bootstrap.CELERY_BROKER_URL,backend=bootstrap.CELERY_RESULT_BACKEND)
-# celery.conf.update(
-#     broker_connection_timeout = 1
-# )
-# celery = FlaskCelery()
+
 # Flask-Migrate
 migrate = Migrate()
-
 
 # Flask-Mail
 mail = Mail()
@@ -106,8 +71,7 @@ mail = Mail()
 # Flask-User
 user_manager = UserManager()
 
-
-# # Flask-Login
+# Flask-Login
 # login_manager = LoginManager()
 
 # Flask-Misaka
@@ -172,7 +136,6 @@ def init_app():
     
     app.config.update(BASE_CONFIG)
 
-
     # Load configuration specified in environment variable or default
     # development one.
     # Production configurations shold be stored in a separate directory, such
@@ -182,7 +145,6 @@ def init_app():
 
     else:
         app.config.from_object('cyber_role.config.development')
-
 
     #Config elasticsearch
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \

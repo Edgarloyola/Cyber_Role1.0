@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# control supr elimina una lineapñ
 """This file contains manage views."""
 
 import datetime
@@ -17,34 +16,31 @@ from cyber_role.models import User, Ksat, Category, Specialist, WorkRole, Knowle
 from cyber_role.forms import RegistrationForm, TestForm, KsaForm, TargetForm, TargetKsaForm,SearchForm,\
  DescriptionKsaForm,CategoryForm,SpecialistForm,WorkRoleForm
 
-
 bp_manage = Blueprint('manage', __name__)
 
-# Añdiremos datos a un usuario ya creado para su Ksat_iD
-# reidentar control + alt + L
-
-#Area ADmin tablas Knowledges , Skills , Abilties, Tasks, Work roles, Categories, Specialist, LOS, Courses
+#Area Admin tablas Knowledges , Skills , Abilties, Tasks, Work roles, Categories, Specialist, LOS, Courses
 
 @bp_manage.route('/manage_knowledge', methods=['GET','POST'])
 @login_required
 @roles_required('Admin')
 def manage_knowledge():
 
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de Knowledges."""
+
     # session.clear()
-    
     page = request.args.get('page', 1, type=int)
     knowledges_ids = Knowledge.query.order_by(Knowledge.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
-
 
     if not knowledges_ids.items:
         return render_template('manage/manage_knowledge.html', title='Knowledges')
 
     search_form = SearchForm(request.form)
 
-    #Cuandeo borramoms la db y la tabla y cuando este los datos hay que hacer esto
-    # Knowledge.reindex()
+    # Cuando borramoms la db, la tabla y cuando esten los datos hay que hacer esto
+    # Sirve para la creacion de indices de Elasticsearch
 
+    # Knowledge.reindex()
     # current_app.elasticsearch.indices.delete('knowledges')
 
     if request.args.get('q'):
@@ -58,15 +54,13 @@ def manage_knowledge():
         prev_url = url_for('manage.manage_knowledge', q=q, page=page-1) \
             if page > 1 else None
 
-
         return render_template('manage/manage_knowledge.html', title=_('Knowledges'),
             search_form=search_form,search_knows =knowledges,next_url=next_url, prev_url=prev_url)
 
     if not request.args.get('delete'):
         return render_template('manage/manage_knowledge.html', title='Knowledges',
             search_form=search_form,lista_K=knowledges_ids)
-    else:#Remove knows
-
+    else: #Remove knows
         id_hash = request.args.get('id')
         if not id_hash or id_hash=='':
             flash("No null or empty values are allowed.","error")
@@ -99,6 +93,8 @@ def manage_knowledge():
 @login_required
 @roles_required('Admin')
 def add_knowledge():
+
+    """ Metodo exclusivo del administrador que sirve para anadir un nuevo knowledge."""
 
     know_form = DescriptionKsaForm(request.form)
 
@@ -140,11 +136,14 @@ def add_knowledge():
 @roles_required('Admin')
 def modify_knowledge():
 
+    """ Metodo exclusivo del administrador que sirve para modificar un knowledge."""
+
     id_hash = request.args.get('id')
 
     if not id_hash or id_hash=='':
         flash("There is no ID.","error")
         return redirect(url_for('manage.manage_knowledge'))
+
     #Localizamos el knowledges y luego lo modificamos
     modify_k = Knowledge.query.filter_by(id=hashids_hasher.decode(id_hash)).first()
 
@@ -188,6 +187,9 @@ def modify_knowledge():
 @login_required
 @roles_required('Admin')
 def manage_skill():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de skill."""
+
     page = request.args.get('page', 1, type=int)
     skills_ids = Skill.query.order_by(Skill.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -197,9 +199,8 @@ def manage_skill():
         return render_template('manage/manage_skill.html', title='Skills')
 
     search_form = SearchForm(request.form)
-    # Skill.reindex()
 
-    #Cuandeo borramoms la db y la tabla y cuando este los datos hay que hacer esto
+    # Skill.reindex()
     # current_app.elasticsearch.indices.delete('skills')
 
     if request.args.get('q'):
@@ -221,7 +222,6 @@ def manage_skill():
         return render_template('manage/manage_skill.html', title='Skills',search_form=search_form,
             lista_S=skills_ids)
     else:#Remove knows
-
         id_hash = request.args.get('id')
 
         if not id_hash or id_hash=='':
@@ -256,13 +256,15 @@ def manage_skill():
 @roles_required('Admin')
 def add_skill():
 
+    """ Metodo exclusivo del administrador que sirve para anadir un nuevo skill."""
+
     skill_form = DescriptionKsaForm(request.form)
 
     if skill_form.validate_on_submit():
 
         description = request.form['description']
         #Una cosa muy importante aunque en el form sea validado como required hay que validarlo en la parte del servidor
-        #porqie en la parte del cliente un hacker se lo podria saltar
+        #porque en la parte del cliente un ciberdelincuente se lo podria saltar
         if not description or description == '' :
             flash("No null or empty values are allowed.","warn")
             return render_template('manage/add_edit_ksat.html', title='Add Skills',
@@ -296,13 +298,15 @@ def add_skill():
 @roles_required('Admin')
 def modify_skill():
 
+    """ Metodo exclusivo del administrador que sirve para modificar un skill."""
+
     id_hash = request.args.get('id')
 
     if not id_hash or id_hash =='':
         flash("There is no ID.","error")
         return redirect(url_for('manage.manage_skill'))
 
-    #Localizamos el knowledges y luego lo modificamos
+    #Localizamos el skill y luego lo modificamos
     modify_s = Skill.query.filter_by(id=hashids_hasher.decode(id_hash)).first()
     if not modify_s:
         flash("There is no Skill.","error")
@@ -345,6 +349,9 @@ def modify_skill():
 @login_required
 @roles_required('Admin')
 def manage_ability():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de ability."""
+
     page = request.args.get('page', 1, type=int)
     abilities_ids = Ability.query.order_by(Ability.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -355,9 +362,8 @@ def manage_ability():
         return render_template('manage/manage_ability.html',title='Abilities')
 
     search_form = SearchForm(request.form)
-    # Ability.reindex()
 
-    #Cuandeo borramoms la db y la tabla y cuando este los datos hay que hacer esto
+    # Ability.reindex()
     # current_app.elasticsearch.indices.delete('abilities')
 
     if request.args.get('q'):
@@ -379,7 +385,6 @@ def manage_ability():
         return render_template('manage/manage_ability.html', title='Abilities',
             search_form=search_form,lista_A=abilities_ids)
     else:#Remove an ability
-
         id_hash = request.args.get('id')
 
         if not id_hash or id_hash=='':
@@ -413,6 +418,8 @@ def manage_ability():
 @login_required
 @roles_required('Admin')
 def add_ability():
+
+    """ Metodo exclusivo del administrador que sirve para anadir un ability."""
 
     abil_form = DescriptionKsaForm(request.form)
 
@@ -453,11 +460,14 @@ def add_ability():
 @roles_required('Admin')
 def modify_ability():
 
+    """ Metodo exclusivo del administrador que sirve para modificar un ability."""
+
     id_hash = request.args.get('id')
 
     if not id_hash or id_hash=='':
         flash("There is no ID.","error")
         return redirect(url_for('manage.manage_ability'))
+
     #Localizamos el knowledges y luego lo modificamos
     modify_a = Ability.query.filter_by(id=hashids_hasher.decode(id_hash)).first()
 
@@ -502,6 +512,9 @@ def modify_ability():
 @login_required
 @roles_required('Admin')
 def manage_task():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de tasks."""
+
     page = request.args.get('page', 1, type=int)
     tasks_ids = Task.query.order_by(Task.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -510,10 +523,8 @@ def manage_task():
         return render_template('manage/manage_task.html', title='Tasks')
 
     search_form = SearchForm(request.form)
-    # Task.reindex()
 
-    #Cuandeo borramoms la db y la tabla y cuando este los datos hay que hacer esto
-    # Knowledge.reindex()
+    # Task.reindex()
     # current_app.elasticsearch.indices.delete('tasks')
 
     if request.args.get('q'):
@@ -535,7 +546,6 @@ def manage_task():
         return render_template('manage/manage_task.html', title='Tasks',search_form=search_form,
             lista_T=tasks_ids)
     else:#Remove knows
-
         id_hash = request.args.get('id')
         if not id_hash or id_hash=='':
             flash("There is no ID.","error")
@@ -568,6 +578,8 @@ def manage_task():
 @login_required
 @roles_required('Admin')
 def add_task():
+
+    """ Metodo exclusivo del administrador que sirve para anadir un nuevo task."""
 
     task_form = DescriptionKsaForm(request.form)
 
@@ -608,11 +620,13 @@ def add_task():
 @roles_required('Admin')
 def modify_task():
 
+    """ Metodo exclusivo del administrador que sirve para modificar un task."""
+
     id_hash = request.args.get('id')
     if not id_hash or id_hash=='':
         flash('There is no ID.','error')
         return redirect(url_for('manage.manage_task'))
-    #Localizamos el knowledges y luego lo modificamos
+    #Localizamos el task y luego lo modificamos
     modify_t = Task.query.filter_by(id=hashids_hasher.decode(id_hash)).first()
 
     if not modify_t:
@@ -627,7 +641,8 @@ def modify_task():
 
         if not new_description or new_description == '' :
             flash("No null or empty values are allowed.","warn")
-            return render_template('manage/add_edit_ksat.html',prev_url='manage.manage_task', title='Modify Tasks',form=task_form)
+            return render_template('manage/add_edit_ksat.html',prev_url='manage.manage_task', 
+                title='Modify Tasks',form=task_form)
         else:
             modify_t.description = new_description
             try:
@@ -654,6 +669,9 @@ def modify_task():
 @login_required
 @roles_required('Admin')
 def manage_ksat():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de ksat."""
+
     page = request.args.get('page', 1, type=int)
     ksats_ids = Ksat.query.order_by(Ksat.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -682,8 +700,7 @@ def manage_ksat():
     if not request.args.get('delete'):
         return render_template('manage/manage_ksat.html', title='Ksats',
             search_form=search_form,lista_ksat=ksats_ids)
-    else:#Remove an ability
-
+    else:#Remove an ksat
         id_hash = request.args.get('id')
         if not id_hash or id_hash=='':
             flash('There is no ID.','error')
@@ -718,6 +735,9 @@ def manage_ksat():
 @login_required
 @roles_required('Admin')
 def manage_category():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de category."""
+
     page = request.args.get('page', 1, type=int)
     categories_ids = Category.query.order_by(Category.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -727,8 +747,8 @@ def manage_category():
         return render_template('manage/manage_category.html', title='Categories')
 
     search_form = SearchForm(request.form)
-    # Category.reindex()
 
+    # Category.reindex()
     # current_app.elasticsearch.indices.delete('categories')
 
     if request.args.get('q'):
@@ -784,6 +804,9 @@ def manage_category():
 @login_required
 @roles_required('Admin')
 def add_category():
+
+    """ Metodo exclusivo del administrador que sirve para anadir un nuevo category."""
+
     category_form = CategoryForm(request.form)
 
     if category_form.validate_on_submit():
@@ -829,6 +852,8 @@ def add_category():
 @login_required
 @roles_required('Admin')
 def modify_category():
+
+    """ Metodo exclusivo del administrador que sirve para modificar un category."""
 
     id_hash = request.args.get('id')
 
@@ -883,6 +908,9 @@ def modify_category():
 @login_required
 @roles_required('Admin')
 def manage_specialist():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de Specialist."""
+
     page = request.args.get('page', 1, type=int)
     specialists_ids = Specialist.query.order_by(Specialist.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
@@ -892,8 +920,8 @@ def manage_specialist():
         return render_template('manage/manage_specialist.html', title='Specialists')
 
     search_form = SearchForm(request.form)
-    # Specialist.reindex()
 
+    # Specialist.reindex()
     # current_app.elasticsearch.indices.delete('specialists')
 
     if request.args.get('q'):
@@ -915,7 +943,6 @@ def manage_specialist():
         return render_template('manage/manage_specialist.html', title='Specialists',
             search_form=search_form,lista_spe=specialists_ids)
     else:#Remove an specalist
-
         id_hash = request.args.get('id')
 
         if not id_hash or id_hash=='':
@@ -950,6 +977,9 @@ def manage_specialist():
 @login_required
 @roles_required('Admin')
 def add_specialist():
+
+    """ Metodo exclusivo del administrador que sirve para anadir un nuevo specialist."""
+
     specialist_form = SpecialistForm(request.form)
 
     if specialist_form.validate_on_submit():
@@ -998,6 +1028,8 @@ def add_specialist():
 @login_required
 @roles_required('Admin')
 def modify_specialist():
+
+    """ Metodo exclusivo del administrador que sirve para modificar un specialist."""
 
     id_hash = request.args.get('id')
     if not id_hash or id_hash=='':
@@ -1051,6 +1083,9 @@ def modify_specialist():
 @login_required
 @roles_required('Admin')
 def manage_work_role():
+
+    """ Metodo exclusivo del administrador que sirve para gestionar la tabla de WorkRole."""
+
     page = request.args.get('page', 1, type=int)
     workRoles_ids = WorkRole.query.order_by(WorkRole.id.asc()).paginate(
         page, 2, False)
@@ -1060,6 +1095,7 @@ def manage_work_role():
         return render_template('manage/manage_work_role.html', title='Work Roles')
 
     search_form = SearchForm(request.form)
+
     # WorkRole.reindex()
     # current_app.elasticsearch.indices.delete('work_roles')
 
@@ -1067,7 +1103,6 @@ def manage_work_role():
         q = request.args.get('q')
         page = request.args.get('page', 1, type=int)
         workRoles, total = WorkRole.search(q, page,3)
-
 
         #Pues habria que hacer una paginacion manual conforme a los resultados de elastisearch
         next_url = url_for('manage.manage_work_role', q=q, page=page+1) \
@@ -1117,6 +1152,9 @@ def manage_work_role():
 @login_required
 @roles_required('Admin')
 def add_work_role():
+
+    """ Metodo exclusivo del administrador que sirve para anadir un nuevo work-role."""
+
     wk_form = WorkRoleForm(request.form)
 
     if wk_form.validate_on_submit():
@@ -1165,6 +1203,8 @@ def add_work_role():
 @login_required
 @roles_required('Admin')
 def modify_work_role():
+
+    """ Metodo exclusivo del administrador que sirve para modificar un work-role."""
 
     id_hash = request.args.get('id')
     if not id_hash or id_hash=='':
@@ -1226,8 +1266,12 @@ def modify_work_role():
 @roles_required('Admin')
 def manage_db_catspewk():
 
+    """ Metodo exclusivo del administrador que sirve para gestionar las tablas CATEGORY-SPECIALIST-WKROLE.
 
-    #Esta configuracoin de relaciones entre CATEGORY ---- SPECIALIST ---- WORK ROLES SE HACE UNA SOLA VEZ Por el administrador !
+    Esta configuracoin de relaciones entre CATEGORY --SPECIALIST --WORK ROLES SE HACE
+    UNA SOLA VEZ Por el administrador !
+
+    """
 
     categories_ids = Category.query.all()
     specialists_ids = Specialist.query.all()

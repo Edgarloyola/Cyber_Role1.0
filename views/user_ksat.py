@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-# control supr elimina una lineapñ
-"""This file contains general views."""
+"""This file contains user_ksat views."""
 
 import datetime
 from flask import Blueprint, session, render_template, flash, redirect, url_for, request, current_app
@@ -20,17 +19,7 @@ bp_user_ksat = Blueprint('user_ksat', __name__)
 @bp_user_ksat.route('/register', methods=['GET', 'POST'])
 def register():
 
-
-#EJEMPLO DE DOCSTRINGS
-    """Show a form to request a password reset token.
-
-    This does not tell the user whether the emails is valid or not. In
-    addition, if the user already had a password reset token, it will be
-    overwritten.
-    
-     Args:
-        token (str): Random token mailed to the user.
-    """
+    """ Metodo que sirve para registrar un usuario."""
 
     if current_user.is_authenticated:
         return redirect(url_for('general.show_dash'))
@@ -38,8 +27,8 @@ def register():
     form = RegistrationForm()
 
     if form.validate_on_submit():
-        #Continua con la creacion de un usuario
 
+        #Continua con la creacion de un usuario
         hashed_password = user_manager.hash_password(form.password.data)
         new_user = User(
             username=form.username.data,
@@ -87,18 +76,21 @@ def register():
 @login_required
 @roles_required('Admin')
 def manage_user():
+
+    """ Metodo exclusivo del administrador que sirve para la gestion de usuario de la DB."""
+
     page = request.args.get('page', 1, type=int)
     users_ids = User.query.order_by(User.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
 
     search_form = SearchForm(request.form)
-    # Ksat.reindex()
+    # user.reindex()
 
     if search_form.validate_on_submit():
         page = request.args.get('page', 1, type=int)
         users, total = User.search(request.form['q'], page,current_app.config['PAGE_ITEMS'])
 
-        #Pues habria que hacer una paginacion manual conforme a users resultados de elastisearch
+        #Pues habria que hacer una paginacion manual conforme a los resultados de elastisearch
         next_url = url_for('user/manage_user.html', q=request.form['q'], page=page+1) \
             if total > page * current_app.config['PAGE_ITEMS'] else None
         prev_url = url_for('user/manage_user.html', q=request.form['q'], page=page-1) \
@@ -143,6 +135,9 @@ def manage_user():
 @login_required
 @roles_required('Admin')
 def add_user():
+
+    """ Metodo exclusivo del administrador para anadir un nuevo usuario."""
+
     roles = Role.query.all()
 
     user_form = UserForm(request.form)
@@ -180,7 +175,7 @@ def add_user():
             timezone=user_form.timezone.data
         )
 
-        #Si existe la lista de roles que hemos elegido se anadira al usuario
+        # Si existe la lista de roles que hemos elegido se anadira al usuario
         if user_form.roles.data:
             for rol in roles:
                 if rol.name in user_form.roles.data:
@@ -213,6 +208,8 @@ def add_user():
 @roles_required('Admin')
 def modify_user():
 
+    """ Metodo exclusivo del administrador para modificar un usuario."""
+
     id_hash = request.args.get('id')
 
     if not id_hash or id_hash=='':
@@ -238,7 +235,8 @@ def modify_user():
         locale=modify_user.locale,
         timezone=modify_user.timezone
         )
-    # Metemos los valores actuales de los roles y los roles que no se añadieron anteriormente
+    # Metemos los valores actuales de los roles y los roles que no se anadieron anteriormente
+    # para que puedan ser seleccionados
     user_form.roles.choices = [(i.name,i.name) for i in roles]
     user_form.roles.data = [i for i in modify_user.role_names]
 
@@ -278,7 +276,7 @@ def modify_user():
         modify_user.locale=request.form['locale']
         modify_user.timezone=request.form['timezone']
 
-        #Si existe la lista de roles que hemos elegido se anadira al usuario
+        # Si existe la lista de roles que hemos elegido se anadira al usuario
         if request.form.getlist('roles'):
             for rol in roles:
                 if rol.name in request.form.getlist('roles'):
@@ -312,18 +310,21 @@ def modify_user():
 @login_required
 @roles_required('Admin')
 def manage_role():
+
+    """ Metodo exclusivo del administrador para gestionar los Role de la DB."""
+
     page = request.args.get('page', 1, type=int)
     roles_ids = Role.query.order_by(Role.id.asc()).paginate(
         page, current_app.config['PAGE_ITEMS'], False)
 
     search_form = SearchForm(request.form)
-    # Ksat.reindex()
+    # Role.reindex()
 
     if search_form.validate_on_submit():
         page = request.args.get('page', 1, type=int)
         roles, total = Role.search(request.form['q'], page,current_app.config['PAGE_ITEMS'])
 
-        #Pues habria que hacer una paginacion manual conforme a users resultados de elastisearch
+        #Pues habria que hacer una paginacion manual conforme a los resultados de elastisearch
         next_url = url_for('user/manage_role.html', q=request.form['q'], page=page+1) \
             if total > page * current_app.config['PAGE_ITEMS'] else None
         prev_url = url_for('user/manage_role.html', q=request.form['q'], page=page-1) \
@@ -368,10 +369,12 @@ def manage_role():
 @login_required
 @roles_required('Admin')
 def add_role():
+
+    """ Metodo exclusivo del administrador para anadir un nuevo rol."""
+
     role_form = RoleForm(request.form)
 
     if role_form.validate_on_submit():
-
         name = request.form['name']
 
         if not name or name == '' :
@@ -404,6 +407,9 @@ def add_role():
 @login_required
 @roles_required('Admin')
 def modify_role():
+
+    """ Metodo exclusivo del administrador para modificar un rol."""
+
     id_hash = request.args.get('id')
 
     if not id_hash or id_hash=='':
@@ -446,21 +452,14 @@ def modify_role():
     return render_template('user/add_edit_role.html', title='Role',form=role_form)
 
 
-
-
-
-
 @bp_user_ksat.route('/show_user', methods=['GET'])
 @login_required
 @roles_required(['User','Admin'])
 def show_user():
-    #Mostraremos los datos esenciales del usuario
-    #CUANDO SACAMOS EL PASSWORD DIRECTAMENTE DEL CURREN_USER OBTENEMOS UN PASSWORD HASHEADO
-    #MIENTRAS QUE SI LO METEMOS EN UN FORMULARIO
-    # Y LUEGO DE ESE CAMPO SACAMOS SU DESCRIPTION, OBTENEMOS EL PASSWORD EN TEXTO PLANO
+
+    """ Metodo que sirve para mostrar el perfil de un usuario."""
 
     return render_template('user/show_by_user.html', title='Show Profile', user = current_user)
-
 
 
 @bp_user_ksat.route('/modify_by_user', methods=['GET', 'POST'])
@@ -468,12 +467,12 @@ def show_user():
 @roles_required(['User','Admin'])
 def modify_by_user():
 
+    """ Metodo que sirve para modificar el perfil de un usuario."""
+
     user_form = UserForm(request.form)
 
     user_form.username.data = current_user.username
     user_form.email.data = current_user.email
-    #AQUI ESTAMOS METIENDO EL PASSWORD EN TEXTO PLANO CUANDO ACCEDEMOS A DESCRIPTION
-    # DE ESTE ATRIBUTO, ESTO ES FALSO
     user_form.password.data = current_user.password
     user_form.first_name.data = current_user.first_name
     user_form.last_name.data = current_user.last_name
@@ -529,11 +528,17 @@ def modify_by_user():
     return render_template('user/modify_by_user.html', title='Modify Profile',user_form=user_form)
 
 
-#Esta ya la tenemos arriba en este mismo codigo
 @bp_user_ksat.route('/change_password_user', methods=['GET', 'POST'])
 @login_required
 @roles_required(['User','Admin'])
 def change_password_user():
+
+    """ Metodo que sirve para cambiar la contrasena de un usuario.
+
+    Este metodo primeramente se debe comprobar que se sabe la
+    contrasena antigua, para poder cambiar la contrasena, por una nueva.
+
+    """
 
     form = ChangePasswordForm(request.form)
 
@@ -554,7 +559,7 @@ def change_password_user():
 
         hashed_password = user_manager.hash_password(request.form['password'])
 
-        #modificamos el password del usuario
+        # Modificamos el password del usuario
         current_user.password = hashed_password
 
         try:
@@ -582,7 +587,12 @@ def change_password_user():
 @roles_required(['User','Admin'])
 def drop_out_user():
 
-    #Lo que se hara aqui, basicamente será desabilitar el usuario y se le notoficara su baja
+    """ Metodo que sirve para darse de baja de la plataforma web.
+
+    Este metodo primero deshabilitara el usuario y le notificara su baja
+    enviandole un mensaje a su correo electronico.
+
+    """
 
     form = DropOutForm(request.form)
 
@@ -616,11 +626,13 @@ def drop_out_user():
 
 def send_email(username,email):
 
+    """ Metodo auxiliar que sirve para enviar correos electronicos."""
+
     msg = Message('Drop out user',
             sender='noreply@cyber_role.com',
             recipients=['edgaryour25@gmail.com'])
 
-    #ponerlo más bonito
+    # Se crea el cuerpo del mensaje
     msg.body = f'''The user: {username} wants to unsubscribe from the Cyber Role platform.'''
     mail.send(msg)
 
@@ -632,13 +644,22 @@ def send_email(username,email):
 @roles_required(['User','Admin'])
 def ksa_comparison_friend():
 
+    """ Metodo que sirve para comparar tus KSA con las de otro usuario.
+
+    Para que puedas compararar tus KSAs, primero tienes que buscar al usuario
+    por su username, y hacer una comprobacion de errores de si existe el usuario,
+    si tiene KSA y si tu tambien tienes KSA para comparar.
+    En el que la comparacion se hara sobre los ultimos KSAs que tienen los dos usuarios.
+
+    """
+
     search_friend = SearchFriendForm(request.form)
 
     if search_friend.validate_on_submit():
 
         friend_user = request.form['friend_user']
 
-        #Buscamos el usuario en cuestion y comparamos sus ksas con el usuario actual
+        # Buscamos el usuario en cuestion y comparamos sus ksas con el usuario actual
         if friend_user !='' and friend_user:
             friend = User.query.filter_by(username=friend_user).first()
 
@@ -658,7 +679,7 @@ def ksa_comparison_friend():
                     search_friend=search_friend)
 
             if friend.ksat and current_user.ksat:
-                #Cargar el KSAT actual del usuario
+                # Cargar el KSAT actual del usuario
                 ksas_user_current={}
 
                 knowledges_user = current_user.ksat.ksat_ids['knowledges_ids']
@@ -675,7 +696,7 @@ def ksa_comparison_friend():
 
                 ksas_user_friend={}
 
-                #Info KSA del usuario FRIEND++++++++++"
+                # Info KSA del usuario FRIEND
                 knowledges_user = friend.ksat.ksat_ids['knowledges_ids']
                 skills_user = friend.ksat.ksat_ids['skills_ids']
                 abilities_user = friend.ksat.ksat_ids['abilities_ids']
@@ -691,7 +712,7 @@ def ksa_comparison_friend():
                 dates= []
                 matrix = []
 
-                #SOLO HABRA DOS FECHAS PORQUE SERAN SOLO 2 USUARIOS KSAS, ordenamos de menor a mayor fecha
+                # SOLO HABRA DOS FECHAS PORQUE SERAN SOLO 2 USUARIOS KSAS, ordenamos de menor a mayor fecha
                 friend_date_mayor = False
                 names =[]
                 if friend.ksat.date > current_user.ksat.date:
@@ -712,25 +733,25 @@ def ksa_comparison_friend():
                         dict_mezcla[i]= [ksas_user_current[i],ksas_user_friend[i]]
                     else:
                         dict_mezcla[i]= [ksas_user_current[i],0]
-                #añadimos todos los que se encuentren y los que no se encuentren se añaden al final
+                # Anadimos todos los que se encuentren y los que no se encuentren se añaden al final
                 for i in ksas_user_friend:
-                    #Si aun no se ha añadido se agregara
+                    # Si aun no se ha añadido se agregara
                     if not i in dict_mezcla:
-                        #Significa que no pertenece al usuario
+                        # Significa que no pertenece al usuario
                         dict_mezcla[i] = [0,ksas_user_friend[i]]
-                #Donde el primero seria del usuario actual y el segundo del amigo
-                # en caso de que no aparezca en el amigo se añadira un 0
-                #dict = { "k0001":[2,3]}
 
-                #Añadimos los IDs - simbolicos de los dos mezclados
+                # Donde el primero seria del usuario actual y el segundo del amigo
+                # en caso de que no aparezca en el amigo se añadira un 0
+                # Posible valores --> dict = { "k0001":[2,3]}
+
+                # Anadimos los IDs - simbolicos de los dos mezclados
                 matrix.append(list(dict_mezcla.keys()))
 
-                # obtenemos los valores de los diccionarios para su comparación
+                # Obtenemos los valores de los diccionarios para su comparación
                 lista_values_user = [i[0] for i in list(dict_mezcla.values())]
                 lista_values_friend = [i[1] for i in list(dict_mezcla.values())]
 
-
-                #ordenamos por fechas 
+                # Ordenamos por fechas
                 if friend_date_mayor:
                     matrix.append(lista_values_user)
                     matrix.append(lista_values_friend)
@@ -738,10 +759,8 @@ def ksa_comparison_friend():
                     matrix.append(lista_values_friend)
                     matrix.append(lista_values_user)
 
-
                 #TRANSPONEMOS LOS ARRYAS
                 rez = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))] 
-
 
                 dict_matrix = {0:rez}
                 # dict_matrix[0]=rez
@@ -751,7 +770,6 @@ def ksa_comparison_friend():
 
         return render_template('user/ksa_comparison_friend.html', title='KSA Comparsion',
             search_friend=search_friend)
-
 
     return render_template('user/ksa_comparison_friend.html', title='KSA Comparsion',
         search_friend=search_friend)

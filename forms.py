@@ -567,8 +567,8 @@ class TargetForm(FlaskForm):
     def validate(self, **kwargs):
 
         if self.time_min.data < t_min or self.time_min.data > t_max:
-            #Volvemos al estado base, porque la modificacion dinamica de la selecion de wk roles se hace en el javascript
-            # y este vuelve a un estado base cuando hay una validacion incorrecta
+            #Volvemos al estado base, porque la modificacion dinamica de la selecion de wk roles 
+            # se hace en el javascript y este vuelve a un estado base cuando hay una validacion incorrecta
             message_error = f'{"Choose a value greater or equal than Time min: "}{t_min}{"or less or equal than Time max: "}{t_max}'
             self.selectWroles.data='Default'
             self.time_min.errors = (super().errors, message_error)
